@@ -43,7 +43,7 @@ experimentApp.controller('ExperimentController',
         $scope.stim_id = 0;
         $scope.part_id = 0;
       } else {
-        $scope.inst_id = $scope.inst_id + 1
+        $scope.inst_id = $scope.inst_id + 1;
       }
       $scope.response = {"goal": null, "relprob": [50, 50]};
     };
@@ -109,16 +109,16 @@ experimentApp.controller('ExperimentController',
       {
         text: `Imagine you're watching your friend play the video game above.
                Can you figure out which of the five words your friend is trying to spell?`,
-        image: "stimuli/1/a1/experiment-1a1.gif"
+        image: "tutorial/experiment-1a1.gif"
       },
       {
-        text: `Rate how likely each word.`,
-        image: "stimuli/1/a1/experiment-1a1.gif",
+        text: `Rate how likely each word is.`,
+        image: "tutorial/experiment-1a1.gif",
         tutorial: true
       },
       {
         text: `Yes, it was "POWER"!`,
-        image: "stimuli/1/a1/experiment-1a1.gif",
+        image: "tutorial/experiment-1a1.gif",
       },
       {
         text: `Once done, please remember to press the save button
@@ -129,8 +129,8 @@ experimentApp.controller('ExperimentController',
         save: true
       },
       {
-        text: `Ready to start? You have x tasks in total.
-               Press next to continue!`,
+        text: `Ready to start? You have n tasks in total.
+               Press next to continue!`
       }
     ];
     $scope.stimuli = shuffle([
@@ -138,18 +138,18 @@ experimentApp.controller('ExperimentController',
         "trial": 0,
         "times": [
           1,
+          2,
+          3,
+          4,
+          5,
+          6,
           7,
-          13,
-          19,
-          24,
-          31,
-          37,
-          43,
-          49,
-          54,
-          61,
-          67,
-          73
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
         ],
         "name": "problem_1_a1",
         "optimal": true,
