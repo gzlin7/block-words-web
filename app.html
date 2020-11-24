@@ -98,7 +98,7 @@
 				<!-- Stimuli -->
 				<p ng-show="section == 'stimuli' && part_id < 0" class="display">
 						The true goal was
-						<span ng-style="true_color(stim_id-1)">{{true_goal(stim_id-1)}}</span>.
+						<span ng-style="{color:'blue'}">{{possible_goals[stimuli[stim_id-1].goal]}}</span>.
 						<br> Press next to continue.
 				</p>
       	<img ng-show="section == 'stimuli' && part_id >= 0"
@@ -127,6 +127,7 @@
 			</p>
 			<!-- Questions -->
 			<div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()">
+      <p>For each word below, how likely is the player trying to spell that word?</p>
 			<b>{{possible_goals[0]}}</b>
 			<br>
       <input type="range" min="0" max="100" step="10" list="ticks"

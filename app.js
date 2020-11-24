@@ -55,6 +55,8 @@ experimentApp.controller('ExperimentController',
         // Advance to next stimulus
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
+        // set possible goals based on stimuli json
+        $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
       } else if ($scope.part_id < $scope.stimuli[$scope.stim_id].length) {
         // Advance to next part
         $scope.ratings.push($scope.compute_ratings($scope.response));
@@ -112,7 +114,7 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/experiment-1a1.gif"
       },
       {
-        text: `Rate how likely each word is.`,
+        text: ``,
         image: "tutorial/experiment-1a1.gif",
         tutorial: true
       },
@@ -153,6 +155,7 @@ experimentApp.controller('ExperimentController',
           "stimuli/1/1/5.gif"  
         ]
       },
+      /*
       {
         "trial": 0,
         "times": [1,2,3,4,5,6,7],
@@ -430,6 +433,7 @@ experimentApp.controller('ExperimentController',
           "stimuli/4/3/2.gif"
         ]
       },
+      */
       {
         "trial": 0,
         "times": [1,2,3,4],
