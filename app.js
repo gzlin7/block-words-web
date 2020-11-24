@@ -16,13 +16,14 @@ experimentApp.controller('ExperimentController',
     $scope.inst_id = 0;
     $scope.stim_id = 0;
     $scope.part_id = -1;
-    $scope.response = {"goal": null, "relprob": [50, 50]};
+    $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
     $scope.csv_header = [
       "timestep",
-      "true_goal_probs",
       "goal_probs_0",
       "goal_probs_1",
-      "goal_probs_2"
+      "goal_probs_2",
+      "goal_probs_3",
+      "goal_probs_4"
     ];
     $scope.csv_name = function() {
       return $scope.stimuli[$scope.stim_id-1].name + ".csv"
@@ -45,7 +46,7 @@ experimentApp.controller('ExperimentController',
       } else {
         $scope.inst_id = $scope.inst_id + 1;
       }
-      $scope.response = {"goal": null, "relprob": [50, 50]};
+      $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
     };
     $scope.advance_stimuli = function() {
       if ($scope.stim_id == $scope.stimuli.length) {
@@ -67,35 +68,25 @@ experimentApp.controller('ExperimentController',
           $scope.stim_id = $scope.stim_id + 1;
         }
       }
-      $scope.response = {"goal": null, "relprob": [50, 50]};
+      $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
     };
     $scope.compute_ratings = function(resp) {
-      if (resp.goal == null) {resp.goal = 0;}
-      if (resp.goal == -1) {
-        // Handle equally likely option
-        probs = [1.0, 1.0, 1.0];
-        resp.goal = 0;
-      } else {
-        // Compute unnormalized probabilities from relative probabilities
-        probs = [0.0, 0.0, 0.0];
-        probs[resp.goal] = 1.0;
-        probs[(resp.goal+1) % 3] = resp.relprob[0] / 100;
-        probs[(resp.goal+2) % 3] = resp.relprob[1] / 100;
-      }
-      // Normalize probabilities
-      sumprobs = probs.reduce((a,b) => a + b, 0);
-      probs = probs.map(p => p/sumprobs);
+      // Compute normalized probabilities from ratings
+      probs = resp.relprob;
+      sum_ratings = resp.relprob.reduce((a,b) => a + b, 0);
+      probs = probs.map(p => p/sum_ratings);
       rating = {
         "timestep": $scope.stimuli[$scope.stim_id].times[$scope.part_id],
-        "true_goal_probs": probs[resp.goal], // FIX ME - this should look up true goal for stimulus
         "goal_probs_0": probs[0],
         "goal_probs_1": probs[1],
-        "goal_probs_2": probs[2]
+        "goal_probs_2": probs[2],
+        "goal_probs_3": probs[3],
+        "goal_probs_4": probs[4]
       }
       console.log(rating)
       return rating;
     };
-    $scope.rating_labels = ["Extremely Unlikely", "50/50", "Extremely Likely"];
+    $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
     $scope.instruction_has_image = function() {
       return $scope.instructions[$scope.inst_id].image != null
@@ -155,7 +146,6 @@ experimentApp.controller('ExperimentController',
           "stimuli/1/1/5.gif"  
         ]
       },
-      /*
       {
         "trial": 0,
         "times": [1,2,3,4,5,6,7],
@@ -433,7 +423,6 @@ experimentApp.controller('ExperimentController',
           "stimuli/4/3/2.gif"
         ]
       },
-      */
       {
         "trial": 0,
         "times": [1,2,3,4],
