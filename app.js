@@ -26,7 +26,7 @@ experimentApp.controller('ExperimentController',
       "goal_probs_4"
     ];
     $scope.csv_name = function() {
-      return $scope.stimuli[$scope.stim_id-1].name + ".csv"
+      return $scope.stimuli[$scope.stim_id-1].name + Date.now() + ".csv"
     }
     $scope.ratings = [];
     $scope.advance = function() {
