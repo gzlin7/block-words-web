@@ -166,7 +166,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `Even if it seems obvious what the word is, do make sure 
-        to answer correctly by setting all othre words as <i>Very Unlikely</i>`,
+        to answer correctly by setting all other words as <i>Very Unlikely</i>`,
         image: "tutorial/tutorial/5.gif",
         tutorial: true
       },
