@@ -124,14 +124,14 @@ experimentApp.controller('ExperimentController',
         text: `Some things that might be helpful to know: <br>
                <br>
                You will be given 5 possible words and the goal must be one of them. <br>
-               The initial arrangment of the letters is random. <br>`
+               The initial arrangement of the letters is random. <br>`
       },
       {
         text: `Let's do a practice run, just so you're familiarized.`,
       },
       {
         text: `First, you'll get a chance to look at the avalibale letters and the 5 possible words.
-               Before seeing the player moving any blocks, rate each possible word based on how likely 
+               Before seeing the player move any blocks, rate each possible word based on how likely 
                it is to be the word that the player will try to spell. If you think that all words are 
                equally likely, rate them all as <i>Maybe</i>. `,
         image: "tutorial/tutorial/0.png",
