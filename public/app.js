@@ -143,31 +143,36 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `If you believe that two words are equally likely and the rest and not likely 
-        then rate the two words as <i>Maybe</i> and the rest as <i>Very Unlikely</i>.`,
+        text: `Consider this new move and update your scores if need be. 
+        Remember, it is ok to give the same scoring in two consecutive steps.`,
         image: "tutorial/tutorial/1.gif",
         tutorial: true
       },
       {
-        text: `Consider this new move and update your scores if need be. 
-        Remember, it is ok to give the same scoring in two consecutive steps.`,
+        text: `If you believe that two words are equally likely and the rest and not likely 
+        then rate the two words as <i>Maybe</i> and the rest as <i>Very Unlikely</i>.`,
         image: "tutorial/tutorial/2.gif",
         tutorial: true
       },
       {
-        text: `Two more steps...`,
+        text: `Three more steps...`,
         image: "tutorial/tutorial/3.gif",
+        tutorial: true
+      },
+      {
+        text: `Two more steps...`,
+        image: "tutorial/tutorial/4.gif",
         tutorial: true
       },
       {
         text: `Even if it seems obvious what the word is, do make sure 
         to answer correctly by setting all othre words as <i>Very Unlikely</i>`,
-        image: "tutorial/tutorial/4.gif",
+        image: "tutorial/tutorial/5.gif",
         tutorial: true
       },
       {
         text: `Yes, it was <i>power</i>!`,
-        image: "tutorial/tutorial/10.png",
+        image: "tutorial/tutorial/12.png",
       },
       {
         text: `Ready to start? Press next to continue!`
