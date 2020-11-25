@@ -43,6 +43,8 @@ experimentApp.controller('ExperimentController',
         $scope.section = "stimuli";
         $scope.stim_id = 0;
         $scope.part_id = 0;
+        // set possible goals based on stimuli json
+        $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
       } else {
         $scope.inst_id = $scope.inst_id + 1;
       }
