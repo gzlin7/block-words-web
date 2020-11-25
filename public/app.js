@@ -55,11 +55,17 @@ experimentApp.controller('ExperimentController',
         // Advance section
         $scope.section = "endscreen"
       } else if ($scope.part_id < 0) {
+        // Store result to DB
+        storeToDB($scope.stimuli[$scope.stim_id-1].name + "_" + Date.now(), $scope.ratings);
+        // Stop after the first stimulus
+        $scope.section = "endscreen"
+        /*
         // Advance to next stimulus
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
         // set possible goals based on stimuli json
         $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
+        */
       } else if ($scope.part_id < $scope.stimuli[$scope.stim_id].length) {
         // Advance to next part
         $scope.ratings.push($scope.compute_ratings($scope.response));
@@ -164,8 +170,7 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/tutorial/10.png",
       },
       {
-        text: `Ready to start? You have n tasks in total.
-               Press next to continue!`
+        text: `Ready to start? Press next to continue!`
       }
     ];
     $scope.stimuli = shuffle([
