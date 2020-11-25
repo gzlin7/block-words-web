@@ -103,14 +103,68 @@ experimentApp.controller('ExperimentController',
     };
     $scope.instructions = [
       {
-        text: `Welcome to our goal inference experiment! <br>
+        text: `Welcome to our word guessing game! <br>
                Press next to continue.`,
       },
       {
-        text: `Imagine you're watching your friend play the video game above.
-               Can you figure out which of the five words your friend is trying to spell?`,
-        image: "tutorial/experiment-1a1.gif"
+        text: `Imagine you're watching your friend play the video game above, where they try to spell a 
+              certain word backwards by stacking the right blocks. How soon can you guess the word your friend is trying to spell?`,
+        image: "tutorial/demo/demo-part1.gif"
       },
+      {
+        text: `The word is <i>core</i>!`,
+        image: "tutorial/demo/demo-part2.gif"
+      },
+      {
+        text: `Your task now is to watch videos of someone playing the same game, 
+        and with every block they move, you guess which word is their most likely goal.`,
+      },
+      {
+        text: `Some things that might be helpful to know: <br>
+               <br>
+               You will be given 5 possible words and the goal must be one of them. <br>
+               The initial arrangment of the letters is random. <br>`
+      },
+      {
+        text: `Let's do a practice run, just so you're familiarized.`,
+      },
+      {
+        text: `First, you'll get a chance to look at the avalibale letters and the 5 possible words.
+               Before seeing the player moving any blocks, rate each possible word based on how likely 
+               it is to be the word that the player will try to spell. If you think that all words are equally likely, rate them all as <i>maybe</i> `,
+        image: "tutorial/tutorial/0.png",
+        tutorial: true
+      },
+      {
+        text: `Now watch the player move the first block. What do you think now?:`,
+        image: "tutorial/tutorial/0.gif",
+        tutorial: true
+      },
+      {
+        text: `We remind you of the scoring guidlines: `,
+        image: "tutorial/tutorial/1.gif",
+        tutorial: true
+      },
+      {
+        text: `We remind you of the scoring guidlines: `,
+        image: "tutorial/tutorial/2.gif",
+        tutorial: true
+      },
+      {
+        text: `We remind you of the scoring guidlines: `,
+        image: "tutorial/tutorial/3.gif",
+        tutorial: true
+      },
+      {
+        text: `We remind you of the scoring guidlines: `,
+        image: "tutorial/tutorial/4.gif",
+        tutorial: true
+      },
+
+
+
+
+
       {
         text: `Rate how likely each word is.`,
         image: "tutorial/experiment-1a1.gif",
