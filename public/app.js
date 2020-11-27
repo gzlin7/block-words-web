@@ -17,6 +17,7 @@ experimentApp.controller('ExperimentController',
     $scope.inst_id = 0;
     $scope.stim_id = 0;
     $scope.part_id = -1;
+    $scope.tutorial_step = 0;
     $scope.response = {"relprob": [50, 50, 50, 50, 50]};
     $scope.csv_header = [
       "timestep",
@@ -41,6 +42,7 @@ experimentApp.controller('ExperimentController',
     };
     $scope.advance_instructions = function() {
       if ($scope.inst_id == $scope.instructions.length - 1) {
+        storeToDB( "tutorial_TT" + Date.now(), $scope.ratings);
         $scope.section = "stimuli";
         $scope.stim_id = 0;
         $scope.part_id = 0;
@@ -52,6 +54,10 @@ experimentApp.controller('ExperimentController',
           start_time = (new Date()).getTime();
         }
       } else {
+        if ($scope.instructions[$scope.inst_id].tutorial) {
+          $scope.ratings.push($scope.compute_ratings($scope.response));
+          $scope.tutorial_step = $scope.tutorial_step + 1;
+        }
         $scope.inst_id = $scope.inst_id + 1;
       }
       $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
@@ -62,7 +68,7 @@ experimentApp.controller('ExperimentController',
         $scope.section = "endscreen" 
       } else if ($scope.part_id < 0) {
         // Store result to DB
-        storeToDB($scope.stimuli[$scope.stim_id-1].name + "_" + Date.now(), $scope.ratings);
+        storeToDB($scope.stimuli[$scope.stim_id-1].name + "_TT" + Date.now(), $scope.ratings);
         // Stop after the first stimulus
         $scope.section = "endscreen"
         /*
@@ -89,6 +95,18 @@ experimentApp.controller('ExperimentController',
       probs = resp.relprob;
       sum_ratings = resp.relprob.reduce((a,b) => a + b, 0);
       probs = probs.map(p => p/sum_ratings);
+      if ($scope.section == "instructions"){
+        rating = {
+        "timestep": $scope.tutorial_step,
+        "time_spent": 0,
+        "goal_probs_0": probs[0],
+        "goal_probs_1": probs[1],
+        "goal_probs_2": probs[2],
+        "goal_probs_3": probs[3],
+        "goal_probs_4": probs[4]
+      }
+      }
+      else {
       rating = {
         "timestep": $scope.stimuli[$scope.stim_id].times[$scope.part_id],
         "time_spent": ((new Date()).getTime()-start_time)/1000.,
@@ -99,6 +117,7 @@ experimentApp.controller('ExperimentController',
         "goal_probs_4": probs[4]
       }
       start_time = (new Date()).getTime();
+      }
       console.log(rating);
       return rating;
     };
@@ -116,8 +135,9 @@ experimentApp.controller('ExperimentController',
                Press next to continue.`,
       },
       {
-        text: `Imagine you're watching your friend play the video game above, where they try to spell a 
-              certain word backwards by stacking the right blocks. How soon can you guess the word your friend is trying to spell?`,
+        text: `Your friend is stacking some blocks to spell an English word backwards. You are watching and trying to guess
+               what the word is before your friend finishes spelling. <br>
+               Is the word <i>power</i>, <i>cower</i>, <i>crow</i>, <i>core</i>, or <i>pore</i>?`,
         image: "tutorial/demo/demo-part1.gif"
       },
       {
@@ -125,14 +145,16 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/demo/demo-part2.gif"
       },
       {
-        text: `Your task now is to watch videos of someone playing the same game, 
-        and with every block they move, you guess which word is their most likely goal.`,
+        text: `Your task here is to simply watch someone stacking these blocks, and with every block thay 
+        move, you need to guess which word they are most likely trying to spell.`,
       },
       {
-        text: `Some things that might be helpful to know: <br>
+        text: `<i>How to guess?</i> <br>
                <br>
-               You will be given 5 possible words and the goal must be one of them. <br>
-               The initial arrangement of the letters is random. <br>`
+               You will be given 5 possible words. 
+               When a block is moved you need to give a score for every word based on how 
+               likely you think it is the word that is being spelled. 
+               The scoring scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
       {
         text: `Let's do a practice run, just so you're familiarized.`,
