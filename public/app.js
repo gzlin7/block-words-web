@@ -1,4 +1,5 @@
 var experimentApp = angular.module('experimentApp', ['ngSanitize', 'ngCsv']);
+var start_time;
 
 function shuffle(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -16,7 +17,7 @@ experimentApp.controller('ExperimentController',
     $scope.inst_id = 0;
     $scope.stim_id = 0;
     $scope.part_id = -1;
-    $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
+    $scope.response = {"relprob": [50, 50, 50, 50, 50]};
     $scope.csv_header = [
       "timestep",
       "goal_probs_0",
@@ -45,6 +46,11 @@ experimentApp.controller('ExperimentController',
         $scope.part_id = 0;
         // set possible goals based on stimuli json
         $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
+
+        // get time of first experiment
+        if (start_time == undefined) {
+          start_time = (new Date()).getTime();
+        }
       } else {
         $scope.inst_id = $scope.inst_id + 1;
       }
@@ -53,7 +59,7 @@ experimentApp.controller('ExperimentController',
     $scope.advance_stimuli = function() {
       if ($scope.stim_id == $scope.stimuli.length) {
         // Advance section
-        $scope.section = "endscreen"
+        $scope.section = "endscreen" 
       } else if ($scope.part_id < 0) {
         // Store result to DB
         storeToDB($scope.stimuli[$scope.stim_id-1].name + "_" + Date.now(), $scope.ratings);
@@ -85,13 +91,15 @@ experimentApp.controller('ExperimentController',
       probs = probs.map(p => p/sum_ratings);
       rating = {
         "timestep": $scope.stimuli[$scope.stim_id].times[$scope.part_id],
+        "time_spent": ((new Date()).getTime()-start_time)/1000.,
         "goal_probs_0": probs[0],
         "goal_probs_1": probs[1],
         "goal_probs_2": probs[2],
         "goal_probs_3": probs[3],
         "goal_probs_4": probs[4]
       }
-      console.log(rating)
+      start_time = (new Date()).getTime();
+      console.log(rating);
       return rating;
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
@@ -130,7 +138,7 @@ experimentApp.controller('ExperimentController',
         text: `Let's do a practice run, just so you're familiarized.`,
       },
       {
-        text: `First, you'll get a chance to look at the avalibale letters and the 5 possible words.
+        text: `First, you'll get a chance to look at the available letters and the 5 possible words.
                Before seeing the player move any blocks, rate each possible word based on how likely 
                it is to be the word that the player will try to spell. If you think that all words are 
                equally likely, rate them all as <i>Maybe</i>. `,
