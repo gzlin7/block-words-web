@@ -42,7 +42,7 @@ experimentApp.controller('ExperimentController',
     };
     $scope.advance_instructions = function() {
       if ($scope.inst_id == $scope.instructions.length - 1) {
-        storeToDB( "tutorial_TT" + Date.now(), $scope.ratings);
+        storeToDB( "tutorial_" + Date.now(), $scope.ratings);
         $scope.section = "stimuli";
         $scope.stim_id = 0;
         $scope.part_id = 0;
