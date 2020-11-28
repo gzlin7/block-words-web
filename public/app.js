@@ -42,7 +42,6 @@ experimentApp.controller('ExperimentController',
       }
     };
     $scope.advance_instructions = function() {
-      // alert($scope.user_id + "," + $scope.stimuli_set_id);
       if ($scope.inst_id == $scope.instructions.length - 1) {
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
         $scope.reward_score = 0;
@@ -135,7 +134,7 @@ experimentApp.controller('ExperimentController',
     $scope.stimuli_set = [];
     $scope.setStimuli = async function(){
       let count = await getCounter();
-      let stim_idx = $scope.stimuli_sets[count % 6];
+      let stim_idx = $scope.stimuli_sets[count % 7];
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
@@ -180,9 +179,8 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `<b>Bonus</b> <br> <br>
-               A bonus reward will be added to your account based on how high is the score you 
-               give to the right word in every step, So make your best guess 
-               of which word is being spelled in every step.`
+               A bonus reward payment will be added to your account based on how well you guess the right word in every step, 
+               so make your best guess at every step!`
       },
       {
         text: `Let's do a practice run, just so you're familiarized.`,
@@ -221,7 +219,7 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `One more steps...`,
+        text: `One more step...`,
         image: "tutorial/tutorial/4.gif",
         tutorial: true
       },
@@ -241,12 +239,13 @@ experimentApp.controller('ExperimentController',
     ];
     $scope.stimuli_set_length = 3;
     $scope.stimuli_sets = [
-      [0,6,11],
+      [0,6,18],
       [3,10,12],
-      [2,7,9],
-      [1,5,14],
+      [2,16,9],
+      [19,5,14],
       [4,8,15],
-      [3,5,13]
+      [7,17,13],
+      [11,1,15]
     ]
     $scope.stimuli = [
       {
