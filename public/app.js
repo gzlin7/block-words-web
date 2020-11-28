@@ -171,12 +171,18 @@ experimentApp.controller('ExperimentController',
         move, you need to guess which word they are most likely trying to spell.`,
       },
       {
-        text: `<i>How to guess?</i> <br>
+        text: `<b>How to guess?</b> <br>
                <br>
                You will be given 5 possible words. 
                When a block is moved you need to give a score for every word based on how 
                likely you think it is the word that is being spelled. 
                The scoring scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
+      },
+      {
+        text: `<b>Bonus</b> <br> <br>
+               A bonus reward will be added to your account based on how high is the score you 
+               give to the right word in every step, So make your best guess 
+               of which word is being spelled in every step.`
       },
       {
         text: `Let's do a practice run, just so you're familiarized.`,
@@ -243,6 +249,77 @@ experimentApp.controller('ExperimentController',
       [3,5,13]
     ]
     $scope.stimuli = [
+      {
+        "trial": 0,
+        "times": [1,2,3,4,5,6],
+        "name": "problem_0_1",
+        "optimal": true,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 3,
+        "problem": 0,
+        "length": 6,
+        "images": [
+          "stimuli/0/1/0.png",
+          "stimuli/0/1/0.gif",
+          "stimuli/0/1/1.gif",
+          "stimuli/0/1/2.gif",
+          "stimuli/0/1/3.gif",
+          "stimuli/0/1/4.gif"
+        ]
+      },
+      {
+        "trial": 0,
+        "times": [1,2,3,4],
+        "name": "problem_0_2",
+        "optimal": true,
+        "goal_space": ["wad", "reap", "war", "wade", "draw"],
+        "goal": 3,
+        "problem": 0,
+        "length": 4,
+        "images": [
+          "stimuli/0/2/0.png",
+          "stimuli/0/2/0.gif",
+          "stimuli/0/2/1.gif",
+          "stimuli/0/2/2.gif"
+        ]
+      },
+      {
+        "trial": 0,
+        "times": [1,2,3,4,5],
+        "name": "problem_0_3",
+        "optimal": true,
+        "goal_space": ["wad", "reap", "war", "wade", "draw"],
+        "goal": 2,
+        "problem": 0,
+        "length": 5,
+        "images": [
+          "stimuli/0/3/0.png",
+          "stimuli/0/3/0.gif",
+          "stimuli/0/3/1.gif",
+          "stimuli/0/3/2.gif",
+          "stimuli/0/3/3.gif"
+        ]
+      },
+      {
+        "trial": 0,
+        "times": [1,2,3,4,5,6,7,8],
+        "name": "problem_0_4",
+        "optimal": true,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 1,
+        "problem": 0,
+        "length": 8,
+        "images": [
+          "stimuli/0/4/0.png",
+          "stimuli/0/4/0.gif",
+          "stimuli/0/4/1.gif",
+          "stimuli/0/4/2.gif",
+          "stimuli/0/4/3.gif",
+          "stimuli/0/4/4.gif",
+          "stimuli/0/4/5.gif",
+          "stimuli/0/4/6.gif"
+        ]
+      },
       {
         "trial": 0,
         "times": [1,2,3,4,5,6,7],
