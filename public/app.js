@@ -26,6 +26,7 @@ experimentApp.controller('ExperimentController',
       "goal_probs_2",
       "goal_probs_3",
       "goal_probs_4",
+      "true_goal_probs"
     ];
     // $scope.csv_name = function() {
     //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
@@ -40,14 +41,10 @@ experimentApp.controller('ExperimentController',
         // Do nothing
       }
     };
-    $scope.parse_reward_score = function(num) {
-      num /= $scope.stimuli_set[$scope.stim_id].length;
-      return num.toFixed(3).toString().replace(".", "_");
-    }
     $scope.advance_instructions = function() {
       // alert($scope.user_id + "," + $scope.stimuli_set_id);
       if ($scope.inst_id == $scope.instructions.length - 1) {
-        storeToDB($scope.user_id + "_r"+ $scope.parse_reward_score($scope.reward_score) + "_tutorial", $scope.ratings);
+        storeToDB($scope.user_id + "_tutorial", $scope.ratings);
         $scope.reward_score = 0;
         $scope.section = "stimuli";
         $scope.stim_id = 0;
@@ -71,14 +68,13 @@ experimentApp.controller('ExperimentController',
     $scope.advance_stimuli = function() {
       if ($scope.stim_id == $scope.stimuli_set.length) {
         // Advance section
-        $scope.stim_id -= 1;
-        storeToDB($scope.user_id + "_r" + $scope.parse_reward_score($scope.reward_score) + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
+        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
         $scope.reward_score = 0;
         incrementCounter();
         $scope.section = "endscreen" 
       } else if ($scope.part_id < 0) {
         // Store result to DB
-        storeToDB($scope.user_id + "_r"+ $scope.parse_reward_score($scope.reward_score) + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
+        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
         $scope.reward_score = 0;
         // Advance to next stimulus
         $scope.part_id = $scope.part_id + 1;
@@ -114,10 +110,11 @@ experimentApp.controller('ExperimentController',
         "goal_probs_2": probs[2],
         "goal_probs_3": probs[3],
         "goal_probs_4": probs[4],
+        "true_goal_probs" : probs[$scope.true_goal],
+        "reward_score" : $scope.reward_score 
       }
       }
       else {
-      console.log("timestep " + $scope.stimuli_set[$scope.stim_id].times[$scope.part_id]);
       rating = {
         "timestep": $scope.stimuli_set[$scope.stim_id].times[$scope.part_id],
         "time_spent": ((new Date()).getTime()-start_time)/1000.,
@@ -126,6 +123,8 @@ experimentApp.controller('ExperimentController',
         "goal_probs_2": probs[2],
         "goal_probs_3": probs[3],
         "goal_probs_4": probs[4],
+        "true_goal_probs" : probs[$scope.true_goal],
+        "reward_score" : $scope.reward_score 
       }
       start_time = (new Date()).getTime();
       }
