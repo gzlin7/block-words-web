@@ -99,7 +99,6 @@ experimentApp.controller('ExperimentController',
       probs = probs.map(p => p/sum_ratings);
       // Increase reward score
       $scope.reward_score += probs[$scope.true_goal];
-      // alert("reward: " + $scope.reward_score);
       if ($scope.section == "instructions"){
         rating = {
         "timestep": $scope.tutorial_step,
@@ -138,7 +137,7 @@ experimentApp.controller('ExperimentController',
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
-      alert("stimuli set = " + stim_idx);
+      // alert("stimuli set = " + stim_idx);
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
