@@ -103,7 +103,7 @@
   <script src="app.js"></script>
 </head>
 
-<body ng-controller="ExperimentController">
+<body ng-controller="ExperimentController" ng-init="setStimuli()">
   <div class="main">
     <div class="display">
       <!-- Instructions -->
@@ -243,9 +243,22 @@
       // Get a reference to the database service
       const root = firebase.database().ref();
       const resultsRef = root.child("results");
+      const counterRef = root.child("counter");
+      const counterKey = "count";
+      let count = 0;
 
       function storeToDB(key, val) {
         resultsRef.child(key).set(val);
+      }
+
+      function incrementCounter() {
+        counterRef.child(counterKey).set(count+1);
+      }
+
+      async function getCounter(){
+        return counterRef.child(counterKey).once("value", function(snapshot) {
+          count = snapshot.val();
+        }).then(()=>{return count;});
       }
 
     </script>

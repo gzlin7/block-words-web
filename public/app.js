@@ -1,15 +1,15 @@
 var experimentApp = angular.module('experimentApp', ['ngSanitize', 'ngCsv']);
 var start_time;
 
-function shuffle(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array
-}
+// function shuffle(array) {
+//     for (var i = array.length - 1; i > 0; i--) {
+//         var j = Math.floor(Math.random() * (i + 1));
+//         var temp = array[i];
+//         array[i] = array[j];
+//         array[j] = temp;
+//     }
+//     return array
+// }
 
 experimentApp.controller('ExperimentController',
   function ExperimentController($scope) {
@@ -27,9 +27,9 @@ experimentApp.controller('ExperimentController',
       "goal_probs_3",
       "goal_probs_4"
     ];
-    $scope.csv_name = function() {
-      return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
-    }
+    // $scope.csv_name = function() {
+    //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
+    // }
     $scope.ratings = [];
     $scope.advance = function() {
       if ($scope.section == "instructions") {
@@ -41,8 +41,9 @@ experimentApp.controller('ExperimentController',
       }
     };
     $scope.advance_instructions = function() {
+      // alert($scope.user_id + "," + $scope.stimuli_set_id);
       if ($scope.inst_id == $scope.instructions.length - 1) {
-        storeToDB( "tutorial_" + Date.now(), $scope.ratings);
+        storeToDB($scope.user_id + "_tutorial", $scope.ratings);
         $scope.section = "stimuli";
         $scope.stim_id = 0;
         $scope.part_id = 0;
@@ -63,26 +64,24 @@ experimentApp.controller('ExperimentController',
       $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
     };
     $scope.advance_stimuli = function() {
-      if ($scope.stim_id == $scope.stimuli.length) {
+      if ($scope.stim_id == $scope.stimuli_set.length) {
         // Advance section
+        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
+        incrementCounter();
         $scope.section = "endscreen" 
       } else if ($scope.part_id < 0) {
         // Store result to DB
-        storeToDB($scope.stimuli[$scope.stim_id-1].name + "_TT" + Date.now(), $scope.ratings);
-        // Stop after the first stimulus
-        $scope.section = "endscreen"
-        /*
+        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
         // Advance to next stimulus
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
         // set possible goals based on stimuli json
-        $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
-        */
-      } else if ($scope.part_id < $scope.stimuli[$scope.stim_id].length) {
+        $scope.possible_goals = $scope.stimuli_set[$scope.stim_id].goal_space;
+      } else if ($scope.part_id < $scope.stimuli_set[$scope.stim_id].length) {
         // Advance to next part
         $scope.ratings.push($scope.compute_ratings($scope.response));
         $scope.part_id = $scope.part_id + 1;
-        if ($scope.part_id == $scope.stimuli[$scope.stim_id].length) {
+        if ($scope.part_id == $scope.stimuli_set[$scope.stim_id].length) {
           // Advance to stimulus endscreen.
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
@@ -108,7 +107,7 @@ experimentApp.controller('ExperimentController',
       }
       else {
       rating = {
-        "timestep": $scope.stimuli[$scope.stim_id].times[$scope.part_id],
+        "timestep": $scope.stimuli_set[$scope.stim_id].times[$scope.part_id],
         "time_spent": ((new Date()).getTime()-start_time)/1000.,
         "goal_probs_0": probs[0],
         "goal_probs_1": probs[1],
@@ -120,6 +119,16 @@ experimentApp.controller('ExperimentController',
       }
       console.log(rating);
       return rating;
+    };
+    $scope.user_id = Date.now();
+    $scope.stimuli_set = [];
+    $scope.setStimuli = async function(){
+      let count = await getCounter();
+      let stim_idx = $scope.stimuli_sets[count % 6];
+      for (i = 0; i < stim_idx.length; i++) {
+        $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
+      }
+      alert("stimuli set = " + stim_idx);
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
@@ -211,7 +220,16 @@ experimentApp.controller('ExperimentController',
         text: `Ready to start? Press next to continue!`
       }
     ];
-    $scope.stimuli = shuffle([
+    $scope.stimuli_set_length = 3;
+    $scope.stimuli_sets = [
+      [0,6,11],
+      [3,10,12],
+      [2,7,9],
+      [1,5,14],
+      [4,8,15],
+      [3,5,13]
+    ]
+    $scope.stimuli = [
       {
         "trial": 0,
         "times": [1,2,3,4,5,6,7],
@@ -524,6 +542,6 @@ experimentApp.controller('ExperimentController',
           "stimuli/4/4/2.gif"
         ]
       },
-    ]);
+    ];
   }
 )
