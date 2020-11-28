@@ -26,7 +26,6 @@ experimentApp.controller('ExperimentController',
       "goal_probs_2",
       "goal_probs_3",
       "goal_probs_4",
-      "true_goal_probs"
     ];
     // $scope.csv_name = function() {
     //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
@@ -73,6 +72,7 @@ experimentApp.controller('ExperimentController',
     $scope.advance_stimuli = function() {
       if ($scope.stim_id == $scope.stimuli_set.length) {
         // Advance section
+        $scope.stim_id -= 1;
         storeToDB($scope.user_id + "_r" + $scope.parse_reward_score($scope.reward_score) + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
         $scope.reward_score = 0;
         incrementCounter();
@@ -105,7 +105,7 @@ experimentApp.controller('ExperimentController',
       probs = probs.map(p => p/sum_ratings);
       // Increase reward score
       $scope.reward_score += probs[$scope.true_goal];
-      alert("reward: " + $scope.reward_score);
+      // alert("reward: " + $scope.reward_score);
       if ($scope.section == "instructions"){
         rating = {
         "timestep": $scope.tutorial_step,
@@ -118,6 +118,7 @@ experimentApp.controller('ExperimentController',
       }
       }
       else {
+      console.log("timestep " + $scope.stimuli_set[$scope.stim_id].times[$scope.part_id]);
       rating = {
         "timestep": $scope.stimuli_set[$scope.stim_id].times[$scope.part_id],
         "time_spent": ((new Date()).getTime()-start_time)/1000.,
