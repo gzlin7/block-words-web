@@ -55,7 +55,6 @@ experimentApp.controller('ExperimentController',
         // set possible goals and true goal based on stimuli json
         $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
         $scope.true_goal = $scope.stimuli[$scope.stim_id].goal;
-        
         // get time of first experiment
         if (start_time == undefined) {
           start_time = (new Date()).getTime();
