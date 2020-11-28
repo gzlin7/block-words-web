@@ -56,6 +56,7 @@ experimentApp.controller('ExperimentController',
         // set possible goals and true goal based on stimuli json
         $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
         $scope.true_goal = $scope.stimuli[$scope.stim_id].goal;
+        
         // get time of first experiment
         if (start_time == undefined) {
           start_time = (new Date()).getTime();
@@ -345,7 +346,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,10],
+        "times": [1,2,3,4,5,6,7,8,9,10],
         "name": "problem_2_2",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -389,7 +390,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,8],
+        "times": [1,2,3,4,5,6,7,8],
         "name": "problem_2_4",
         "optimal": true,
         "goal_space": ["wad", "reap", "war", "wade", "draw"],
