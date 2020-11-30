@@ -75,7 +75,7 @@ experimentApp.controller('ExperimentController',
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
         $scope.reward_score = 0;
-        // Advance to next stimulus
+        // Advance to first part
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
         // set possible goals based on stimuli json
@@ -85,7 +85,7 @@ experimentApp.controller('ExperimentController',
         $scope.ratings.push($scope.compute_ratings($scope.response));
         $scope.part_id = $scope.part_id + 1;
         if ($scope.part_id == $scope.stimuli_set[$scope.stim_id].length) {
-          // Advance to stimulus endscreen.
+          // Advance to next problem.
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
         }
@@ -126,7 +126,6 @@ experimentApp.controller('ExperimentController',
       }
       start_time = (new Date()).getTime();
       }
-      console.log(rating);
       return rating;
     };
     $scope.user_id = Date.now();

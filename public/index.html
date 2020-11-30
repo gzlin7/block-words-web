@@ -115,7 +115,7 @@
       <!-- Stimuli -->
       <p ng-show="section == 'stimuli' && part_id < 0" class="display">
         The true goal was
-        <span ng-style="{color:'blue'}">{{possible_goals[stimuli[stim_id-1].goal]}}</span>.
+        <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>.
         <br> Press next to continue.
       </p>
       <img ng-show="section == 'stimuli' && part_id >= 0" ng-src="{{stimuli[stim_id].images[part_id]}}"
