@@ -44,6 +44,7 @@ experimentApp.controller('ExperimentController',
     $scope.advance_instructions = function() {
       if ($scope.inst_id == $scope.instructions.length - 1) {
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
+        $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
         $scope.reward_score = 0;
         $scope.section = "stimuli";
         $scope.stim_id = 0;
@@ -61,7 +62,7 @@ experimentApp.controller('ExperimentController',
         }
         $scope.inst_id = $scope.inst_id + 1;
       }
-      $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
+      // $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
     };
     $scope.advance_stimuli = function() {
       if ($scope.stim_id == $scope.stimuli_set.length) {
@@ -73,6 +74,7 @@ experimentApp.controller('ExperimentController',
       } else if ($scope.part_id < 0) {
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
+        $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
         $scope.reward_score = 0;
         // Advance to first part
         $scope.part_id = $scope.part_id + 1;
@@ -90,7 +92,7 @@ experimentApp.controller('ExperimentController',
           $scope.stim_id = $scope.stim_id + 1;
         }
       }
-      $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
+      //$scope.response = {"relprob": [50, 50, 50, 50 , 50]};
     };
     $scope.compute_ratings = function(resp) {
       // Compute normalized probabilities from ratings
