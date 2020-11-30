@@ -46,6 +46,8 @@ experimentApp.controller('ExperimentController',
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
         $scope.reward_score = 0;
         $scope.section = "stimuli";
+        $scope.stim_id = 0;
+        $scope.part_id = 0;
         $scope.possible_goals = $scope.stimuli_set[$scope.stim_id].goal_space;
         $scope.true_goal = $scope.stimuli_set[$scope.stim_id].goal;
         // get time of first experiment
