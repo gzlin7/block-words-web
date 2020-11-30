@@ -48,9 +48,8 @@ experimentApp.controller('ExperimentController',
         $scope.section = "stimuli";
         $scope.stim_id = 0;
         $scope.part_id = 0;
-        // set possible goals and true goal based on stimuli json
-        $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
-        $scope.true_goal = $scope.stimuli[$scope.stim_id].goal;
+        $scope.possible_goals = $scope.stimuli_set[$scope.stim_id].goal_space;
+        $scope.true_goal = $scope.stimuli_set[$scope.stim_id].goal;
         // get time of first experiment
         if (start_time == undefined) {
           start_time = (new Date()).getTime();
@@ -137,8 +136,6 @@ experimentApp.controller('ExperimentController',
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
-      $scope.possible_goals = $scope.stimuli_set[$scope.stim_id].goal_space;
-      $scope.true_goal = $scope.stimuli_set[$scope.stim_id].goal;
       console.log("stimuli set = " + stim_idx);
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
