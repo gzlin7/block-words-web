@@ -118,7 +118,7 @@
         <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>.
         <br> Press next to continue.
       </p>
-      <img ng-show="section == 'stimuli' && part_id >= 0" ng-src="{{stimuli[stim_id].images[part_id]}}"
+      <img ng-show="section == 'stimuli' && part_id >= 0" ng-src="{{stimuli_set[stim_id].images[part_id]}}"
         class="stimulus">
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="display">
