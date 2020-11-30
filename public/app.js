@@ -164,14 +164,14 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/demo/demo-part2.gif"
       },
       {
-        text: `Your task here is to simply watch someone stacking these blocks, and with every block thay 
+        text: `Your task here is to simply watch someone stacking these blocks, and with every block they 
         move, you need to guess which word they are most likely trying to spell.`,
       },
       {
         text: `<b>How to guess?</b> <br>
                <br>
                You will be given 5 possible words. 
-               When a block is moved you need to give a score for every word based on how 
+               When a block is moved, you need to give a score for every word based on how 
                likely you think it is the word that is being spelled. 
                The scoring scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
@@ -194,7 +194,7 @@ experimentApp.controller('ExperimentController',
       {
         text: `Now watch the player move the first block. What do you think now? <br>
 
-        If you think that two words are equally likely and the rest and not likely 
+        If you think that two words are equally likely and the rest not likely 
         then rate the two words as <i>Maybe</i> and the rest as <i>Very Unlikely</i>.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
