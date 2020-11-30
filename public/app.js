@@ -140,7 +140,7 @@ experimentApp.controller('ExperimentController',
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
-    $scope.true_goal = 0;
+    $scope.true_goal = 0
     $scope.reward_score = 0;
     $scope.instruction_has_image = function() {
       return $scope.instructions[$scope.inst_id].image != null
@@ -154,7 +154,7 @@ experimentApp.controller('ExperimentController',
                Press next to continue.`,
       },
       {
-        text: `Your friend is stacking some blocks to spell an English word backwards. You are watching and trying to guess
+        text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
                what the word is before your friend finishes spelling. <br>
                Is the word <i>power</i>, <i>cower</i>, <i>crow</i>, <i>core</i>, or <i>pore</i>?`,
         image: "tutorial/demo/demo-part1.gif"
@@ -171,13 +171,13 @@ experimentApp.controller('ExperimentController',
         text: `<b>How to guess?</b> <br>
                <br>
                You will be given 5 possible words. 
-               When a block is moved, you need to give a score for every word based on how 
+               When a block is moved, you need to rate each word word based on how 
                likely you think it is the word that is being spelled. 
-               The scoring scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
+               The rating scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
       {
         text: `<b>Bonus</b> <br> <br>
-               A bonus reward payment will be added to your account based on how well you guess the right word in every step, 
+               A bonus reward payment will be added to your account based on how often you guess the right word, 
                so make your best guess at every step!`
       },
       {
@@ -194,13 +194,13 @@ experimentApp.controller('ExperimentController',
       {
         text: `Now watch the player move the first block. What do you think now? <br>
 
-        If you think that two words are equally likely and the rest not likely 
+        If you think that two words are equally likely and the rest are not likely 
         then rate the two words as <i>Maybe</i> and the rest as <i>Very Unlikely</i>.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
       },
       {
-        text: `Consider this new move and update your scores if need be. 
+        text: `Consider this new move and update your scores if your guesses change. 
         Do you notice that this move doesn't make sense? It is ok, the person 
         spelling the words might make sub-optimal moves sometimes. Just make your best guess here.`,
         image: "tutorial/tutorial/1.gif",
@@ -228,7 +228,7 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Yes, it was <i>power</i>!`,
+        text: `Yes, the word your friend was spelling was <i>power</i>!`,
         image: "tutorial/tutorial/12.png",
       },
       {
