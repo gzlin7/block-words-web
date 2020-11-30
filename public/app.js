@@ -471,14 +471,14 @@ experimentApp.controller('ExperimentController',
         "problem": 2,
         "length": 8,
         "images": [
-          "stimuli/2/2/0.png",
-          "stimuli/2/2/0.gif",
-          "stimuli/2/2/1.gif",
-          "stimuli/2/2/2.gif",
-          "stimuli/2/2/3.gif",
-          "stimuli/2/2/4.gif", 
-          "stimuli/2/2/5.gif",
-          "stimuli/2/2/6.gif"
+          "stimuli/2/4/0.png",
+          "stimuli/2/4/0.gif",
+          "stimuli/2/4/1.gif",
+          "stimuli/2/4/2.gif",
+          "stimuli/2/4/3.gif",
+          "stimuli/2/4/4.gif", 
+          "stimuli/2/4/5.gif",
+          "stimuli/2/4/6.gif"
         ]
       },
       {
