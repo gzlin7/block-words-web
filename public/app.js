@@ -232,7 +232,7 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/tutorial/12.png",
       },
       {
-        text: `Ready to start? Press next to continue!`
+        text: `You will guess words for 3 different games. Ready to start? Press next to continue!`
       }
     ];
     $scope.stimuli_set_length = 3;
