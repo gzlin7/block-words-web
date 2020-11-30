@@ -79,7 +79,7 @@ experimentApp.controller('ExperimentController',
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
         // set possible goals based on stimuli json
-        $scope.possible_goals = $scope.stimuli_set[$scope.stim_id].goal_space;
+        $scope.possible_goals = $scope.stimuli_set[$scope.stim_id-1].goal_space;
       } else if ($scope.part_id < $scope.stimuli_set[$scope.stim_id].length) {
         // Advance to next part
         $scope.ratings.push($scope.compute_ratings($scope.response));
@@ -136,7 +136,8 @@ experimentApp.controller('ExperimentController',
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
-      // alert("stimuli set = " + stim_idx);
+      $scope.possible_goals = $scope.stimuli[$scope.stim_id].goal_space;
+      console.log("stimuli set = " + stim_idx);
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
