@@ -157,13 +157,16 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
-               what the word is before your friend finishes spelling. <br>
-               Is the word <i>power</i>, <i>cower</i>, <i>crow</i>, <i>core</i>, or <i>pore</i>?`,
-        image: "tutorial/demo/demo-part1.gif"
+               what the word is before your friend finishes spelling.`,
+        image: "tutorial/demo/0.png"
+      },
+      {
+        text: `Is the word <i>power</i>, <i>cower</i>, <i>crow</i>, <i>core</i>, or <i>pore</i>?`,
+        image: "tutorial/demo/part1.gif"
       },
       {
         text: `The word is <i>core</i>!`,
-        image: "tutorial/demo/demo-part2.gif"
+        image: "tutorial/demo/part2.gif"
       },
       {
         text: `Your task here is to simply watch someone stacking these blocks, and with every block they 
