@@ -249,6 +249,7 @@
       let count = 0;
 
       function storeToDB(key, val) {
+        console.log("Storing " + key + " with " + JSON.stringify(val));
         resultsRef.child(key).set(val);
       }
 
