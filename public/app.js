@@ -32,6 +32,14 @@ experimentApp.controller('ExperimentController',
     //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
     // }
     $scope.ratings = [];
+    $scope.reload_gif = function() {
+      if ($scope.section == "stimuli") {
+        var id = document.getElementById("stimulus-img");
+      } else {
+        var id = document.getElementById("instruction-img")
+      }
+      id.src = id.src;
+    }
     $scope.advance = function() {
       if ($scope.section == "instructions") {
         $scope.advance_instructions()
