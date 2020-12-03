@@ -235,7 +235,7 @@ experimentApp.controller('ExperimentController',
       {
         text: `Consider this new move and update your scores if your guesses change. 
         Do you notice that this move doesn't make sense? It is ok, the person 
-        spelling the words might make sub-optimal moves sometimes. Just make your best guess here.`,
+        spelling the words might make mistakes sometimes. Keep that in mind throughout the games, and just make your best guess here.`,
         image: "tutorial/tutorial/1.gif",
         tutorial: true
       },
