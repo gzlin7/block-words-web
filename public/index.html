@@ -28,10 +28,6 @@
       padding-left: 20px;
     }
 
-    .img-placeholder{
-      height: calc((40vw - 20px) * 0.8);
-    }
-
     .captions {
       font-size: 12pt;
       text-align: left;
@@ -104,7 +100,7 @@
       </p>
       <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()" ng-src="{{instructions[inst_id].image}}"
         class="stimulus" id="instruction-img">
-      <div class="img-placeholder" ng-show="loaded == false && section == 'instructions' && instruction_has_image()"></div>
+      <img ng-show="!loaded && section == 'instructions' && instruction_has_image()" ng-src="blank.png" class="stimulus">
       <!-- Stimuli -->
       <p ng-show="section == 'stimuli' && part_id < 0" class="full-row">
         The true goal was
@@ -114,7 +110,7 @@
       </p>
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0" ng-src="{{stimuli_set[stim_id].images[part_id]}}"
         class="stimulus" id="stimulus-img">
-      <div class="img-placeholder" ng-show="loaded == false && section == 'stimuli' && part_id >= 0"></div>
+      <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
         You're all done! <br> Thank you for your time :) <br>
