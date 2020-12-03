@@ -111,7 +111,7 @@
       <p ng-show="section == 'instructions' && !instruction_has_image()" class="instructions"
         ng-bind-html="instructions[inst_id].text">
       </p>
-      <img ng-show="section == 'instructions' && instruction_has_image()" ng-src="{{instructions[inst_id].image}}"
+      <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()" ng-src="{{instructions[inst_id].image}}"
         class="stimulus" id="instruction-img">
       <!-- Stimuli -->
       <p ng-show="section == 'stimuli' && part_id < 0" class="display">
@@ -119,7 +119,7 @@
         <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>.
         <br> Press next to continue.
       </p>
-      <img ng-show="section == 'stimuli' && part_id >= 0" ng-src="{{stimuli_set[stim_id].images[part_id]}}"
+      <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0" ng-src="{{stimuli_set[stim_id].images[part_id]}}"
         class="stimulus" id="stimulus-img">
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="display">

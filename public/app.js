@@ -11,6 +11,22 @@ var start_time;
 //     return array
 // }
 
+experimentApp.directive('imageonload', function() {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs) {
+      element.bind('load', function () {
+        scope.$apply(function () {
+          scope.loaded = true;
+        });
+      });
+      // element.bind('error', function () {
+      //   console.log('image could not be loaded');
+      // });
+    }
+  };
+});
+
 experimentApp.controller('ExperimentController',
   function ExperimentController($scope) {
     $scope.section = "instructions";
@@ -41,6 +57,7 @@ experimentApp.controller('ExperimentController',
       id.src = id.src;
     }
     $scope.advance = function() {
+      $scope.loaded = false;
       if ($scope.section == "instructions") {
         $scope.advance_instructions()
       } else if ($scope.section == "stimuli") {
@@ -140,6 +157,7 @@ experimentApp.controller('ExperimentController',
     };
     $scope.user_id = Date.now();
     $scope.stimuli_set = [];
+    $scope.loaded = false;
     $scope.setStimuli = async function(){
       let count = await getCounter();
       let stim_idx = $scope.stimuli_sets[count % 7];
