@@ -93,7 +93,7 @@ experimentApp.controller('ExperimentController',
             $scope.tutorial_score = ($scope.tutorial_score/$scope.tutorial_length).toFixed(1);
             $scope.tutorial_text += `<br>Averaging all the points, your score for this round is: ` + $scope.tutorial_score + 
                                     ` points`;
-            $scope.instructions[$scope.inst_id+1]['text'] += `You scored ` + $scope.tutorial_score + ` points!<br><br>` + `<b>Your score breakdown:</b> <br>` + $scope.tutorial_text;
+            $scope.instructions[$scope.inst_id+1]['text'] += `You scored ` + $scope.tutorial_score + ` points!<br><br>` + `<b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
             // console.log($scope.tutorial_text)
             $scope.tutorial_length = 0
         }
@@ -180,6 +180,8 @@ experimentApp.controller('ExperimentController',
       }
       console.log("stimuli set = " + stim_idx);
       incrementCounter();
+      // unhide question sliders- workaround for slider initial flashing
+      document.getElementById("question").classList.remove("hidden");    
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
@@ -212,8 +214,8 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/demo/part2.gif"
       },
       {
-        text: `Your task here is to simply watch someone stacking these blocks, and with every block they 
-        move, you need to guess which word they are most likely trying to spell.`,
+        text: `Your task is to watch someone stacking these blocks, and with every block they 
+        move, guess which word they are trying to spell.`,
       },
       {
         text: `<b>How to guess?</b> <br>
@@ -224,15 +226,13 @@ experimentApp.controller('ExperimentController',
                The rating scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
         {
-        text: `<b>Scoring System</b> <br> <br>
-               As you play this game, you will be scoring points based on how close your guess is to the actual word. 
-               The scoring system works as follows:<br>
-               1. In every step we calculate the percentage of rating you gave to the correct word. <br>
-               2. For each step you earn points based on this percentage. <br>
-               3. Your final score in each round is the average of the points you earned in each step. 
+        text: `<b>Bonus Payment</b> <br> <br>
+               As you play this game, you can earn bonus payment based on a score of how close your guess is to the actual word.
+               Scoring works as follows:<br>
+               1. In every step, you earn points based on how likely you rated the correct word compared to the other words.<br>
+               2. Your final score is the average of the points you earned in each step.<br> 
                <br>
-               <br>
-               A bonus payment will be added to your account based on your score in each round!`
+               The more correct your guesses are, the more bonus pay you will receive, so please try to make your best guesses!`
       },
       {
         text: `Let's do a practice run, just so you're familiarized.`,

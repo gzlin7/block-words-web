@@ -33,6 +33,10 @@
       text-align: left;
     }
 
+    .hidden {
+      display: none;
+    }
+    
     .stimulus {
       float: right;
       width: 80%;
@@ -138,7 +142,8 @@
       ng-bind-html="instructions[inst_id].text">
     </p>
     <!-- Questions -->
-    <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()">
+    <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()"
+      class="hidden" id="question">      
       <p>For each word below, how likely is the player trying to spell that word?</p>
       <b>{{possible_goals[0]}}</b>
       <br>
