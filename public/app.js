@@ -33,7 +33,9 @@ experimentApp.controller('ExperimentController',
     $scope.inst_id = 0;
     $scope.stim_id = 0;
     $scope.part_id = -1;
-    $scope.tutorial_step = 0;
+    $scope.tutorial_step = 1;
+    $scope.tutorial_length = 7;
+    $scope.tutorial_text = ``;
     $scope.response = {"relprob": [50, 50, 50, 50, 50]};
     $scope.csv_header = [
       "timestep",
@@ -83,7 +85,17 @@ experimentApp.controller('ExperimentController',
       } else {
         if ($scope.instructions[$scope.inst_id].tutorial) {
           $scope.ratings.push($scope.compute_ratings($scope.response));
+          $scope.tutorial_text += `Step ` + $scope.tutorial_step + `: you gave a ` + $scope.points * 10 + 
+                                  `% rating to the correct word and earned ` +  $scope.points + ` points <br>`;
           $scope.tutorial_step = $scope.tutorial_step + 1;
+        }
+        if ($scope.tutorial_step == $scope.tutorial_length+1) {
+            $scope.tutorial_score = ($scope.tutorial_score/$scope.tutorial_length).toFixed(1);
+            $scope.tutorial_text += `<br>Averaging all the points, your score for this round is: ` + $scope.tutorial_score + 
+                                    ` points`;
+            $scope.instructions[$scope.inst_id+1]['text'] += `You scored ` + $scope.tutorial_score + ` points!<br><br>` + `<b>Your score breakdown:</b> <br>` + $scope.tutorial_text;
+            // console.log($scope.tutorial_text)
+            $scope.tutorial_length = 0
         }
         $scope.inst_id = $scope.inst_id + 1;
       }
@@ -127,6 +139,8 @@ experimentApp.controller('ExperimentController',
       // Increase reward score
       $scope.reward_score += probs[$scope.true_goal];
       if ($scope.section == "instructions"){
+        $scope.points = (probs[$scope.true_goal]*10).toFixed(1);
+        $scope.tutorial_score += probs[$scope.true_goal]*10;
         rating = {
         "timestep": $scope.tutorial_step,
         "time_spent": 0,
@@ -172,6 +186,7 @@ experimentApp.controller('ExperimentController',
     $scope.true_goal = 0
     $scope.reward_score = 0;
     $scope.bonus_points = 0;
+    $scope.tutorial_score = 0;
     $scope.instruction_has_image = function() {
       return $scope.instructions[$scope.inst_id].image != null
     };
@@ -204,14 +219,20 @@ experimentApp.controller('ExperimentController',
         text: `<b>How to guess?</b> <br>
                <br>
                You will be given 5 possible words. 
-               When a block is moved, you need to rate each word word based on how 
+               When a block is moved, you need to rate each word  based on how 
                likely you think it is the word that is being spelled. 
                The rating scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
-      {
-        text: `<b>Bonus</b> <br> <br>
-               A bonus reward payment will be added to your account based on how often you guess the right word, 
-               so make your best guess at every step!`
+        {
+        text: `<b>Scoring System</b> <br> <br>
+               As you play this game, you will be scoring points based on how close your guess is to the actual word. 
+               The scoring system works as follows:<br>
+               1. In every step we calculate the percentage of rating you gave to the correct word. <br>
+               2. For each step you earn points based on this percentage. <br>
+               3. Your final score in each round is the average of the points you earned in each step. 
+               <br>
+               <br>
+               A bonus payment will be added to your account based on your score in each round!`
       },
       {
         text: `Let's do a practice run, just so you're familiarized.`,
@@ -261,11 +282,11 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Yes, the word your friend was spelling was <i>power</i>!`,
+        text: `Yes, the word your friend was spelling was <i>power</i>! <br><br>`,
         image: "tutorial/tutorial/12.png",
       },
       {
-        text: `You will guess words for 3 different games. Ready to start? Press next to continue!`
+        text: `You will guess words for 3 different rounds. Ready to start? Press next to continue!`
       }
     ];
     $scope.stimuli_set_length = 3;
