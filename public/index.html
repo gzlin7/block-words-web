@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
     body {
       background-color: #FFFFFF;
@@ -10,27 +11,25 @@
     }
 
     .main {
+      width: 80%;
       margin: auto;
-      width: 360px;
+      padding-top: 50px;
       font-size: 11pt;
     }
 
-    .display {
-      width: 100%;
-      height: 350px;
-      text-align: center;
+    .full-row {
+      width: 200%;
+      padding: 10vw 10vw 10vw 0vw;
       font-size: 16pt;
-      padding: 0pt;
+      text-align: center;
     }
 
-    .display p {
-      padding: 180px 0;
+    .w3-col {
+      padding-left: 20px;
     }
 
-    .instructions {
-      padding: 180px 0;
-      font-size: 12pt;
-      text-align: left;
+    .img-placeholder{
+      height: 380px;
     }
 
     .captions {
@@ -39,12 +38,12 @@
     }
 
     .stimulus {
-      width: 100%;
+      float: right;
+      width: 80%;
     }
 
     .slider {
       width: 100%;
-      /* Full-width */
     }
 
     .sliderticks {
@@ -54,17 +53,8 @@
       font-size: 8pt;
     }
 
-    .radio {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 4px;
-    }
-
     .controls {
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
+      float: right;
       padding: 10px;
     }
 
@@ -105,29 +95,32 @@
 </head>
 
 <body ng-controller="ExperimentController" ng-init="setStimuli()">
-  <div class="main">
-    <div class="display">
+  <div class="main w3-row">
+   <div class="w3-col m6">
+    <!-- <div> -->
       <!-- Instructions -->
-      <p ng-show="section == 'instructions' && !instruction_has_image()" class="instructions"
+      <p ng-show="section == 'instructions' && !instruction_has_image()" class="instructions1 full-row"
         ng-bind-html="instructions[inst_id].text">
       </p>
       <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()" ng-src="{{instructions[inst_id].image}}"
         class="stimulus" id="instruction-img">
+      <div class="img-placeholder" ng-show="loaded == false && section == 'instructions' && instruction_has_image()"></div>
       <!-- Stimuli -->
-      <p ng-show="section == 'stimuli' && part_id < 0" class="display">
+      <p ng-show="section == 'stimuli' && part_id < 0" class="full-row">
         The true goal was
         <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>. <br>
-        You earned {{bonus_points}} bonus points this round.
+        You earned {{bonus_points}} bonus points this round. <br>
         Press next to continue.
       </p>
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0" ng-src="{{stimuli_set[stim_id].images[part_id]}}"
         class="stimulus" id="stimulus-img">
+      <div class="img-placeholder" ng-show="loaded == false && section == 'stimuli' && part_id >= 0"></div>
       <!-- Endscreen -->
-      <p ng-show="section == 'endscreen'" class="display">
+      <p ng-show="section == 'endscreen'" class="full-row">
         You're all done! <br> Thank you for your time :) <br>
         Your survey code is {{user_id}}
       </p>
-    </div>
+    <!-- </div> -->
     <!-- Controls -->
     <div class="controls">
       <button class="button" ng-click="reload_gif()" 
@@ -142,6 +135,8 @@
         Next >>
       </button>
     </div>
+   </div>
+   <div class="w3-col m5">
     <!-- Captioned Instructions -->
     <p ng-show="section == 'instructions' && instruction_has_image()" class="captions"
       ng-bind-html="instructions[inst_id].text">
@@ -233,6 +228,7 @@
         <option value="90" label=""></option>
         <option value="100" label="{{rating_labels[2]}}"></option>
       </datalist>
+     </div>
 
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
