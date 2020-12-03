@@ -115,6 +115,7 @@ experimentApp.controller('ExperimentController',
           // Advance to next problem.
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
+          $scope.bonus_points = (($scope.reward_score * 10)/$scope.stimuli_set[$scope.stim_id-1].length).toFixed(1);
         }
       }
       //$scope.response = {"relprob": [50, 50, 50, 50 , 50]};
@@ -170,6 +171,7 @@ experimentApp.controller('ExperimentController',
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
     $scope.true_goal = 0
     $scope.reward_score = 0;
+    $scope.bonus_points = 0;
     $scope.instruction_has_image = function() {
       return $scope.instructions[$scope.inst_id].image != null
     };
