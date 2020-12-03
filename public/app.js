@@ -94,7 +94,6 @@ experimentApp.controller('ExperimentController',
         // Advance section
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
         $scope.reward_score = 0;
-        incrementCounter();
         $scope.section = "endscreen" 
       } else if ($scope.part_id < 0) {
         // Store result to DB
@@ -166,6 +165,7 @@ experimentApp.controller('ExperimentController',
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
       console.log("stimuli set = " + stim_idx);
+      incrementCounter();
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
