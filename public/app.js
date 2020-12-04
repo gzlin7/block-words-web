@@ -86,14 +86,14 @@ experimentApp.controller('ExperimentController',
         if ($scope.instructions[$scope.inst_id].tutorial) {
           $scope.ratings.push($scope.compute_ratings($scope.response));
           $scope.tutorial_text += `Step ` + $scope.tutorial_step + `: you gave a ` + $scope.points * 10 + 
-                                  `% rating to the correct word and earned ` +  $scope.points + ` points <br>`;
+                                  `% rating to <b>power</b>: ` +  $scope.points + ` points <br>`;
           $scope.tutorial_step = $scope.tutorial_step + 1;
         }
         if ($scope.tutorial_step == $scope.tutorial_length+1) {
             $scope.tutorial_score = ($scope.tutorial_score/$scope.tutorial_length).toFixed(1);
-            $scope.tutorial_text += `<br>Averaging all the points, your score for this round is: ` + $scope.tutorial_score + 
+            $scope.tutorial_text += `<br>Averaging all the points, your score for this game is: ` + $scope.tutorial_score + 
                                     ` points`;
-            $scope.instructions[$scope.inst_id+1]['text'] += `You scored ` + $scope.tutorial_score + ` points!<br><br>` + `<b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
+            $scope.instructions[$scope.inst_id+1]['text'] += `<br><br> <b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
             // console.log($scope.tutorial_text)
             $scope.tutorial_length = 0
         }
@@ -206,11 +206,11 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/demo/0.png"
       },
       {
-        text: `Is the word <i>power</i>, <i>cower</i>, <i>crow</i>, <i>core</i>, or <i>pore</i>?`,
+        text: `Is the word <b>power</b>, <b>cower</b>, <b>crow</b>, <b>core</b>, or <b>pore</b>?`,
         image: "tutorial/demo/part1.gif"
       },
       {
-        text: `The word is <i>core</i>!`,
+        text: `The word is <b>core</b>!`,
         image: "tutorial/demo/part2.gif"
       },
       {
@@ -219,14 +219,13 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `<b>How to guess?</b> <br>
-               <br>
                You will be given 5 possible words. 
                When a block is moved, you need to rate each word  based on how 
                likely you think it is the word that is being spelled. 
                The rating scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
         {
-        text: `<b>Bonus Payment</b> <br> <br>
+        text: `<b>Bonus Payment</b> <br>
                As you play this game, you can earn bonus payment based on a score of how close your guess is to the actual word.
                Scoring works as follows:<br>
                1. In every step, you earn points based on how likely you rated the correct word compared to the other words.<br>
@@ -248,8 +247,8 @@ experimentApp.controller('ExperimentController',
       {
         text: `Now watch the player move the first block. What do you think now? <br>
 
-        If you think that two words are equally likely and the rest are not likely 
-        then rate the two words as <i>Maybe</i> and the rest as <i>Very Unlikely</i>.`,
+        If you think that two words are equally likely and the rest are not likely, then give the two words the same higher rating, 
+        and the rest of the words a lower rating.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
       },
@@ -282,7 +281,7 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Yes, the word your friend was spelling was <i>power</i>! <br><br>`,
+        text: `Yes, the word your friend was spelling was <b>power</b>!`,
         image: "tutorial/tutorial/12.png",
       },
       {
