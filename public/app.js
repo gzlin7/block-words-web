@@ -226,7 +226,7 @@ experimentApp.controller('ExperimentController',
       },
         {
         text: `<b>Bonus Payment</b> <br>
-               As you play this game, you can earn bonus payment based on a score of how close your guess is to the actual word.
+               As you play this game, you can earn bonus payment based on a score of how close your guess is to the actual word.<br>
                Scoring works as follows:<br>
                1. In every step, you earn points based on how likely you rated the correct word compared to the other words.<br>
                2. Your final score is the average of the points you earned in each step.<br> 
