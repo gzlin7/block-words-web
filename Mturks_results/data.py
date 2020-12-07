@@ -18,6 +18,30 @@ workers_dict = dict.fromkeys(id_list, 0)
 exp_dict = dict()
 possibly_reject = []
 
+rejected =[1607115047337,
+1607115070015,
+1607115116358,
+1607115480159,
+1607115552593,
+1607116558958,
+1607117474340,
+1607117492816,
+1607125963924,
+1607116912260,
+1607115323722,
+1607120548427,
+1607126650608,
+1607117907163,
+1607118854103,
+1607115018235,
+1607117830583,
+1607117440250,
+1607115873532,
+1607121165107,
+1607117172687,
+1607116510666
+]
+
 
 
 
@@ -70,7 +94,10 @@ for key, entry in results.items():
             entry[-1]['goal_probs_2'], entry[-1]['goal_probs_3'], 
             entry[-1]['goal_probs_4']] == [0.2,0.2,0.2,0.2,0.2]: 
             workers_dict[current_id]['default'] = True
-        # build prediction
+        # build prediction if user not rejected
+        if int(current_id) in rejected:
+            print(current_id)
+            continue
         predictions_dict[exp] = predictions_dict.get(exp, dict())
         for timestep in entry:
             time = timestep['timestep']

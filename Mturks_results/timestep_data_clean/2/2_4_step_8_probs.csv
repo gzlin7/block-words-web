@@ -1,0 +1,5 @@
+goal_probs_0,goal_probs_1,goal_probs_2,goal_probs_3,goal_probs_4,true_goal_probs,time_spent,reward_score,user_id
+0,0,0,0,1,1,5.73,3.78,1607115854486
+0,0,0,0,1,1,4.12,4.4,1607116360089
+0,0,0,0,1,1,4.76,6.33,1607118666465
+0,0,0,0,1,1,5.61,2.6,1607129901627
