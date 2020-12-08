@@ -65,6 +65,7 @@ for key, entry in results.items():
 # primary key is problem number, secondary key is timestep, values are list of dictionaries with keys column_order and additional user_id column
 predictions_dict = dict()
 column_order = ['goal_probs_0', 'goal_probs_1','goal_probs_2','goal_probs_3','goal_probs_4','true_goal_probs','time_spent','reward_score']
+averaged_columns = ['goal_probs_0', 'goal_probs_1','goal_probs_2','goal_probs_3','goal_probs_4','true_goal_probs','time_spent']
 
 workers_dict = dict.fromkeys(id_list, 0)
 exp_dict = dict()
@@ -110,8 +111,23 @@ for key, entry in results.items():
             step['user_id'] = current_id
             predictions_dict[exp][time] = predictions_dict[exp].get(time, [])
             predictions_dict[exp][time].append(step)
+# build averaged dictionary
+avg_dict = dict()
+for exp in predictions_dict:
+    avg_dict[exp] = []
+    for time in predictions_dict[exp]:
+        timestep_average = dict()
+        for result in predictions_dict[exp][time]:
+            for column in averaged_columns:
+                timestep_average[column] = timestep_average.get(column, 0)
+                timestep_average[column] += result[column]
+            timestep_average["timestep"] = time
+        for column in averaged_columns:
+            timestep_average[column] =  round(timestep_average[column]/len(predictions_dict[exp][time]), 4)
+        avg_dict[exp].append(timestep_average)
 
-#flagging workers 
+
+#flagging workers
 flagged_ids = []
 for key, worker in workers_dict.items(): 
     if worker['min_time'] < 2.0 or worker['tutorial_final_prob'] < 0.7 or worker['default']: 
@@ -146,21 +162,36 @@ with open('dict_by_id.json', 'w') as fp:
     json.dump(ids_dict, fp)
 
 
-# writing timestep data
-column_order.append('user_id')
-for problem in predictions_dict:
-    problem_data = predictions_dict[problem]
-    for step in problem_data:
-        step_data = problem_data[step]
-        csv_file = str(problem)+"_step_"+str(step)+'_probs.csv'
-        try:
-            with open(csv_file, 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=column_order)
-                writer.writeheader()
-                for data in step_data:
-                    writer.writerow(data)
-        except IOError:
-            print("I/O error")
+# # writing timestep data
+# column_order.append('user_id')
+# for problem in predictions_dict:
+#     problem_data = predictions_dict[problem]
+#     for step in problem_data:
+#         step_data = problem_data[step]
+#         csv_file = str(problem)+"_step_"+str(step)+'_probs.csv'
+#         try:
+#             with open(csv_file, 'w') as csvfile:
+#                 writer = csv.DictWriter(csvfile, fieldnames=column_order)
+#                 writer.writeheader()
+#                 for data in step_data:
+#                     writer.writerow(data)
+#         except IOError:
+#             print("I/O error")
+
+# writing averaged timestep data
+averaged_columns.append('timestep')
+for problem in avg_dict:
+    csv_file = str(problem)+"_average_probs.csv"
+    problem_data = avg_dict[problem]
+    try:
+        with open(csv_file, 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=averaged_columns)
+            writer.writeheader()
+            for data in problem_data:
+                writer.writerow(data)
+    except IOError:
+        print("I/O error")
+
 
 
 exp_df.to_csv(path_or_buf='experiments_data.csv')
