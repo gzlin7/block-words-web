@@ -36,7 +36,7 @@
     .hidden {
       display: none;
     }
-    
+
     .stimulus {
       float: right;
       width: 80%;
@@ -48,6 +48,19 @@
 
     .check-all {
       margin-left: 35px;
+      background-color: #0f6bd4;
+      border-radius: 6px;
+      border: 1px solid #0f6bd4;
+      display: inline-block;
+      cursor: pointer;
+      color: white;
+      font-family: "Lato";
+      font-size: 14px;
+      padding: 4px 10px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px black;
+
+      margin-right: 10px;
     }
 
     .controls {
@@ -56,9 +69,9 @@
     }
 
     .button {
-      background-color: #44c767;
+      background-color: #02a342;
       border-radius: 6px;
-      border: 1px solid #18ab29;
+      border: 1px solid #02a342;
       display: inline-block;
       cursor: pointer;
       color: #ffffff;
@@ -66,7 +79,7 @@
       font-size: 14px;
       padding: 4px 10px;
       text-decoration: none;
-      text-shadow: 0px 1px 0px #2f6627;
+      text-shadow: 0px 1px 0px black;
       margin-right: 10px;
     }
 
@@ -93,15 +106,16 @@
 
 <body ng-controller="ExperimentController" ng-init="setStimuli()">
   <div class="main w3-row">
-   <div class="w3-col m6">
-    <!-- <div> -->
+    <div class="w3-col m6">
+      <!-- <div> -->
       <!-- Instructions -->
       <p ng-show="section == 'instructions' && !instruction_has_image()" class="instructions1 full-row"
         ng-bind-html="instructions[inst_id].text">
       </p>
-      <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()" ng-src="{{instructions[inst_id].image}}"
-        class="stimulus" id="instruction-img">
-      <img ng-show="!loaded && section == 'instructions' && instruction_has_image()" ng-src="blank.png" class="stimulus">
+      <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()"
+        ng-src="{{instructions[inst_id].image}}" class="stimulus" id="instruction-img">
+      <img ng-show="!loaded && section == 'instructions' && instruction_has_image()" ng-src="blank.png"
+        class="stimulus">
       <!-- Stimuli -->
       <p ng-show="section == 'stimuli' && part_id < 0" class="full-row">
         The true goal was
@@ -109,50 +123,57 @@
         You earned {{bonus_points}} bonus points this round. <br>
         Press next to continue.
       </p>
-      <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0" ng-src="{{stimuli_set[stim_id].images[part_id]}}"
-        class="stimulus" id="stimulus-img">
+      <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"
+        ng-src="{{stimuli_set[stim_id].images[part_id]}}" class="stimulus" id="stimulus-img">
       <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
         You're all done! <br> Thank you for your time :) <br>
         Your survey code is {{user_id}}
       </p>
-    <!-- </div> -->
-    <!-- Controls -->
-    <div class="controls">
-      <button class="button" ng-click="reload_gif()" 
-        ng-show="section == 'stimuli' && part_id >= 0 || section == 'instructions' && instruction_has_image()">
-        Replay Move </button>
-      <button class="button" ng-click="advance()"
-        ng-show="section == 'stimuli' && part_id < 0">
-        Next >>
-      </button>
-      <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0"
-        ng-disabled="section == 'endscreen'">
-        Next >>
-      </button>
+      <!-- </div> -->
+      <!-- Controls -->
+      <div class="controls">
+        <button class="button" ng-click="reload_gif()"
+          ng-show="section == 'stimuli' && part_id >= 0 || section == 'instructions' && instruction_has_image()">
+          Replay Move </button>
+        <button class="button" ng-click="advance()" ng-show="section == 'stimuli' && part_id < 0">
+          Next >>
+        </button>
+        <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' || 
+          valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial())">
+          Next >>
+        </button>
+      </div>
     </div>
-   </div>
-   <div class="w3-col m5">
-    <!-- Captioned Instructions -->
-    <p ng-show="section == 'instructions' && instruction_has_image()" class="captions"
-      ng-bind-html="instructions[inst_id].text">
-    </p>
-    <!-- Questions -->
-    <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()"
-      class="hidden" id="question">      
-      <p>For each word below, how likely is the player trying to spell that word?</p>
+    <div class="w3-col m5">
+      <!-- Captioned Instructions -->
+      <p ng-show="section == 'instructions' && instruction_has_image()" class="captions"
+        ng-bind-html="instructions[inst_id].text">
+      </p>
+      <!-- Questions -->
+      <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()" class="hidden" id="question">
+        <p><b>Which of the words below is the player trying to spell? </b> </p>
+        <p>You must select <b>at least one word</b> to
+          continue. You may select <b>more than one word</b> if there are several likely choices. If
+          all words seem equally likely, select the 'All Equally Likely' option.
+        </p>
 
-      <ul class="no-bullets">
-        <li><input type="checkbox" ng-model="response.checked[0]"><b> {{possible_goals[0]}}</b></li>
-        <li><input type="checkbox" ng-model="response.checked[1]"><b> {{possible_goals[1]}}</b></li>
-        <li><input type="checkbox" ng-model="response.checked[2]"><b> {{possible_goals[2]}}</b></li>
-        <li><input type="checkbox" ng-model="response.checked[3]"><b> {{possible_goals[3]}}</b></li>
-        <li><input type="checkbox" ng-model="response.checked[4]"><b> {{possible_goals[4]}}</b></li>
-      </ul>
-      <button class="check-all" ng-click="check_all()">All Goals Equally Likely</button>
+        <ul class="no-bullets">
+          <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"><b>
+              {{possible_goals[0]}}</b></li>
+          <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"><b>
+              {{possible_goals[1]}}</b></li>
+          <li><input type="checkbox" ng-model="response.checked[2]" ng-change="validate_goal()"><b>
+              {{possible_goals[2]}}</b></li>
+          <li><input type="checkbox" ng-model="response.checked[3]" ng-change="validate_goal()"><b>
+              {{possible_goals[3]}}</b></li>
+          <li><input type="checkbox" ng-model="response.checked[4]" ng-change="validate_goal()"><b>
+              {{possible_goals[4]}}</b></li>
+        </ul>
+        <button class="check-all" ng-click="check_all()">All Equally Likely</button>
 
-     </div>
+      </div>
 
     </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -182,14 +203,14 @@
         // counterRef.child(counterKey).set(count+1);
       }
 
-      async function getCounter(){
-        return counterRef.child(counterKey).once("value", function(snapshot) {
+      async function getCounter() {
+        return counterRef.child(counterKey).once("value", function (snapshot) {
           count = snapshot.val();
-        }).then(()=>{return count;});
+        }).then(() => { return count; });
       }
 
     </script>
-    
+
 </body>
 
 </html>

@@ -11,7 +11,7 @@ var start_time;
 //     return array
 // }
 
-experimentApp.directive('imageonload', function() {
+experimentApp.directive('imageonload', function () {
   return {
     restrict: 'A',
     link: function (scope, element, attrs) {
@@ -36,7 +36,8 @@ experimentApp.controller('ExperimentController',
     $scope.tutorial_step = 1;
     $scope.tutorial_length = 7;
     $scope.tutorial_text = ``;
-    $scope.response = {"checked": [false, false, false, false, false]};
+    $scope.response = { "checked": [false, false, false, false, false] };
+    $scope.valid_goal = false;
     $scope.csv_header = [
       "timestep",
       "goal_probs_0",
@@ -50,7 +51,7 @@ experimentApp.controller('ExperimentController',
     //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
     // }
     $scope.ratings = [];
-    $scope.reload_gif = function() {
+    $scope.reload_gif = function () {
       if ($scope.section == "stimuli") {
         var id = document.getElementById("stimulus-img");
       } else {
@@ -58,10 +59,14 @@ experimentApp.controller('ExperimentController',
       }
       id.src = id.src;
     }
-    $scope.check_all = function() {
-      $scope.response = {"checked": [true, true, true, true, true]};
+    $scope.validate_goal = function () {
+      $scope.valid_goal = $scope.response.checked.filter(check => check == true).length > 0;
     }
-    $scope.advance = function() {
+    $scope.check_all = function () {
+      $scope.response = { "checked": [true, true, true, true, true] };
+      $scope.valid_goal = true;
+    }
+    $scope.advance = function () {
       $scope.loaded = false;
       if ($scope.section == "instructions") {
         $scope.advance_instructions()
@@ -71,7 +76,7 @@ experimentApp.controller('ExperimentController',
         // Do nothing
       }
     };
-    $scope.advance_instructions = function() {
+    $scope.advance_instructions = function () {
       if ($scope.inst_id == $scope.instructions.length - 1) {
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
         $scope.reward_score = 0;
@@ -87,31 +92,32 @@ experimentApp.controller('ExperimentController',
       } else {
         if ($scope.instructions[$scope.inst_id].tutorial) {
           $scope.ratings.push($scope.compute_ratings($scope.response));
-          $scope.tutorial_text += `Step ` + $scope.tutorial_step + `: you gave a ` + $scope.points * 10 + 
-                                  `% rating to <b>power</b>: ` +  $scope.points + ` points <br>`;
+          $scope.tutorial_text += `Step ` + $scope.tutorial_step + `: you gave a ` + $scope.points * 10 +
+            `% rating to <b>power</b>: ` + $scope.points + ` points <br>`;
           $scope.tutorial_step = $scope.tutorial_step + 1;
         }
-        if ($scope.tutorial_step == $scope.tutorial_length+1) {
-            $scope.tutorial_score = ($scope.tutorial_score/$scope.tutorial_length).toFixed(1);
-            $scope.tutorial_text += `<br>Averaging all the points, your score for this game is: ` + $scope.tutorial_score + 
-                                    ` points`;
-            $scope.instructions[$scope.inst_id+1]['text'] += `<br><br> <b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
-            // console.log($scope.tutorial_text)
-            $scope.tutorial_length = 0
+        if ($scope.tutorial_step == $scope.tutorial_length + 1) {
+          $scope.tutorial_score = ($scope.tutorial_score / $scope.tutorial_length).toFixed(1);
+          $scope.tutorial_text += `<br>Averaging all the points, your score for this game is: ` + $scope.tutorial_score +
+            ` points`;
+          $scope.instructions[$scope.inst_id + 1]['text'] += `<br><br> <b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
+          // console.log($scope.tutorial_text)
+          $scope.tutorial_length = 0
         }
         $scope.inst_id = $scope.inst_id + 1;
       }
-      $scope.response = {"checked": [false, false, false, false, false]};
+      $scope.response = { "checked": [false, false, false, false, false] };
+      $scope.valid_goal = false;
     };
-    $scope.advance_stimuli = function() {
+    $scope.advance_stimuli = function () {
       if ($scope.stim_id == $scope.stimuli_set.length) {
         // Advance section
-        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
+        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
         $scope.reward_score = 0;
-        $scope.section = "endscreen" 
+        $scope.section = "endscreen"
       } else if ($scope.part_id < 0) {
         // Store result to DB
-        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
+        storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
         $scope.reward_score = 0;
         // Advance to first part
         $scope.part_id = $scope.part_id + 1;
@@ -127,58 +133,59 @@ experimentApp.controller('ExperimentController',
           // Advance to next problem.
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
-          $scope.bonus_points = (($scope.reward_score * 10)/$scope.stimuli_set[$scope.stim_id-1].length).toFixed(1);
+          $scope.bonus_points = (($scope.reward_score * 10) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
         }
       }
-      $scope.response = {"checked": [false, false, false, false, false]};
+      $scope.response = { "checked": [false, false, false, false, false] };
+      $scope.valid_goal = false;
     };
-    $scope.compute_ratings = function(resp) {
+    $scope.compute_ratings = function (resp) {
       // Compute probs from checkboxes
-      let numChecked = resp.checked.filter( c => c == true).length;
+      let numChecked = resp.checked.filter(check => check == true).length;
       probs = [0, 0, 0, 0, 0];
-      resp.checked.forEach( (check, index) => {
-        if (check){
+      resp.checked.forEach((check, index) => {
+        if (check) {
           probs[index] = (1 / numChecked).toFixed(2);
         }
       })
       console.log("probs=" + probs);
       // Increase reward score
       $scope.reward_score += probs[$scope.true_goal];
-      if ($scope.section == "instructions"){
-        $scope.points = (probs[$scope.true_goal]*10).toFixed(1);
-        $scope.tutorial_score += probs[$scope.true_goal]*10;
+      if ($scope.section == "instructions") {
+        $scope.points = (probs[$scope.true_goal] * 10).toFixed(1);
+        $scope.tutorial_score += probs[$scope.true_goal] * 10;
         rating = {
-        "timestep": $scope.tutorial_step,
-        "time_spent": 0,
-        "goal_probs_0": probs[0],
-        "goal_probs_1": probs[1],
-        "goal_probs_2": probs[2],
-        "goal_probs_3": probs[3],
-        "goal_probs_4": probs[4],
-        "true_goal_probs" : probs[$scope.true_goal],
-        "reward_score" : $scope.reward_score 
-      }
+          "timestep": $scope.tutorial_step,
+          "time_spent": 0,
+          "goal_probs_0": probs[0],
+          "goal_probs_1": probs[1],
+          "goal_probs_2": probs[2],
+          "goal_probs_3": probs[3],
+          "goal_probs_4": probs[4],
+          "true_goal_probs": probs[$scope.true_goal],
+          "reward_score": $scope.reward_score
+        }
       }
       else {
-      rating = {
-        "timestep": $scope.stimuli_set[$scope.stim_id].times[$scope.part_id],
-        "time_spent": ((new Date()).getTime()-start_time)/1000.,
-        "goal_probs_0": probs[0],
-        "goal_probs_1": probs[1],
-        "goal_probs_2": probs[2],
-        "goal_probs_3": probs[3],
-        "goal_probs_4": probs[4],
-        "true_goal_probs" : probs[$scope.true_goal],
-        "reward_score" : $scope.reward_score 
-      }
-      start_time = (new Date()).getTime();
+        rating = {
+          "timestep": $scope.stimuli_set[$scope.stim_id].times[$scope.part_id],
+          "time_spent": ((new Date()).getTime() - start_time) / 1000.,
+          "goal_probs_0": probs[0],
+          "goal_probs_1": probs[1],
+          "goal_probs_2": probs[2],
+          "goal_probs_3": probs[3],
+          "goal_probs_4": probs[4],
+          "true_goal_probs": probs[$scope.true_goal],
+          "reward_score": $scope.reward_score
+        }
+        start_time = (new Date()).getTime();
       }
       return rating;
     };
     $scope.user_id = Date.now();
     $scope.stimuli_set = [];
     $scope.loaded = false;
-    $scope.setStimuli = async function(){
+    $scope.setStimuli = async function () {
       let count = await getCounter();
       let stim_idx = $scope.stimuli_sets[count % 7];
       for (i = 0; i < stim_idx.length; i++) {
@@ -187,7 +194,7 @@ experimentApp.controller('ExperimentController',
       console.log("stimuli set = " + stim_idx);
       incrementCounter();
       // unhide question sliders- workaround for slider initial flashing
-      document.getElementById("question").classList.remove("hidden");    
+      document.getElementById("question").classList.remove("hidden");
     };
     $scope.rating_labels = ["Very Unlikely", "Maybe", "Very Likely"];
     $scope.possible_goals = ["power", "cower", "crow", "core", "pore"];
@@ -195,10 +202,10 @@ experimentApp.controller('ExperimentController',
     $scope.reward_score = 0;
     $scope.bonus_points = 0;
     $scope.tutorial_score = 0;
-    $scope.instruction_has_image = function() {
+    $scope.instruction_has_image = function () {
       return $scope.instructions[$scope.inst_id].image != null
     };
-    $scope.is_tutorial = function() {
+    $scope.is_tutorial = function () {
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
     $scope.instructions = [
@@ -230,7 +237,7 @@ experimentApp.controller('ExperimentController',
                likely you think it is the word that is being spelled. 
                The rating scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
       },
-        {
+      {
         text: `<b>Bonus Payment</b> <br>
                As you play this game, you can earn bonus payment based on a score of how close your guess is to the actual word.<br>
                Scoring works as follows:<br>
@@ -296,18 +303,18 @@ experimentApp.controller('ExperimentController',
     ];
     $scope.stimuli_set_length = 3;
     $scope.stimuli_sets = [
-      [0,6,18],
-      [3,10,12],
-      [2,16,9],
-      [19,5,14],
-      [4,8,15],
-      [7,17,13],
-      [11,1,15]
+      [0, 6, 18],
+      [3, 10, 12],
+      [2, 16, 9],
+      [19, 5, 14],
+      [4, 8, 15],
+      [7, 17, 13],
+      [11, 1, 15]
     ]
     $scope.stimuli = [
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6],
+        "times": [1, 2, 3, 4, 5, 6],
         "name": "problem_0_1",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -325,7 +332,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4],
+        "times": [1, 2, 3, 4],
         "name": "problem_0_2",
         "optimal": true,
         "goal_space": ["wad", "reap", "war", "wade", "draw"],
@@ -341,7 +348,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5],
+        "times": [1, 2, 3, 4, 5],
         "name": "problem_0_3",
         "optimal": true,
         "goal_space": ["wad", "reap", "war", "wade", "draw"],
@@ -358,7 +365,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8],
         "name": "problem_0_4",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -378,7 +385,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7],
+        "times": [1, 2, 3, 4, 5, 6, 7],
         "name": "problem_1_1",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -392,12 +399,12 @@ experimentApp.controller('ExperimentController',
           "stimuli/1/1/2.gif",
           "stimuli/1/1/3.gif",
           "stimuli/1/1/4.gif",
-          "stimuli/1/1/5.gif"  
+          "stimuli/1/1/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7],
+        "times": [1, 2, 3, 4, 5, 6, 7],
         "name": "problem_1_2",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -411,12 +418,12 @@ experimentApp.controller('ExperimentController',
           "stimuli/1/2/2.gif",
           "stimuli/1/2/3.gif",
           "stimuli/1/2/4.gif",
-          "stimuli/1/2/5.gif"  
+          "stimuli/1/2/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7],
+        "times": [1, 2, 3, 4, 5, 6, 7],
         "name": "problem_1_3",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -430,12 +437,12 @@ experimentApp.controller('ExperimentController',
           "stimuli/1/3/2.gif",
           "stimuli/1/3/3.gif",
           "stimuli/1/3/4.gif",
-          "stimuli/1/3/5.gif"  
+          "stimuli/1/3/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6],
+        "times": [1, 2, 3, 4, 5, 6],
         "name": "problem_1_4",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -448,12 +455,12 @@ experimentApp.controller('ExperimentController',
           "stimuli/1/4/1.gif",
           "stimuli/1/4/2.gif",
           "stimuli/1/4/3.gif",
-          "stimuli/1/4/4.gif" 
+          "stimuli/1/4/4.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
         "name": "problem_2_1",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -466,19 +473,19 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/1/1.gif",
           "stimuli/2/1/2.gif",
           "stimuli/2/1/3.gif",
-          "stimuli/2/1/4.gif", 
+          "stimuli/2/1/4.gif",
           "stimuli/2/1/5.gif",
           "stimuli/2/1/6.gif",
           "stimuli/2/1/7.gif",
           "stimuli/2/1/8.gif",
-          "stimuli/2/1/9.gif", 
+          "stimuli/2/1/9.gif",
           "stimuli/2/1/10.gif",
           "stimuli/2/1/11.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,9,10],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "name": "problem_2_2",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -491,7 +498,7 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/2/1.gif",
           "stimuli/2/2/2.gif",
           "stimuli/2/2/3.gif",
-          "stimuli/2/2/4.gif", 
+          "stimuli/2/2/4.gif",
           "stimuli/2/2/5.gif",
           "stimuli/2/2/6.gif",
           "stimuli/2/2/7.gif",
@@ -500,7 +507,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,9,10],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "name": "problem_2_3",
         "optimal": true,
         "goal_space": ["ear", "reap", "pear", "wade", "draw"],
@@ -513,7 +520,7 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/3/1.gif",
           "stimuli/2/3/2.gif",
           "stimuli/2/3/3.gif",
-          "stimuli/2/3/4.gif", 
+          "stimuli/2/3/4.gif",
           "stimuli/2/3/5.gif",
           "stimuli/2/3/6.gif",
           "stimuli/2/3/7.gif",
@@ -522,7 +529,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8],
         "name": "problem_2_4",
         "optimal": true,
         "goal_space": ["wad", "reap", "war", "wade", "draw"],
@@ -535,14 +542,14 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/4/1.gif",
           "stimuli/2/4/2.gif",
           "stimuli/2/4/3.gif",
-          "stimuli/2/4/4.gif", 
+          "stimuli/2/4/4.gif",
           "stimuli/2/4/5.gif",
           "stimuli/2/4/6.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6],
+        "times": [1, 2, 3, 4, 5, 6],
         "name": "problem_3_1",
         "optimal": true,
         "goal_space": ["cower", "war", "wear", "crow", "core"],
@@ -560,7 +567,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,9,10],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "name": "problem_3_2",
         "optimal": true,
         "goal_space": ["cower", "war", "wear", "crow", "core"],
@@ -582,7 +589,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,9],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9],
         "name": "problem_3_3",
         "optimal": true,
         "goal_space": ["cower", "war", "wear", "crow", "core"],
@@ -603,7 +610,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5,6,7,8,9,10],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         "name": "problem_3_4",
         "optimal": true,
         "goal_space": ["cower", "war", "wear", "crow", "core"],
@@ -625,7 +632,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4,5],
+        "times": [1, 2, 3, 4, 5],
         "name": "problem_4_1",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
@@ -642,7 +649,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4],
+        "times": [1, 2, 3, 4],
         "name": "problem_4_2",
         "optimal": true,
         "goal_space": ["raw", "paw", "draw", "war", "wear"],
@@ -658,7 +665,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4],
+        "times": [1, 2, 3, 4],
         "name": "problem_4_3",
         "optimal": true,
         "goal_space": ["ear", "paw", "dear", "war", "wear"],
@@ -674,7 +681,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1,2,3,4],
+        "times": [1, 2, 3, 4],
         "name": "problem_4_4",
         "optimal": true,
         "goal_space": ["raw", "paw", "draw", "war", "wear"],
