@@ -42,15 +42,12 @@
       width: 80%;
     }
 
-    .slider {
-      width: 100%;
+    ul.no-bullets {
+      list-style-type: none;
     }
 
-    .sliderticks {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      font-size: 8pt;
+    .check-all {
+      margin-left: 35px;
     }
 
     .controls {
@@ -145,90 +142,16 @@
     <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()"
       class="hidden" id="question">      
       <p>For each word below, how likely is the player trying to spell that word?</p>
-      <b>{{possible_goals[0]}}</b>
-      <br>
-      <input type="range" min="0" max="100" step="10" list="ticks" class="slider" ng-model="response.relprob[0]">
-      <datalist id="ticks" class="sliderticks">
-        <option value="0" label="{{rating_labels[0]}}"></option>
-        <option value="10" label=""></option>
-        <option value="20" label=""></option>
-        <option value="30" label=""></option>
-        <option value="40" label=""></option>
-        <option value="50" label="{{rating_labels[1]}}"></option>
-        <option value="60" label=""></option>
-        <option value="70" label=""></option>
-        <option value="80" label=""></option>
-        <option value="90" label=""></option>
-        <option value="100" label="{{rating_labels[2]}}"></option>
-      </datalist>
-      <br>
-      <b>{{possible_goals[1]}}</b>
-      <br>
-      <input type="range" min="0" max="100" step="10" list="ticks" class="slider" ng-model="response.relprob[1]">
-      <datalist id="ticks" class="sliderticks">
-        <option value="0" label="{{rating_labels[0]}}"></option>
-        <option value="10" label=""></option>
-        <option value="20" label=""></option>
-        <option value="30" label=""></option>
-        <option value="40" label=""></option>
-        <option value="50" label="{{rating_labels[1]}}"></option>
-        <option value="60" label=""></option>
-        <option value="70" label=""></option>
-        <option value="80" label=""></option>
-        <option value="90" label=""></option>
-        <option value="100" label="{{rating_labels[2]}}"></option>
-      </datalist>
-      <br>
-      <b>{{possible_goals[2]}}</b>
-      <br>
-      <input type="range" min="0" max="100" step="10" list="ticks" class="slider" ng-model="response.relprob[2]">
-      <datalist id="ticks" class="sliderticks">
-        <option value="0" label="{{rating_labels[0]}}"></option>
-        <option value="10" label=""></option>
-        <option value="20" label=""></option>
-        <option value="30" label=""></option>
-        <option value="40" label=""></option>
-        <option value="50" label="{{rating_labels[1]}}"></option>
-        <option value="60" label=""></option>
-        <option value="70" label=""></option>
-        <option value="80" label=""></option>
-        <option value="90" label=""></option>
-        <option value="100" label="{{rating_labels[2]}}"></option>
-      </datalist>
-      <br>
-      <b>{{possible_goals[3]}}</b>
-      <br>
-      <input type="range" min="0" max="100" step="10" list="ticks" class="slider" ng-model="response.relprob[3]">
-      <datalist id="ticks" class="sliderticks">
-        <option value="0" label="{{rating_labels[0]}}"></option>
-        <option value="10" label=""></option>
-        <option value="20" label=""></option>
-        <option value="30" label=""></option>
-        <option value="40" label=""></option>
-        <option value="50" label="{{rating_labels[1]}}"></option>
-        <option value="60" label=""></option>
-        <option value="70" label=""></option>
-        <option value="80" label=""></option>
-        <option value="90" label=""></option>
-        <option value="100" label="{{rating_labels[2]}}"></option>
-      </datalist>
-      <br>
-      <b>{{possible_goals[4]}}</b>
-      <br>
-      <input type="range" min="0" max="100" step="10" list="ticks" class="slider" ng-model="response.relprob[4]">
-      <datalist id="ticks" class="sliderticks">
-        <option value="0" label="{{rating_labels[0]}}"></option>
-        <option value="10" label=""></option>
-        <option value="20" label=""></option>
-        <option value="30" label=""></option>
-        <option value="40" label=""></option>
-        <option value="50" label="{{rating_labels[1]}}"></option>
-        <option value="60" label=""></option>
-        <option value="70" label=""></option>
-        <option value="80" label=""></option>
-        <option value="90" label=""></option>
-        <option value="100" label="{{rating_labels[2]}}"></option>
-      </datalist>
+
+      <ul class="no-bullets">
+        <li><input type="checkbox" ng-model="response.checked[0]"><b> {{possible_goals[0]}}</b></li>
+        <li><input type="checkbox" ng-model="response.checked[1]"><b> {{possible_goals[1]}}</b></li>
+        <li><input type="checkbox" ng-model="response.checked[2]"><b> {{possible_goals[2]}}</b></li>
+        <li><input type="checkbox" ng-model="response.checked[3]"><b> {{possible_goals[3]}}</b></li>
+        <li><input type="checkbox" ng-model="response.checked[4]"><b> {{possible_goals[4]}}</b></li>
+      </ul>
+      <button class="check-all" ng-click="check_all()">All Goals Equally Likely</button>
+
      </div>
 
     </div>
@@ -252,11 +175,11 @@
 
       function storeToDB(key, val) {
         console.log("Storing " + key + " with " + JSON.stringify(val));
-        resultsRef.child(key).set(val);
+        // resultsRef.child(key).set(val);
       }
 
       function incrementCounter() {
-        counterRef.child(counterKey).set(count+1);
+        // counterRef.child(counterKey).set(count+1);
       }
 
       async function getCounter(){

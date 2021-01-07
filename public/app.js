@@ -36,7 +36,7 @@ experimentApp.controller('ExperimentController',
     $scope.tutorial_step = 1;
     $scope.tutorial_length = 7;
     $scope.tutorial_text = ``;
-    $scope.response = {"relprob": [50, 50, 50, 50, 50]};
+    $scope.response = {"checked": [false, false, false, false, false]};
     $scope.csv_header = [
       "timestep",
       "goal_probs_0",
@@ -58,6 +58,9 @@ experimentApp.controller('ExperimentController',
       }
       id.src = id.src;
     }
+    $scope.check_all = function() {
+      $scope.response = {"checked": [true, true, true, true, true]};
+    }
     $scope.advance = function() {
       $scope.loaded = false;
       if ($scope.section == "instructions") {
@@ -71,7 +74,6 @@ experimentApp.controller('ExperimentController',
     $scope.advance_instructions = function() {
       if ($scope.inst_id == $scope.instructions.length - 1) {
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
-        $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
         $scope.reward_score = 0;
         $scope.section = "stimuli";
         $scope.stim_id = 0;
@@ -99,7 +101,7 @@ experimentApp.controller('ExperimentController',
         }
         $scope.inst_id = $scope.inst_id + 1;
       }
-      // $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
+      $scope.response = {"checked": [false, false, false, false, false]};
     };
     $scope.advance_stimuli = function() {
       if ($scope.stim_id == $scope.stimuli_set.length) {
@@ -110,7 +112,6 @@ experimentApp.controller('ExperimentController',
       } else if ($scope.part_id < 0) {
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id-1].name, $scope.ratings);
-        $scope.response = {"relprob": [50, 50, 50, 50 , 50]};
         $scope.reward_score = 0;
         // Advance to first part
         $scope.part_id = $scope.part_id + 1;
@@ -129,13 +130,18 @@ experimentApp.controller('ExperimentController',
           $scope.bonus_points = (($scope.reward_score * 10)/$scope.stimuli_set[$scope.stim_id-1].length).toFixed(1);
         }
       }
-      //$scope.response = {"relprob": [50, 50, 50, 50 , 50]};
+      $scope.response = {"checked": [false, false, false, false, false]};
     };
     $scope.compute_ratings = function(resp) {
-      // Compute normalized probabilities from ratings
-      probs = resp.relprob;
-      sum_ratings = resp.relprob.reduce((a,b) => a + b, 0);
-      probs = probs.map(p => p/sum_ratings);
+      // Compute probs from checkboxes
+      let numChecked = resp.checked.filter( c => c == true).length;
+      probs = [0, 0, 0, 0, 0];
+      resp.checked.forEach( (check, index) => {
+        if (check){
+          probs[index] = (1 / numChecked).toFixed(2);
+        }
+      })
+      console.log("probs=" + probs);
       // Increase reward score
       $scope.reward_score += probs[$scope.true_goal];
       if ($scope.section == "instructions"){
