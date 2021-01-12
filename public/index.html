@@ -211,7 +211,7 @@
 
         <ul class="no-bullets" ng-repeat="opt in instructions[inst_id].options">
           <li></li><input type="radio" name="comprehension" ng-model="comprehension_response"
-            ng-click="validate_answer(opt)" value="{{opt}}"> <span ng-bind-html="opt"></span></li>
+            ng-click="validate_answer(opt)" value="{{opt}}"> <span class="checkboxtext" ng-bind-html="opt"></span></li>
         </ul>
         <br>
 

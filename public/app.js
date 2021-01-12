@@ -221,56 +221,57 @@ experimentApp.controller('ExperimentController',
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
     $scope.instructions = [
-      {
-        text: `Welcome to our word guessing game! <br>
-               Press next to continue.`,
-      },
-      {
-        text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
-               what the word is before your friend finishes spelling.
-               <br>
-               <br>
-               The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
-               <br>
-               <br>
-               Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
-               `,
-        image: "tutorial/demo/0.png"
-      },
-      {
-        text: ``,
-        image: "tutorial/demo/scenario-tutorial-demo.gif",
-        question: `What is the word?`,
-        options: ["ear", "reap", "pear", "wade", "draw"],
-        answer: 'ear'
-      },
-      {
-        text: ``,
-        image: "tutorial/demo/scenario-tutorial-demo2.gif",
-        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
-        options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
-        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"
-      },
-      {
-        text: `Now, your task is to watch someone stacking these blocks, and with every block they 
-              move, guess which word they are trying to spell.
-              <br><br>
-              <b>How to guess?</b> <br>
-              You will be given <b>5 possible words</b>. 
-              When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
-      },
-
+      // {
+      //   text: `Welcome to our word guessing game! <br>
+      //          Press next to continue.`,
+      // },
+      // {
+      //   text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
+      //          what the word is before your friend finishes spelling.
+      //          <br>
+      //          <br>
+      //          The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
+      //          <br>
+      //          <br>
+      //          Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
+      //          `,
+      //   image: "tutorial/demo/0.png"
+      // },
+      // {
+      //   text: ``,
+      //   image: "tutorial/demo/scenario-tutorial-demo.gif",
+      //   question: `What is the word?`,
+      //   options: ["ear", "reap", "pear", "wade", "draw"],
+      //   answer: 'ear'
+      // },
+      // {
+      //   text: ``,
+      //   image: "tutorial/demo/scenario-tutorial-demo2.gif",
+      //   question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
+      //   options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
+      //   answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"
+      // },
+      // {
+      //   text: `Now, your task is to watch someone stacking these blocks, and with every block they 
+      //         move, guess which word they are trying to spell.
+      //         <br><br>
+      //         <b>How to guess?</b> <br>
+      //         You will be given <b>5 possible words</b>. 
+      //         When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
+      // },
       {
         text: `<b>Bonus Points</b> <br>
                As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make. 
-               <br><br>
-               The points system works as follows: 
+               The points system works as follows:<br><br>
+               -2.0 points if none of the words you choose is correct <br>
+               0.0 points for saying I Don't Know, or that words are All Equally Likely <br>
+               0.5 points for choosing 4 words, one of which is the correct word <br>
+               1.3 points for choosing 3 words, one of which is the correct word <br>
+               3.0 points for choosing 2 words, one of which is the correct word <br>
+               8.0 points for choosing only the correct word 
                <br>
-               1 point for choosing 4 words, one of which is the correct word<br>
-               2 points for choosing 3 words, one of which is the correct word<br>
-               5 points for choosing 2 words, one of which is the correct word<br>
-               7 points for choosing only the correct word
-               <br><br>
+               <br>
+               Because <b>you might lose points</b> if you guess incorrectly, don't be over-confident! The point system is designed so that you <b>don't benefit from guessing when you don't know for sure</b>.
                Your total points for each task are shown at the end of the task, and [insert conversion method?]`,
       },
 
@@ -300,7 +301,7 @@ experimentApp.controller('ExperimentController',
           'The player <i><b>mistakenly</b></i>&nbsp; picked up block <b>w</b>, then put it back down in a different location.',
           'I don\'t think a mistake was made.'],
         footnote: "If you missed what happened, you can always replay the current move by clicking \"Replay Move\".&nbsp; In case you don\'t remember the previous move, the player stacked block e on top of block r.",
-        answer: 'The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b> on block <b>e</b> , but mistakenly dropped it in the wrong location.'
+        answer: 'The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b>  on block <b>e</b> , but mistakenly dropped it in the wrong location.'
       },
       {
         text: `Let's watch the move again, and make your best guess.
