@@ -36,6 +36,8 @@ experimentApp.controller('ExperimentController',
     $scope.tutorial_step = 1;
     $scope.tutorial_length = 7;
     $scope.tutorial_text = ``;
+    $scope.comprehension_response = "";
+    $scope.valid_comprehension = false;
     $scope.response = { "checked": [false, false, false, false, false] };
     $scope.valid_goal = false;
     $scope.csv_header = [
@@ -58,6 +60,10 @@ experimentApp.controller('ExperimentController',
         var id = document.getElementById("instruction-img")
       }
       id.src = id.src;
+    }
+    $scope.validate_answer = function (ans) {
+      $scope.comprehension_response = ans;
+      $scope.valid_comprehension = $scope.comprehension_response == $scope.instructions[$scope.inst_id].answer;
     }
     $scope.validate_goal = function () {
       $scope.valid_goal = $scope.response.checked.filter(check => check == true).length > 0;
@@ -108,6 +114,8 @@ experimentApp.controller('ExperimentController',
       }
       $scope.response = { "checked": [false, false, false, false, false] };
       $scope.valid_goal = false;
+      $scope.comprehension_response = "";
+      $scope.valid_comprehension = false;
     };
     $scope.advance_stimuli = function () {
       if ($scope.stim_id == $scope.stimuli_set.length) {
@@ -202,19 +210,6 @@ experimentApp.controller('ExperimentController',
     $scope.reward_score = 0;
     $scope.bonus_points = 0;
     $scope.tutorial_score = 0;
-    
-    $scope.format_question = function () {
-      html_string = ``
-      for (var i = 0; i < $scope.instructions[$scope.inst_id].options.length ; i++) {
-        html_string += `<li><input type="radio" ng-model="response.checked[0]" ng-change="validate_goal()">` 
-                        + $scope.instructions[$scope.inst_id].options[i]  + `</li>`
-      }
-      return html_string
-    };
-
-    $scope.check_answer = function () {
-      return true
-    };
 
     $scope.instruction_has_image = function () {
       return $scope.instructions[$scope.inst_id].image != null
@@ -241,17 +236,17 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: ``, 
+        image: "tutorial/demo/scenario-tutorial-demo.gif",
         question: `What is the word?`,
         options: ["ear", "reap", "pear", "wade", "draw"],
-        answer: 'ear',
-        image: "tutorial/demo/scenario-tutorial-demo.gif"
+        answer: 'ear'
       },
       {
         text: ``, 
+        image: "tutorial/demo/scenario-tutorial-demo2.gif",
         question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>`,
         options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
-        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>",
-        image: "tutorial/demo/scenario-tutorial-demo.gif"
+        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"   
       },
       {
         text: `Now, your task is to watch someone stacking these blocks, and with every block they 
@@ -290,16 +285,19 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Consider this new move and make your choice. Do you notice that this move doesn't make sense? 
-        It is ok, the person spelling the words might make mistakes sometimes. 
-        Keep that in mind throughout the task, and just make your best guess.`,
+        text: `Consider this new move. Do you notice that it doesn't make sense? 
+        It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
         image: "tutorial/tutorial/1.gif",
-        tutorial: true,
         question: `How would you best describe the mistake here?`,
         options: ['The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location', 
                   'The player has mistakenly picked up the block <b>w</b> then dropped it in a random location'],
-        answer: 'yes'
-
+        answer: 'The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location'
+      },
+      {
+        text: `Let's watch the move again, and make your best guess.
+        Keep that in mind throughout the following tasks that the player might make mistakes, but not always.`,
+        image: "tutorial/tutorial/1b.gif",
+        tutorial: true
       },
       {
         text: `The person spelling the word is fixing the mistake.`,

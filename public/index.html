@@ -111,7 +111,7 @@
 
 <body ng-controller="ExperimentController" ng-init="setStimuli()">
   <div class="main w3-row">
-    <!-- <first col> -->
+    <!-- Left side -->
     <div class="w3-col m6">
       <!-- <div> -->
       <!-- Instructions -->
@@ -147,19 +147,21 @@
           Next >>
         </button>
         <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' || 
-          valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial())">
+          valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial()) || 
+          valid_comprehension == false && section == 'instructions' && instruction_has_question()">
           Next >>
         </button>
       </div>
 
     </div>
-    <!-- <second col> -->
+    <!-- Right side -->
     <div class="w3-col m5">
       <!-- Captioned Instructions -->
       <p ng-show="section == 'instructions' && instruction_has_image()" class="captions"
         ng-bind-html="instructions[inst_id].text">
       </p>
-      <!-- Questions -->
+      <!-- Note: No instruction should have both tutorial and comprehension questions -->
+      <!-- Questions for goals-->
       <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()" class="hidden" id="question">
         <p><b>Which of the words below is the player trying to spell? </b> </p>
         <p>You must select <b>at least one word</b> to
@@ -180,28 +182,26 @@
               {{possible_goals[4]}}</b></li>
         </ul>
         <button class="check-all" ng-click="check_all()">All Equally Likely</button>
-
       </div>
 
-    <!-- comprehension questions -->
-    <div ng-show="section == 'instructions' && instruction_has_question()" class="comprehension_question">
-      <p ng-bind-html="instructions[inst_id].question">
-      </p>
-      <ul class="no-bullets" ng-bind-html="format_question()">
-      </ul>
-      <button class="check-all" ng-click="check_answer()">submit</button>
-    </div>
+      <!-- Comprehension questions -->
+      <div ng-show="section == 'instructions' && instruction_has_question()" class="comprehension_question">
+        <p ng-bind-html="instructions[inst_id].question"></p>
+      
+        <ul class="no-bullets" ng-repeat="opt in instructions[inst_id].options">
+          <li></li><input type="radio" name="comprehension" ng-model="comprehension_response"
+            ng-click="validate_answer(opt)"
+            value="{{opt}}" > <span ng-bind-html="opt"></span></li>
+        </ul>
+        <br>
+      
+        <div ng-hide="comprehension_response == ''">
+          <b ng-show="valid_comprehension" style="color:green">Correct!</b>
+          <b ng-show="!valid_comprehension" style="color:red">Wrong answer, please try again!</b>
+        </div>
+      </div>
 
     </div>
-
-<!--     <div ng-show="section == 'instructions' && instruction_has_question()" id="comprehension_question">
-      <ul class="no-bullets">
-        <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"><b>
-            {{instructions[inst_id].question[0]}}</b></li>
-        <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"><b>
-            {{instructions[inst_id].question[1]}}</b></li>
-      </ul>
-    </div> -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- <script src="/__/firebase/8.1.1/firebase-app.js"></script> -->
