@@ -230,44 +230,50 @@ experimentApp.controller('ExperimentController',
                what the word is before your friend finishes spelling.
                <br>
                <br>
-               Hit the next button to watch your friend playing and try to guess the word. 
-               Is it <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, or <b>draw</b>? `,
+               The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
+               <br>
+               <br>
+               Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
+               `,
         image: "tutorial/demo/0.png"
       },
       {
-        text: ``, 
+        text: ``,
         image: "tutorial/demo/scenario-tutorial-demo.gif",
         question: `What is the word?`,
         options: ["ear", "reap", "pear", "wade", "draw"],
         answer: 'ear'
       },
       {
-        text: ``, 
+        text: ``,
         image: "tutorial/demo/scenario-tutorial-demo2.gif",
-        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>`,
+        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
         options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
-        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"   
+        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"
       },
       {
         text: `Now, your task is to watch someone stacking these blocks, and with every block they 
               move, guess which word they are trying to spell.
               <br><br>
               <b>How to guess?</b> <br>
-              You will be given 5 possible words. 
-              When a block is moved, you need to choose all words that might possibly be the targeted one.`
+              You will be given <b>5 possible words</b>. 
+              When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
       },
 
       {
         text: `<b>Bonus Points</b> <br>
-               As you play this game, you can earn bonus payment by collecting points for each guess you make. 
-               The point system works as follow: <br>
-               1 point for choosing 4 words one of which is the correct word<br>
-               2 points for choosing 3 words one of which is the correct word<br>
-               5 points for choosing 2 words one of which is the correct word<br>
-               7 points for choosing only the correct word<br>
-               <br>`,
+               As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make. 
+               <br><br>
+               The points system works as follows: 
+               <br>
+               1 point for choosing 4 words, one of which is the correct word<br>
+               2 points for choosing 3 words, one of which is the correct word<br>
+               5 points for choosing 2 words, one of which is the correct word<br>
+               7 points for choosing only the correct word
+               <br><br>
+               Your total points for each task are shown at the end of the task, and [insert conversion method?]`,
       },
-     
+
       {
         text: `Let's do a practice run, just so you're familiarized.`,
       },
@@ -289,8 +295,8 @@ experimentApp.controller('ExperimentController',
         It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
         image: "tutorial/tutorial/1.gif",
         question: `How would you best describe the mistake here?`,
-        options: ['The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location', 
-                  'The player has mistakenly picked up the block <b>w</b> then dropped it in a random location'],
+        options: ['The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location',
+          'The player has mistakenly picked up the block <b>w</b> then dropped it in a random location'],
         answer: 'The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location'
       },
       {

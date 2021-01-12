@@ -164,9 +164,8 @@
       <!-- Questions for goals-->
       <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()" class="hidden" id="question">
         <p><b>Which of the words below is the player trying to spell? </b> </p>
-        <p>You must select <b>at least one word</b> to
-          continue. You may select <b>more than one word</b> if there are several likely choices. If
-          all words seem equally likely, select the 'All Equally Likely' option.
+        <p>Select <b>at least one guess</b> to
+          continue. If all guesses seem equally likely, select the 'All Equally Likely' option.
         </p>
 
         <ul class="no-bullets">
@@ -187,16 +186,15 @@
       <!-- Comprehension questions -->
       <div ng-show="section == 'instructions' && instruction_has_question()" class="comprehension_question">
         <p ng-bind-html="instructions[inst_id].question"></p>
-      
+
         <ul class="no-bullets" ng-repeat="opt in instructions[inst_id].options">
           <li></li><input type="radio" name="comprehension" ng-model="comprehension_response"
-            ng-click="validate_answer(opt)"
-            value="{{opt}}" > <span ng-bind-html="opt"></span></li>
+            ng-click="validate_answer(opt)" value="{{opt}}"> <span ng-bind-html="opt"></span></li>
         </ul>
         <br>
-      
+
         <div ng-hide="comprehension_response == ''">
-          <b ng-show="valid_comprehension" style="color:green">Correct!</b>
+          <b ng-show="valid_comprehension" style="color:green">Correct! Hit the next button to continue.</b>
           <b ng-show="!valid_comprehension" style="color:red">Wrong answer, please try again!</b>
         </div>
       </div>
