@@ -294,7 +294,8 @@ experimentApp.controller('ExperimentController',
         text: `Consider this new move. Do you notice that it doesn't make sense? 
         It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
         image: "tutorial/tutorial/1.gif",
-        question: `How would you best describe the mistake here?`,
+        question: `Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br> 
+        How would you best describe the mistake here?`,
         options: ['The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location',
           'The player has mistakenly picked up the block <b>w</b> then dropped it in a random location'],
         answer: 'The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location'
