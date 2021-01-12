@@ -221,44 +221,44 @@ experimentApp.controller('ExperimentController',
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
     $scope.instructions = [
-      // {
-      //   text: `Welcome to our word guessing game! <br>
-      //          Press next to continue.`,
-      // },
-      // {
-      //   text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
-      //          what the word is before your friend finishes spelling.
-      //          <br>
-      //          <br>
-      //          The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
-      //          <br>
-      //          <br>
-      //          Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
-      //          `,
-      //   image: "tutorial/demo/0.png"
-      // },
-      // {
-      //   text: ``,
-      //   image: "tutorial/demo/scenario-tutorial-demo.gif",
-      //   question: `What is the word?`,
-      //   options: ["ear", "reap", "pear", "wade", "draw"],
-      //   answer: 'ear'
-      // },
-      // {
-      //   text: ``,
-      //   image: "tutorial/demo/scenario-tutorial-demo2.gif",
-      //   question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
-      //   options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
-      //   answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"
-      // },
-      // {
-      //   text: `Now, your task is to watch someone stacking these blocks, and with every block they 
-      //         move, guess which word they are trying to spell.
-      //         <br><br>
-      //         <b>How to guess?</b> <br>
-      //         You will be given <b>5 possible words</b>. 
-      //         When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
-      // },
+      {
+        text: `Welcome to our word guessing game! <br>
+               Press next to continue.`,
+      },
+      {
+        text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
+               what the word is before your friend finishes spelling.
+               <br>
+               <br>
+               The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
+               <br>
+               <br>
+               Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
+               `,
+        image: "tutorial/demo/0.png"
+      },
+      {
+        text: ``,
+        image: "tutorial/demo/scenario-tutorial-demo.gif",
+        question: `What is the word?`,
+        options: ["ear", "reap", "pear", "wade", "draw"],
+        answer: 'ear'
+      },
+      {
+        text: ``,
+        image: "tutorial/demo/scenario-tutorial-demo2.gif",
+        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
+        options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
+        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"
+      },
+      {
+        text: `Now, your task is to watch someone stacking these blocks, and with every block they 
+              move, guess which word they are trying to spell.
+              <br><br>
+              <b>How to guess?</b> <br>
+              You will be given <b>5 possible words</b>. 
+              When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
+      },
       {
         text: `<b>Bonus Points</b> <br>
                As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make. 
