@@ -18,7 +18,7 @@ Data for [stimuli plans](https://docs.google.com/presentation/d/1x_hYhpUz88JUVGs
 
 <img src="public/stimuli/3/2/experiment-3-2.gif"  height="300" />
 
-### 4. Intermediate/initial state matching other (incorrect) goals
+<!-- ### 4. Intermediate/initial state matching other (incorrect) goals
 - a. Initial configuration already matches an incorrect goal state
 - b. Goal words contain other goal words
     - i. SUFFIX- goal: star, wrong goal: tar
@@ -27,6 +27,6 @@ Data for [stimuli plans](https://docs.google.com/presentation/d/1x_hYhpUz88JUVGs
 - c. Rhyming words (suffix matches but isn't itself a goal)
         - goal: star, wrong goal: altar
 
-<img src="public/stimuli/4/2/experiment-4-2.gif"  height="300" />
+<img src="public/stimuli/4/2/experiment-4-2.gif"  height="300" /> -->
 
 

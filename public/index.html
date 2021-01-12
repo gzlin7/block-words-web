@@ -46,6 +46,29 @@
       list-style-type: none;
     }
 
+    input[type=checkbox],
+    input[type=radio] {
+      /* Double-sized Checkboxes */
+      -ms-transform: scale(2);
+      /* IE */
+      -moz-transform: scale(2);
+      /* FF */
+      -webkit-transform: scale(2);
+      /* Safari and Chrome */
+      -o-transform: scale(2);
+      /* Opera */
+      transform: scale(2);
+      /* padding: 20px; */
+      margin: 10px;
+    }
+
+    /* Might want to wrap a span around your checkbox text */
+    .checkboxtext {
+      /* Checkbox text */
+      font-size: 120%;
+      display: inline;
+    }
+
     .check-all {
       margin-left: 35px;
       background-color: #0f6bd4;
@@ -59,7 +82,6 @@
       padding: 4px 10px;
       text-decoration: none;
       text-shadow: 0px 1px 0px black;
-
       margin-right: 10px;
     }
 
@@ -165,19 +187,19 @@
       <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()" class="hidden" id="question">
         <p><b>Which of the words below is the player trying to spell? </b> </p>
         <p>Select <b>at least one guess</b> to
-          continue. If all guesses seem equally likely, select the 'All Equally Likely' option.
+          continue. If all guesses seem equally likely, select the "All Equally Likely" option.
         </p>
 
         <ul class="no-bullets">
-          <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"><b>
+          <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"><b class='checkboxtext'>
               {{possible_goals[0]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"><b>
+          <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"><b class='checkboxtext'>
               {{possible_goals[1]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[2]" ng-change="validate_goal()"><b>
+          <li><input type="checkbox" ng-model="response.checked[2]" ng-change="validate_goal()"><b class='checkboxtext'>
               {{possible_goals[2]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[3]" ng-change="validate_goal()"><b>
+          <li><input type="checkbox" ng-model="response.checked[3]" ng-change="validate_goal()"><b class='checkboxtext'>
               {{possible_goals[3]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[4]" ng-change="validate_goal()"><b>
+          <li><input type="checkbox" ng-model="response.checked[4]" ng-change="validate_goal()"><b class='checkboxtext'>
               {{possible_goals[4]}}</b></li>
         </ul>
         <button class="check-all" ng-click="check_all()">All Equally Likely</button>
@@ -194,9 +216,11 @@
         <br>
 
         <div ng-hide="comprehension_response == ''">
-          <b ng-show="valid_comprehension" style="color:green">Correct! Hit the next button to continue.</b>
+          <b ng-show="valid_comprehension" style="color:green">Correct! Hit the "Next" button to continue.</b>
           <b ng-show="!valid_comprehension" style="color:red">Wrong answer, please try again!</b>
         </div>
+
+        <p ng-bind-html="instructions[inst_id].footnote"></p>
       </div>
 
     </div>

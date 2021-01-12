@@ -296,9 +296,11 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/tutorial/1.gif",
         question: `Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br> 
         How would you best describe the mistake here?`,
-        options: ['The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location',
-          'The player has mistakenly picked up the block <b>w</b> then dropped it in a random location'],
-        answer: 'The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location'
+        options: ['The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b>  on block <b>e</b> , but mistakenly dropped it in the wrong location.',
+          'The player <i><b>mistakenly</b></i>&nbsp; picked up block <b>w</b>, then put it back down in a different location.',
+          'I don\'t think a mistake was made.'],
+        footnote: "If you missed what happened, you can always replay the current move by clicking \"Replay Move\".&nbsp; In case you don\'t remember the previous move, the player stacked block e on top of block r.",
+        answer: 'The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b> on block <b>e</b> , but mistakenly dropped it in the wrong location.'
       },
       {
         text: `Let's watch the move again, and make your best guess.
