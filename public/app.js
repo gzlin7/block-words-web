@@ -286,7 +286,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `Now watch the player move the first block. What do you think? 
-        If you think that two words are more likely than the rest select both of them.`,
+        If you think that several words are more likely than the rest, select all of likely words.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
       },
@@ -301,7 +301,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `Let's watch the move again, and make your best guess.
-        Keep that in mind throughout the following tasks that the player might make mistakes, but not always.`,
+        Keep in mind throughout the following tasks that the player might make mistakes, but not always.`,
         image: "tutorial/tutorial/1b.gif",
         tutorial: true
       },
@@ -317,8 +317,8 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Even if it seems obvious what the word is, please do make sure 
-        to answer by selecting the correct word only.`,
+        text: `Even if it seems obvious what the word is, please make sure 
+        to answer by selecting only the correct word.`,
         image: "tutorial/tutorial/4.gif",
         tutorial: true
       },
