@@ -202,8 +202,25 @@ experimentApp.controller('ExperimentController',
     $scope.reward_score = 0;
     $scope.bonus_points = 0;
     $scope.tutorial_score = 0;
+    
+    $scope.format_question = function () {
+      html_string = ``
+      for (var i = 0; i < $scope.instructions[$scope.inst_id].options.length ; i++) {
+        html_string += `<li><input type="radio" ng-model="response.checked[0]" ng-change="validate_goal()">` 
+                        + $scope.instructions[$scope.inst_id].options[i]  + `</li>`
+      }
+      return html_string
+    };
+
+    $scope.check_answer = function () {
+      return true
+    };
+
     $scope.instruction_has_image = function () {
       return $scope.instructions[$scope.inst_id].image != null
+    };
+    $scope.instruction_has_question = function () {
+      return $scope.instructions[$scope.inst_id].question != null
     };
     $scope.is_tutorial = function () {
       return $scope.instructions[$scope.inst_id].tutorial == true
@@ -215,62 +232,74 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
-               what the word is before your friend finishes spelling.`,
+               what the word is before your friend finishes spelling.
+               <br>
+               <br>
+               Hit the next button to watch your friend playing and try to guess the word. 
+               Is it <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, or <b>draw</b>? `,
         image: "tutorial/demo/0.png"
       },
       {
-        text: `Is the word <b>power</b>, <b>cower</b>, <b>crow</b>, <b>core</b>, or <b>pore</b>?`,
-        image: "tutorial/demo/part1.gif"
+        text: ``, 
+        question: `What is the word?`,
+        options: ["ear", "reap", "pear", "wade", "draw"],
+        answer: 'ear',
+        image: "tutorial/demo/scenario-tutorial-demo.gif"
       },
       {
-        text: `The word is <b>core</b>!`,
-        image: "tutorial/demo/part2.gif"
+        text: ``, 
+        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>`,
+        options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
+        answer: "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>",
+        image: "tutorial/demo/scenario-tutorial-demo.gif"
       },
       {
-        text: `Your task is to watch someone stacking these blocks, and with every block they 
-        move, guess which word they are trying to spell.`,
+        text: `Now, your task is to watch someone stacking these blocks, and with every block they 
+              move, guess which word they are trying to spell.
+              <br><br>
+              <b>How to guess?</b> <br>
+              You will be given 5 possible words. 
+              When a block is moved, you need to choose all words that might possibly be the targeted one.`
       },
+
       {
-        text: `<b>How to guess?</b> <br>
-               You will be given 5 possible words. 
-               When a block is moved, you need to rate each word  based on how 
-               likely you think it is the word that is being spelled. 
-               The rating scale ranges from <i>Very Unlikely</i> to <i>Very Likely</i>`
+        text: `<b>Bonus Points</b> <br>
+               As you play this game, you can earn bonus payment by collecting points for each guess you make. 
+               The point system works as follow: <br>
+               1 point for choosing 4 words one of which is the correct word<br>
+               2 points for choosing 3 words one of which is the correct word<br>
+               5 points for choosing 2 words one of which is the correct word<br>
+               7 points for choosing only the correct word<br>
+               <br>`,
       },
-      {
-        text: `<b>Bonus Payment</b> <br>
-               As you play this game, you can earn bonus payment based on a score of how close your guess is to the actual word.<br>
-               Scoring works as follows:<br>
-               1. In every step, you earn points based on how likely you rated the correct word compared to the other words.<br>
-               2. Your final score is the average of the points you earned in each step.<br> 
-               <br>
-               The more correct your guesses are, the more bonus pay you will receive, so please try to make your best guesses!`
-      },
+     
       {
         text: `Let's do a practice run, just so you're familiarized.`,
       },
       {
         text: `First, you'll get a chance to look at the available letters and the 5 possible words.
-               Before seeing the player move any blocks, rate each possible word based on how likely 
-               it is to be the word that the player will try to spell. If you think that all words are 
-               equally likely, rate them all as <i>Maybe</i>. `,
+               Before seeing the player move any blocks, select all the words that you think
+               might be the word that the player will try to spell. `,
         image: "tutorial/tutorial/0.png",
         tutorial: true
       },
       {
-        text: `Now watch the player move the first block. What do you think now? <br>
-
-        If you think that two words are equally likely and the rest are not likely, then give the two words the same higher rating, 
-        and the rest of the words a lower rating.`,
+        text: `Now watch the player move the first block. What do you think? 
+        If you think that two words are more likely than the rest select both of them.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
       },
       {
-        text: `Consider this new move and update your scores if your guesses change. 
-        Do you notice that this move doesn't make sense? It is ok, the person 
-        spelling the words might make mistakes sometimes. Keep that in mind throughout the games, and just make your best guess here.`,
+        text: `Consider this new move and make your choice. Do you notice that this move doesn't make sense? 
+        It is ok, the person spelling the words might make mistakes sometimes. 
+        Keep that in mind throughout the task, and just make your best guess.`,
         image: "tutorial/tutorial/1.gif",
-        tutorial: true
+        tutorial: true,
+        question: `How would you best describe the mistake here?`,
+        options: ['The player intended to move block <b>w</b> but has mistakenly dropped it in a wrong location', 
+                  'The player has mistakenly picked up the block <b>w</b> then dropped it in a random location'],
+        answer: 'yes'
+
       },
       {
         text: `The person spelling the word is fixing the mistake.`,
@@ -278,27 +307,23 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Two more steps...`,
+        text: `It seems like there are two equally possible words. 
+        If that's the case please select both of them.`,
         image: "tutorial/tutorial/3.gif",
         tutorial: true
       },
       {
-        text: `One more step...`,
+        text: `Even if it seems obvious what the word is, please do make sure 
+        to answer by selecting the correct word only.`,
         image: "tutorial/tutorial/4.gif",
         tutorial: true
       },
       {
-        text: `Even if it seems obvious what the word is, do make sure 
-        to answer correctly by setting all other words as <i>Very Unlikely</i>`,
-        image: "tutorial/tutorial/5.gif",
-        tutorial: true
-      },
-      {
         text: `Yes, the word your friend was spelling was <b>power</b>!`,
-        image: "tutorial/tutorial/12.png",
+        image: "tutorial/tutorial/10.png",
       },
       {
-        text: `You will guess words for 3 different rounds. Ready to start? Press next to continue!`
+        text: `You will guess words for n different rounds. Ready to start? Press next to continue!`
       }
     ];
     $scope.stimuli_set_length = 3;

@@ -68,6 +68,11 @@
       padding: 10px;
     }
 
+    .comprehension_question {
+      float: left;
+      padding: 10px;
+    }
+
     .button {
       background-color: #02a342;
       border-radius: 6px;
@@ -106,6 +111,7 @@
 
 <body ng-controller="ExperimentController" ng-init="setStimuli()">
   <div class="main w3-row">
+    <!-- <first col> -->
     <div class="w3-col m6">
       <!-- <div> -->
       <!-- Instructions -->
@@ -145,7 +151,9 @@
           Next >>
         </button>
       </div>
+
     </div>
+    <!-- <second col> -->
     <div class="w3-col m5">
       <!-- Captioned Instructions -->
       <p ng-show="section == 'instructions' && instruction_has_image()" class="captions"
@@ -175,7 +183,26 @@
 
       </div>
 
+    <!-- comprehension questions -->
+    <div ng-show="section == 'instructions' && instruction_has_question()" class="comprehension_question">
+      <p ng-bind-html="instructions[inst_id].question">
+      </p>
+      <ul class="no-bullets" ng-bind-html="format_question()">
+      </ul>
+      <button class="check-all" ng-click="check_answer()">submit</button>
     </div>
+
+    </div>
+
+<!--     <div ng-show="section == 'instructions' && instruction_has_question()" id="comprehension_question">
+      <ul class="no-bullets">
+        <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"><b>
+            {{instructions[inst_id].question[0]}}</b></li>
+        <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"><b>
+            {{instructions[inst_id].question[1]}}</b></li>
+      </ul>
+    </div> -->
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- <script src="/__/firebase/8.1.1/firebase-app.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
