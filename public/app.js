@@ -67,12 +67,15 @@ experimentApp.controller('ExperimentController',
       $scope.valid_comprehension = ans == $scope.instructions[$scope.inst_id].options[index];
     }
     $scope.validate_goal = function () {
+      $scope.valid_goal = $scope.response.checked.filter(check => check == true).length > 0;
+    }
+    $scope.toggle_dontknow = function () {
       if ($scope.response.dontKnow){
         $scope.response.checked = [true, true, true, true, true];
       } else {
         $scope.response.checked = [false, false, false, false, false];
       }
-      $scope.valid_goal = $scope.response.checked.filter(check => check == true).length > 0;
+      $scope.validate_goal();
     }
     $scope.check_all = function () {
       $scope.response = { "checked": [true, true, true, true, true] };
@@ -266,22 +269,6 @@ experimentApp.controller('ExperimentController',
               When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
       },
       {
-        text: `<b>Bonus Points</b> <br>
-               As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make. 
-               The points system works as follows:<br><br>
-               -2.0 points if none of the words you choose is correct <br>
-               0.0 points for saying I Don't Know, or that words are All Equally Likely <br>
-               0.5 points for choosing 4 words, one of which is the correct word <br>
-               1.3 points for choosing 3 words, one of which is the correct word <br>
-               3.0 points for choosing 2 words, one of which is the correct word <br>
-               8.0 points for choosing only the correct word 
-               <br>
-               <br>
-               Because <b>you might lose points</b> if you guess incorrectly, don't be over-confident! The point system is designed so that you <b>don't benefit from guessing when you don't know for sure</b>.
-               Your total points for each task are shown at the end of the task, and [insert conversion method?]`,
-      },
-
-      {
         text: `Let's do a practice run, just so you're familiarized.`,
       },
       {
@@ -335,6 +322,21 @@ experimentApp.controller('ExperimentController',
       {
         text: `Yes, the word your friend was spelling was <b>power</b>!`,
         image: "tutorial/tutorial/10.png",
+      },
+      {
+        text: `<b>Bonus Points</b> <br>
+               As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make. 
+               The points system works as follows:<br><br>
+               -2.0 points if none of the words you choose is correct <br>
+               0.0 points for saying I Don't Know, or that words are All Equally Likely <br>
+               0.5 points for choosing 4 words, one of which is the correct word <br>
+               1.3 points for choosing 3 words, one of which is the correct word <br>
+               3.0 points for choosing 2 words, one of which is the correct word <br>
+               8.0 points for choosing only the correct word 
+               <br>
+               <br>
+               Because <b>you might lose points</b> if you guess incorrectly, don't be over-confident! The point system is designed so that you <b>don't benefit from guessing when you don't know for sure</b>.
+               Your total points for each task are shown at the end of the task, and [insert conversion method?]`,
       },
       {
         text: `You will guess words for n different rounds. Ready to start? Press next to continue!`

@@ -202,7 +202,7 @@
           <li><input type="checkbox" ng-model="response.checked[4]" ng-change="validate_goal()" ng-disabled="response.dontKnow">
             <b class='checkboxtext'>{{possible_goals[4]}}</b></li>
           <br>
-          <li><input type="checkbox" ng-model="response.dontKnow" ng-change="validate_goal()">
+          <li><input type="checkbox" ng-model="response.dontKnow" ng-change="toggle_dontknow()">
             <i class='checkboxtext'>I don't know</i></li>
         </ul>
 
