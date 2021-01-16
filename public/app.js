@@ -342,219 +342,121 @@ experimentApp.controller('ExperimentController',
         text: `You will guess words for n different rounds. Ready to start? Press next to continue!`
       }
     ];
-    $scope.stimuli_set_length = 3;
+    $scope.stimuli_set_length = 4;
     $scope.stimuli_sets = [
-      [0, 6, 18],
-      [3, 10, 12],
-      [2, 16, 9],
-      [19, 5, 14],
-      [4, 8, 15],
-      [7, 17, 13],
-      [11, 1, 15]
+      [3,  7, 11, 15],
+      [1,  5,  9, 13],
+      [4,  8, 12, 16],
+      [2,  6, 10, 14]
     ]
     $scope.stimuli = [
       {
         "trial": 0,
         "times": [1, 2, 3, 4, 5, 6],
-        "name": "problem_0_1",
+        "name": "scenario_1_1",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
         "goal": 3,
-        "problem": 0,
-        "length": 6,
-        "images": [
-          "stimuli/0/1/0.png",
-          "stimuli/0/1/0.gif",
-          "stimuli/0/1/1.gif",
-          "stimuli/0/1/2.gif",
-          "stimuli/0/1/3.gif",
-          "stimuli/0/1/4.gif"
-        ]
-      },
-      {
-        "trial": 0,
-        "times": [1, 2, 3, 4],
-        "name": "problem_0_2",
-        "optimal": true,
-        "goal_space": ["wad", "reap", "war", "wade", "draw"],
-        "goal": 3,
-        "problem": 0,
-        "length": 4,
-        "images": [
-          "stimuli/0/2/0.png",
-          "stimuli/0/2/0.gif",
-          "stimuli/0/2/1.gif",
-          "stimuli/0/2/2.gif"
-        ]
-      },
-      {
-        "trial": 0,
-        "times": [1, 2, 3, 4, 5],
-        "name": "problem_0_3",
-        "optimal": true,
-        "goal_space": ["wad", "reap", "war", "wade", "draw"],
-        "goal": 2,
-        "problem": 0,
-        "length": 5,
-        "images": [
-          "stimuli/0/3/0.png",
-          "stimuli/0/3/0.gif",
-          "stimuli/0/3/1.gif",
-          "stimuli/0/3/2.gif",
-          "stimuli/0/3/3.gif"
-        ]
-      },
-      {
-        "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8],
-        "name": "problem_0_4",
-        "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 1,
-        "problem": 0,
-        "length": 8,
-        "images": [
-          "stimuli/0/4/0.png",
-          "stimuli/0/4/0.gif",
-          "stimuli/0/4/1.gif",
-          "stimuli/0/4/2.gif",
-          "stimuli/0/4/3.gif",
-          "stimuli/0/4/4.gif",
-          "stimuli/0/4/5.gif",
-          "stimuli/0/4/6.gif"
-        ]
-      },
-      {
-        "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7],
-        "name": "problem_1_1",
-        "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 0,
         "problem": 1,
-        "length": 7,
+        "length": 6,
         "images": [
           "stimuli/1/1/0.png",
           "stimuli/1/1/0.gif",
           "stimuli/1/1/1.gif",
           "stimuli/1/1/2.gif",
           "stimuli/1/1/3.gif",
-          "stimuli/1/1/4.gif",
-          "stimuli/1/1/5.gif"
+          "stimuli/1/1/4.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7],
-        "name": "problem_1_2",
+        "times": [1, 2, 3, 4],
+        "name": "scenario_1_2",
         "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 1,
+        "goal_space": ["wad", "reap", "war", "wade", "draw"],
+        "goal": 3,
         "problem": 1,
-        "length": 7,
+        "length": 4,
         "images": [
           "stimuli/1/2/0.png",
           "stimuli/1/2/0.gif",
           "stimuli/1/2/1.gif",
-          "stimuli/1/2/2.gif",
-          "stimuli/1/2/3.gif",
-          "stimuli/1/2/4.gif",
-          "stimuli/1/2/5.gif"
+          "stimuli/1/2/2.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7],
-        "name": "problem_1_3",
+        "times": [1, 2, 3, 4],
+        "name": "scenario_1_3",
         "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 3,
+        "goal_space": ["raw", "paw", "draw", "war", "wear"],
+        "goal": 2,
         "problem": 1,
-        "length": 7,
+        "length": 4,
         "images": [
           "stimuli/1/3/0.png",
           "stimuli/1/3/0.gif",
           "stimuli/1/3/1.gif",
-          "stimuli/1/3/2.gif",
-          "stimuli/1/3/3.gif",
-          "stimuli/1/3/4.gif",
-          "stimuli/1/3/5.gif"
+          "stimuli/1/3/2.gif"        ]
+      },
+      {
+        "trial": 0,
+        "times": [1, 2, 3, 4],
+        "name": "scenario_1_4",
+        "optimal": true,
+        "goal_space": ["draw", "raw", "paw", "war", "wear"],
+        "goal": 4,
+        "problem": 1,
+        "length": 4,
+        "images": [
+          "stimuli/1/4/0.png",
+          "stimuli/1/4/0.gif",
+          "stimuli/1/4/1.gif",
+          "stimuli/1/4/2.gif"
         ]
       },
       {
         "trial": 0,
         "times": [1, 2, 3, 4, 5, 6],
-        "name": "problem_1_4",
+        "name": "scenario_2_1",
         "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal_space": ["ear", "reap", "pear", "wade", "draw"],
         "goal": 2,
-        "problem": 1,
-        "length": 6,
-        "images": [
-          "stimuli/1/4/0.png",
-          "stimuli/1/4/0.gif",
-          "stimuli/1/4/1.gif",
-          "stimuli/1/4/2.gif",
-          "stimuli/1/4/3.gif",
-          "stimuli/1/4/4.gif"
-        ]
-      },
-      {
-        "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-        "name": "problem_2_1",
-        "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 1,
         "problem": 2,
-        "length": 13,
+        "length": 6,
         "images": [
           "stimuli/2/1/0.png",
           "stimuli/2/1/0.gif",
           "stimuli/2/1/1.gif",
           "stimuli/2/1/2.gif",
           "stimuli/2/1/3.gif",
-          "stimuli/2/1/4.gif",
-          "stimuli/2/1/5.gif",
-          "stimuli/2/1/6.gif",
-          "stimuli/2/1/7.gif",
-          "stimuli/2/1/8.gif",
-          "stimuli/2/1/9.gif",
-          "stimuli/2/1/10.gif",
-          "stimuli/2/1/11.gif"
-        ]
+          "stimuli/2/1/4.gif"        ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        "name": "problem_2_2",
-        "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 4,
-        "problem": 2,
-        "length": 10,
-        "images": [
-          "stimuli/2/2/0.png",
-          "stimuli/2/2/0.gif",
-          "stimuli/2/2/1.gif",
-          "stimuli/2/2/2.gif",
-          "stimuli/2/2/3.gif",
-          "stimuli/2/2/4.gif",
-          "stimuli/2/2/5.gif",
-          "stimuli/2/2/6.gif",
-          "stimuli/2/2/7.gif",
-          "stimuli/2/2/8.gif"
-        ]
-      },
-      {
-        "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        "name": "problem_2_3",
+        "times": [1, 2, 3, 4],
+        "name": "scenario_2_2",
         "optimal": true,
         "goal_space": ["ear", "reap", "pear", "wade", "draw"],
-        "goal": 1,
+        "goal": 0,
         "problem": 2,
-        "length": 10,
+        "length": 4,
+        "images": [
+          "stimuli/1/2/0.png",
+          "stimuli/1/2/0.gif",
+          "stimuli/1/2/1.gif",
+          "stimuli/1/2/2.gif"
+        ]
+      },
+      {
+        "trial": 0,
+        "times": [1, 2, 3, 4, 5, 6, 7],
+        "name": "scenario_2_3",
+        "optimal": true,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 3,
+        "problem": 2,
+        "length": 7,
         "images": [
           "stimuli/2/3/0.png",
           "stimuli/2/3/0.gif",
@@ -562,19 +464,16 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/3/2.gif",
           "stimuli/2/3/3.gif",
           "stimuli/2/3/4.gif",
-          "stimuli/2/3/5.gif",
-          "stimuli/2/3/6.gif",
-          "stimuli/2/3/7.gif",
-          "stimuli/2/3/8.gif"
+          "stimuli/2/3/5.gif"
         ]
       },
       {
         "trial": 0,
         "times": [1, 2, 3, 4, 5, 6, 7, 8],
-        "name": "problem_2_4",
+        "name": "scenario_2_4",
         "optimal": true,
-        "goal_space": ["wad", "reap", "war", "wade", "draw"],
-        "goal": 4,
+        "goal_space": ["raw", "paw", "draw", "war", "wear"],
+        "goal": 2,
         "problem": 2,
         "length": 8,
         "images": [
@@ -583,38 +482,39 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/4/1.gif",
           "stimuli/2/4/2.gif",
           "stimuli/2/4/3.gif",
-          "stimuli/2/4/4.gif",
+          "stimuli/2/4/4.gif", 
           "stimuli/2/4/5.gif",
           "stimuli/2/4/6.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6],
-        "name": "problem_3_1",
+        "times": [1, 2, 3, 4, 5, 6, 7],
+        "name": "scenario_3_1",
         "optimal": true,
-        "goal_space": ["cower", "war", "wear", "crow", "core"],
-        "goal": 1,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 0,
         "problem": 3,
-        "length": 6,
+        "length": 7,
         "images": [
           "stimuli/3/1/0.png",
           "stimuli/3/1/0.gif",
           "stimuli/3/1/1.gif",
           "stimuli/3/1/2.gif",
           "stimuli/3/1/3.gif",
-          "stimuli/3/1/4.gif"
+          "stimuli/3/1/4.gif",
+          "stimuli/3/1/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        "name": "problem_3_2",
+        "times": [1, 2, 3, 4, 5, 6, 7],
+        "name": "scenario_3_2",
         "optimal": true,
-        "goal_space": ["cower", "war", "wear", "crow", "core"],
-        "goal": 0,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 1,
         "problem": 3,
-        "length": 10,
+        "length": 7,
         "images": [
           "stimuli/3/2/0.png",
           "stimuli/3/2/0.gif",
@@ -622,21 +522,18 @@ experimentApp.controller('ExperimentController',
           "stimuli/3/2/2.gif",
           "stimuli/3/2/3.gif",
           "stimuli/3/2/4.gif",
-          "stimuli/3/2/5.gif",
-          "stimuli/3/2/6.gif",
-          "stimuli/3/2/7.gif",
-          "stimuli/3/2/8.gif"
+          "stimuli/3/2/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        "name": "problem_3_3",
+        "times": [1, 2, 3, 4, 5, 6, 7],
+        "name": "scenario_3_3",
         "optimal": true,
-        "goal_space": ["cower", "war", "wear", "crow", "core"],
-        "goal": 4,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 0,
         "problem": 3,
-        "length": 9,
+        "length": 7,
         "images": [
           "stimuli/3/3/0.png",
           "stimuli/3/3/0.gif",
@@ -644,20 +541,18 @@ experimentApp.controller('ExperimentController',
           "stimuli/3/3/2.gif",
           "stimuli/3/3/3.gif",
           "stimuli/3/3/4.gif",
-          "stimuli/3/3/5.gif",
-          "stimuli/3/3/6.gif",
-          "stimuli/3/3/7.gif"
+          "stimuli/3/3/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        "name": "problem_3_4",
+        "times": [1, 2, 3, 4, 5, 6, 7],
+        "name": "scenario_3_4",
         "optimal": true,
-        "goal_space": ["cower", "war", "wear", "crow", "core"],
-        "goal": 3,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 4,
         "problem": 3,
-        "length": 10,
+        "length": 7,
         "images": [
           "stimuli/3/4/0.png",
           "stimuli/3/4/0.gif",
@@ -665,77 +560,96 @@ experimentApp.controller('ExperimentController',
           "stimuli/3/4/2.gif",
           "stimuli/3/4/3.gif",
           "stimuli/3/4/4.gif",
-          "stimuli/3/4/5.gif",
-          "stimuli/3/4/6.gif",
-          "stimuli/3/4/7.gif",
-          "stimuli/3/4/8.gif"
+          "stimuli/3/4/5.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5],
-        "name": "problem_4_1",
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "name": "scenario_4_1",
         "optimal": true,
-        "goal_space": ["power", "cower", "crow", "core", "pore"],
-        "goal": 3,
+        "goal_space": ["power", "cower", "crow", "core", "pore"], 
+        "goal": 1,
         "problem": 4,
-        "length": 5,
+        "length": 11,
         "images": [
           "stimuli/4/1/0.png",
           "stimuli/4/1/0.gif",
           "stimuli/4/1/1.gif",
           "stimuli/4/1/2.gif",
-          "stimuli/4/1/3.gif"
+          "stimuli/4/1/3.gif",
+          "stimuli/4/1/4.gif", 
+          "stimuli/4/1/5.gif", 
+          "stimuli/4/1/6.gif", 
+          "stimuli/4/1/7.gif", 
+          "stimuli/4/1/8.gif", 
+          "stimuli/4/1/9.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4],
-        "name": "problem_4_2",
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        "name": "scenario_4_2",
         "optimal": true,
-        "goal_space": ["raw", "paw", "draw", "war", "wear"],
-        "goal": 2,
+        "goal_space": ["power", "cower", "crow", "core", "pore"],
+        "goal": 4,
         "problem": 4,
-        "length": 4,
+        "length": 9,
         "images": [
           "stimuli/4/2/0.png",
           "stimuli/4/2/0.gif",
           "stimuli/4/2/1.gif",
           "stimuli/4/2/2.gif",
+          "stimuli/4/2/3.gif",
+          "stimuli/4/2/4.gif",
+          "stimuli/4/2/5.gif",
+          "stimuli/4/2/6.gif",
+          "stimuli/4/2/7.gif",
+          "stimuli/4/2/8.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4],
-        "name": "problem_4_3",
+        "times": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "name": "scenario_4_3",
         "optimal": true,
-        "goal_space": ["ear", "paw", "dear", "war", "wear"],
-        "goal": 4,
+        "goal_space": ["ear", "reap", "pear", "wade", "draw"],
+        "goal": 2,
         "problem": 4,
-        "length": 4,
+        "length": 10,
         "images": [
           "stimuli/4/3/0.png",
           "stimuli/4/3/0.gif",
           "stimuli/4/3/1.gif",
-          "stimuli/4/3/2.gif"
+          "stimuli/4/3/2.gif",
+          "stimuli/4/3/3.gif",
+          "stimuli/4/3/4.gif",
+          "stimuli/4/3/5.gif",
+          "stimuli/4/3/6.gif",
+          "stimuli/4/3/7.gif", 
+          "stimuli/4/3/8.gif"
         ]
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4],
-        "name": "problem_4_4",
+        "times": [1, 2, 3, 4, 5, 6, 7, 8],
+        "name": "scenario_4_4",
         "optimal": true,
-        "goal_space": ["raw", "paw", "draw", "war", "wear"],
+        "goal_space": ["ear", "reap", "pear", "wade", "draw"],
         "goal": 4,
         "problem": 4,
-        "length": 4,
+        "length": 8,
         "images": [
           "stimuli/4/4/0.png",
           "stimuli/4/4/0.gif",
           "stimuli/4/4/1.gif",
-          "stimuli/4/4/2.gif"
+          "stimuli/4/4/2.gif",
+          "stimuli/4/4/3.gif",
+          "stimuli/4/4/4.gif",
+          "stimuli/4/4/5.gif",
+          "stimuli/4/4/6.gif"
         ]
-      },
+      }
     ];
   }
 )
