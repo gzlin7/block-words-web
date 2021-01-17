@@ -241,6 +241,13 @@ experimentApp.controller('ExperimentController',
     $scope.is_tutorial = function () {
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
+    $scope.stimuli_set_length = 4;
+    $scope.stimuli_sets = [
+      [3, 7, 11, 15],
+      [1, 5, 9, 13],
+      [4, 8, 12, 16],
+      [2, 6, 10, 14]
+    ]
     $scope.instructions = [
       {
         text: `Welcome to our word guessing game! <br>
@@ -390,16 +397,9 @@ experimentApp.controller('ExperimentController',
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for n different rounds. Ready to start? Press next to continue!`
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for ${$scope.stimuli_set_length} different rounds. Ready to start? Press next to continue!`
       }
     ];
-    $scope.stimuli_set_length = 4;
-    $scope.stimuli_sets = [
-      [3, 7, 11, 15],
-      [1, 5, 9, 13],
-      [4, 8, 12, 16],
-      [2, 6, 10, 14]
-    ]
     $scope.stimuli = [
       {
         "trial": 0,

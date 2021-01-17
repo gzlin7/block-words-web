@@ -95,6 +95,14 @@
       padding: 10px;
     }
 
+    .section_title {
+      float: left;
+      padding: 10px;
+      font-family: "Lato";
+      font-size: 20px;
+      font-weight: bold
+    }
+
     .button {
       background-color: #02a342;
       border-radius: 6px;
@@ -146,6 +154,7 @@
       </p>
       <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()"
         ng-src="{{instructions[inst_id].image}}" class="stimulus" id="instruction-img">
+      <p class= "section_title" ng-show="section == 'instructions' && instruction_has_image()">Tutorial</p>
       <img ng-show="!loaded && section == 'instructions' && instruction_has_image()" ng-src="blank.png"
         class="stimulus">
       <!-- Stimuli -->
@@ -158,6 +167,7 @@
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"
         ng-src="{{stimuli_set[stim_id].images[part_id]}}" class="stimulus" id="stimulus-img">
       <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
+      <div class= "section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id + 1}}</div>
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
         You're all done! <br> Thank you for your time :) <br>
