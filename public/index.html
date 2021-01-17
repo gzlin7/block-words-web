@@ -19,7 +19,7 @@
 
     .full-row {
       width: 200%;
-      padding: 10vw 10vw 10vw 0vw;
+      padding: 10vw 10vw 2vw 0vw;
       font-size: 16pt;
       text-align: justify;
     }
@@ -70,7 +70,7 @@
     }
 
     .check-all {
-      margin-left: 35px;
+      margin-left: 40px;
       background-color: #0f6bd4;
       border-radius: 6px;
       border: 1px solid #0f6bd4;
@@ -191,17 +191,32 @@
         </p>
 
         <ul class="no-bullets">
-          <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"><b class='checkboxtext'>
-              {{possible_goals[0]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"><b class='checkboxtext'>
-              {{possible_goals[1]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[2]" ng-change="validate_goal()"><b class='checkboxtext'>
-              {{possible_goals[2]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[3]" ng-change="validate_goal()"><b class='checkboxtext'>
-              {{possible_goals[3]}}</b></li>
-          <li><input type="checkbox" ng-model="response.checked[4]" ng-change="validate_goal()"><b class='checkboxtext'>
-              {{possible_goals[4]}}</b></li>
+          <li><input type="checkbox" ng-model="response.checked[0]" ng-change="validate_goal()"
+              ng-disabled="response.dontKnow">
+            <b class='checkboxtext'>{{possible_goals[0]}}</b>
+          </li>
+          <li><input type="checkbox" ng-model="response.checked[1]" ng-change="validate_goal()"
+              ng-disabled="response.dontKnow">
+            <b class='checkboxtext'>{{possible_goals[1]}}</b>
+          </li>
+          <li><input type="checkbox" ng-model="response.checked[2]" ng-change="validate_goal()"
+              ng-disabled="response.dontKnow">
+            <b class='checkboxtext'>{{possible_goals[2]}}</b>
+          </li>
+          <li><input type="checkbox" ng-model="response.checked[3]" ng-change="validate_goal()"
+              ng-disabled="response.dontKnow">
+            <b class='checkboxtext'>{{possible_goals[3]}}</b>
+          </li>
+          <li><input type="checkbox" ng-model="response.checked[4]" ng-change="validate_goal()"
+              ng-disabled="response.dontKnow">
+            <b class='checkboxtext'>{{possible_goals[4]}}</b>
+          </li>
+          <br>
+          <li><input type="checkbox" ng-model="response.dontKnow" ng-change="toggle_dontknow()">
+            <i class='checkboxtext'>I don't know</i>
+          </li>
         </ul>
+
         <button class="check-all" ng-click="check_all()">All Equally Likely</button>
       </div>
 
@@ -215,7 +230,7 @@
         </ul>
         <br>
 
-        <div ng-hide="comprehension_response == ''">
+        <div ng-hide="comprehension_response == ''" class="checkboxtext">
           <b ng-show="valid_comprehension" style="color:green">Correct! Hit the "Next" button to continue.</b>
           <b ng-show="!valid_comprehension" style="color:red">Wrong answer, please try again!</b>
         </div>
