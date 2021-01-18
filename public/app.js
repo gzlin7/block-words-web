@@ -41,6 +41,7 @@ experimentApp.controller('ExperimentController',
     $scope.response = { "dontKnow": false, "checked": [false, false, false, false, false] };
     $scope.valid_goal = false;
     $scope.exam_response = "";
+    $scope.valid_exam = false;
     $scope.csv_header = [
       "timestep",
       "goal_probs_0",
@@ -82,8 +83,9 @@ experimentApp.controller('ExperimentController',
       $scope.response = { "checked": [true, true, true, true, true] };
       $scope.valid_goal = true;
     }
-    $scope.answer_exam = function (ans) {
+    $scope.validate_exam = function (ans) {
       $scope.exam_response = ans;
+      $scope.valid_exam = true;
     }
     $scope.advance = function () {
       $scope.loaded = false;
@@ -134,6 +136,7 @@ experimentApp.controller('ExperimentController',
       $scope.comprehension_response = "";
       $scope.valid_comprehension = false;
       $scope.exam_response = "";
+      $scope.valid_exam = false;
     };
     $scope.advance_stimuli = function () {
       if ($scope.stim_id == $scope.stimuli_set.length) {
@@ -269,15 +272,15 @@ experimentApp.controller('ExperimentController',
         text: ``,
         image: "tutorial/demo/scenario-tutorial-demo.gif",
         question: `What is the word?`,
-        options: ["ear", "reap", "pear", "wade", "draw"],
-        answer: 0
+        options: ["pear", "reap", "ear", "wade", "draw"],
+        answer: 2
       },
       {
         text: ``,
         image: "tutorial/demo/scenario-tutorial-demo2.gif",
         question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
-        options: ["Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>", "No, there was no mistake"],
-        answer: 0
+        options: ["No, there was no mistake", "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"],
+        answer: 1
       },
       {
         text: `Now, your task is to watch someone stacking these blocks, and with every block they 
@@ -309,11 +312,11 @@ experimentApp.controller('ExperimentController',
         image: "tutorial/tutorial/1.gif",
         question: `Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br> 
         How would you best describe the mistake here?`,
-        options: ['The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b>  on block <b>e</b> , but mistakenly dropped it in the wrong location.',
-          'The player <i><b>mistakenly</b></i>&nbsp; picked up block <b>w</b>, then put it back down in a different location.',
-          'I don\'t think a mistake was made.'],
+        options: ['I don\'t think a mistake was made.', 'The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b>  on block <b>e</b> , but mistakenly dropped it in the wrong location.',
+          'The player <i><b>mistakenly</b></i>&nbsp; picked up block <b>w</b>, then put it back down in a different location.'
+        ],
         footnote: "If you missed what happened, you can always replay the current move by clicking \"Replay Move\".&nbsp; In case you don\'t remember the previous move, the player stacked block e on top of block r.",
-        answer: 0
+        answer: 1
       },
       {
         text: `Let's watch the move again, and make your best guess.
@@ -351,7 +354,7 @@ experimentApp.controller('ExperimentController',
         text: `<b>Bonus Payment Points</b> <br>
                The points system works as follows:<br><br>
                <b>-2.0 points</b> if none of the words you choose is correct <br>
-               <b>0.0 points</b> for saying I Don't Know, or that words are All Equally Likely <br>
+               <b>0.0 points</b> for saying "I Don't Know" or choosing all words<br>
                <b>0.5 points</b> for choosing 4 words, one of which is the correct word <br>
                <b>1.3 points</b> for choosing 3 words, one of which is the correct word <br>
                <b>3.0 points</b> for choosing 2 words, one of which is the correct word <br>

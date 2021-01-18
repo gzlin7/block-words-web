@@ -148,8 +148,9 @@
       <p ng-show="section == 'instructions' && !instruction_has_image()" class="instructions1 full-row"
         ng-bind-html="instructions[inst_id].text">
       <ul class="no-bullets" ng_show="is_exam()" ng-repeat="opt in instructions[inst_id].options">
-        <li><input type="radio" name="exam" ng-model="exam_response" ng-click="answer_exam(opt)" value="{{opt}}"> <span
-            class="checkboxtext" ng-bind-html="opt"></span></li>
+        <li><input type="radio" name="exam" ng-model="exam_response" ng-click="validate_exam(opt)" value="{{opt}}">
+          <span class="checkboxtext" ng-bind-html="opt"></span>
+        </li>
       </ul>
       </p>
       <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()"
@@ -184,6 +185,7 @@
         </button>
         <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' || 
           valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial()) || 
+          valid_exam == false && section == 'instructions' && is_exam() ||
           valid_comprehension == false && section == 'instructions' && instruction_has_question()">
           Next >>
         </button>
