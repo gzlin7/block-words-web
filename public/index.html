@@ -147,14 +147,14 @@
       <!-- Instructions -->
       <p ng-show="section == 'instructions' && !instruction_has_image()" class="instructions1 full-row"
         ng-bind-html="instructions[inst_id].text">
-        <ul class="no-bullets" ng_show="is_exam()" ng-repeat="opt in instructions[inst_id].options">
-          <li><input type="radio" name="exam" ng-model="exam_response"
-          ng-click="answer_exam(opt)" value="{{opt}}"> <span class="checkboxtext" ng-bind-html="opt"></span></li>
-        </ul>
+      <ul class="no-bullets" ng_show="is_exam()" ng-repeat="opt in instructions[inst_id].options">
+        <li><input type="radio" name="exam" ng-model="exam_response" ng-click="answer_exam(opt)" value="{{opt}}"> <span
+            class="checkboxtext" ng-bind-html="opt"></span></li>
+      </ul>
       </p>
       <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()"
         ng-src="{{instructions[inst_id].image}}" class="stimulus" id="instruction-img">
-      <p class= "section_title" ng-show="section == 'instructions' && instruction_has_image()">Tutorial</p>
+      <p class="section_title" ng-show="section == 'instructions' && instruction_has_image()">Tutorial</p>
       <img ng-show="!loaded && section == 'instructions' && instruction_has_image()" ng-src="blank.png"
         class="stimulus">
       <!-- Stimuli -->
@@ -167,7 +167,7 @@
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"
         ng-src="{{stimuli_set[stim_id].images[part_id]}}" class="stimulus" id="stimulus-img">
       <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
-      <div class= "section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id + 1}}</div>
+      <div class="section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id + 1}}</div>
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
         You're all done! <br> Thank you for your time :) <br>
@@ -201,7 +201,7 @@
       <div ng-show="section == 'stimuli' && part_id >= 0 || is_tutorial()" class="hidden" id="question">
         <p><b>Which of the words below is the player trying to spell? </b> </p>
         <p>Select <b>at least one guess</b> to
-          continue. If all guesses seem equally likely, select the "All Equally Likely" option.
+          continue. If no guesses seem more likely than the others, select the "I don't know" option.
         </p>
 
         <ul class="no-bullets">
@@ -239,8 +239,8 @@
         <p ng-bind-html="instructions[inst_id].question"></p>
 
         <ul class="no-bullets" ng-repeat="opt in instructions[inst_id].options">
-          <li><input type="radio" name="comprehension" ng-model="comprehension_response"
-            ng-click="validate_answer(opt)" value="{{opt}}"> <span class="checkboxtext" ng-bind-html="opt"></span></li>
+          <li><input type="radio" name="comprehension" ng-model="comprehension_response" ng-click="validate_answer(opt)"
+              value="{{opt}}"> <span class="checkboxtext" ng-bind-html="opt"></span></li>
         </ul>
         <br>
 

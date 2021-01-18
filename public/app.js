@@ -213,7 +213,8 @@ experimentApp.controller('ExperimentController',
     $scope.loaded = false;
     $scope.setStimuli = async function () {
       let count = await getCounter();
-      let stim_idx = $scope.stimuli_sets[count % 7];
+      // let stim_idx = $scope.stimuli_sets[count % 7];
+      let stim_idx = $scope.stimuli_sets[count % 2];
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
@@ -241,12 +242,10 @@ experimentApp.controller('ExperimentController',
     $scope.is_tutorial = function () {
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
-    $scope.stimuli_set_length = 4;
+    $scope.stimuli_set_length = 10;
     $scope.stimuli_sets = [
-      [3, 7, 11, 15],
-      [1, 5, 9, 13],
-      [4, 8, 12, 16],
-      [2, 6, 10, 14]
+      [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
+      [4, 8, 12, 16, 2, 6, 10, 14, 3, 7]
     ]
     $scope.instructions = [
       {
@@ -397,7 +396,7 @@ experimentApp.controller('ExperimentController',
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for ${$scope.stimuli_set_length} different rounds. Ready to start? Press next to continue!`
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. Ready to start? Press next to continue!`
       }
     ];
     $scope.stimuli = [
