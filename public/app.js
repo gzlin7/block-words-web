@@ -216,8 +216,8 @@ experimentApp.controller('ExperimentController',
     $scope.loaded = false;
     $scope.setStimuli = async function () {
       let count = await getCounter();
-      // let stim_idx = $scope.stimuli_sets[count % 7];
-      let stim_idx = $scope.stimuli_sets[count % 2];
+      // change mod if # stimuli sets changes
+      let stim_idx = $scope.stimuli_sets[count % 16];
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
@@ -246,9 +246,25 @@ experimentApp.controller('ExperimentController',
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
     $scope.stimuli_set_length = 10;
+    // circular buffer / sliding window strategy
+    // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
       [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
-      [4, 8, 12, 16, 2, 6, 10, 14, 3, 7]
+      [7, 11, 15, 1, 5, 9, 13, 4, 8, 12],
+      [11, 15, 1, 5, 9, 13, 4, 8, 12, 16],
+      [15, 1, 5, 9, 13, 4, 8, 12, 16, 2],
+      [1, 5, 9, 13, 4, 8, 12, 16, 2, 6],
+      [5, 9, 13, 4, 8, 12, 16, 2, 6, 10],
+      [9, 13, 4, 8, 12, 16, 2, 6, 10, 14],
+      [13, 4, 8, 12, 16, 2, 6, 10, 14, 3],
+      [4, 8, 12, 16, 2, 6, 10, 14, 3, 7],
+      [8, 12, 16, 2, 6, 10, 14, 3, 7, 11],
+      [12, 16, 2, 6, 10, 14, 3, 7, 11, 15],
+      [16, 2, 6, 10, 14, 3, 7, 11, 15, 1],
+      [2, 6, 10, 14, 3, 7, 11, 15, 1, 5],
+      [6, 10, 14, 3, 7, 11, 15, 1, 5, 9],
+      [10, 14, 3, 7, 11, 15, 1, 5, 9, 13],
+      [14, 3, 7, 11, 15, 1, 5, 9, 13, 4],
     ]
     $scope.instructions = [
       {
@@ -347,53 +363,55 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `<b>Bonus Payment Points</b> <br>
-               As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make, based on <b>how correct</b> the guess is. The points system will be explained in more detail on the next page.
-               Your total points for each task are shown at the end of the task, and [insert conversion method?]`
+               As you play, you can earn <b>bonus payment</b> by collecting <b>points for each guess</b>  you make, based on <b>how correct</b> the guess is. Your score for each game is the average score of your guesses in the game, and will be <b>displayed after that game</b>. 
+               <br><br>
+               Your points from all games are converted to bonus payment at a rate of <b>10 points = $1.00.</b>
+               The points system will be explained in more detail on the next page.
+               `
       },
       {
         text: `<b>Bonus Payment Points</b> <br>
-               The points system works as follows:<br><br>
+               The points system works as follows:<br>
                <b>-2.0 points</b> if none of the words you choose is correct <br>
                <b>0.0 points</b> for saying "I Don't Know" or choosing all words<br>
                <b>0.5 points</b> for choosing 4 words, one of which is the correct word <br>
                <b>1.3 points</b> for choosing 3 words, one of which is the correct word <br>
                <b>3.0 points</b> for choosing 2 words, one of which is the correct word <br>
                <b>8.0 points</b> for choosing only the correct word 
-               <br>
-               <br>
+               <br><br>
                <b>Important:</b> Because <b>you might lose points</b> if you guess incorrectly, don't be over-confident! The point system is designed so that you <b>don't benefit from guessing when you don't know for sure</b>.`
       },
       {
-        text: `<b>Comprehension Check</b> <br>
-               For the last part of the tutorial, we will ask some questions to check your understanding of the task. For each question, please select the best answer.`
+        text: `<b>Comprehension Check Questions</b> <br>
+               For the last part of the tutorial, we will ask 5 quick questions to check your understanding of the task. For each question, please select the best answer.`
       },
       {
-        text: `What is the purpose of your task?`,
+        text: `<b>Question 1/5:</b> What is the purpose of your task?`,
         options: ["Spell a word by stacking blocks, out of five possible words.", "Stack blocks to spell as many words as possible.",
           "Watch your friend spell a given word by stacking blocks, and try to guess which word they are spelling."],
         answer: 2,
         exam: true
       },
       {
-        text: `How many words is your friend actually trying to spell?`,
+        text: `<b>Question 2/5:</b>  In a particular game, how many words is your friend actually trying to spell?`,
         options: ["1 word", "2 words", "More than 2 words"],
         answer: 0,
         exam: true
       },
       {
-        text: `Sometimes, you are not yet sure exactly which word your friend is trying to spell, and a few words seem likely. <b>Up to</b> how many words are you allowed to guess?`,
-        options: ["1 word", "2 words", "More than 2 words"],
+        text: `<b>Question 3/5:</b> Sometimes, you are not yet sure exactly which word your friend is trying to spell, and a few words seem likely. How many words are you allowed to guess?`,
+        options: ["Only 1 word", "Only 2 words", "As many words as I want"],
         answer: 2,
         exam: true
       },
       {
-        text: `You're watching your friend play and <b>two</b> of the words seem likelier than the rest. What should you do?`,
+        text: `<b>Question 4/5:</b> You're watching your friend play and <b>two</b> of the words seem likelier than the rest. What should you do?`,
         options: ["Guess <b>one</b> of the two likely words.", "Guess <b>both</b> likely words."],
         answer: 1,
         exam: true
       },
       {
-        text: `You're watching your friend play and <b>none</b> of the words seem likelier than the rest. What should you do?`,
+        text: `<b>Question 5/5:</b> You're watching your friend play and <b>none</b> of the words seem likelier than the rest. Which is the best guessing strategy?`,
         options: ["Guess one or two words and hope one of them is correct.", "Select the \"I don't know\" option because I may lose bonus points from guessing incorrectly."],
         answer: 1,
         exam: true
