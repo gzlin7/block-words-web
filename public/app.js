@@ -162,7 +162,7 @@ experimentApp.controller('ExperimentController',
           // Advance to next problem.
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
-          $scope.bonus_points = (($scope.reward_score * 10) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
+          $scope.bonus_points = (($scope.reward_score) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
         }
       }
       $scope.response = { "checked": [false, false, false, false, false] };
@@ -172,14 +172,25 @@ experimentApp.controller('ExperimentController',
       // Compute probs from checkboxes
       let numChecked = resp.checked.filter(check => check == true).length;
       probs = [0, 0, 0, 0, 0];
+      num_words_guessed = 0
       resp.checked.forEach((check, index) => {
         if (check) {
           probs[index] = (1 / numChecked).toFixed(2);
+          num_words_guessed += 1;
         }
       })
-      console.log("probs=" + probs);
       // Increase reward score
-      $scope.reward_score += probs[$scope.true_goal];
+      reward_weights = [-2.0, 8.0, 3.0, 1.3, 0.5, 0.0]
+      console.log($scope.stimuli_set[$scope.stim_id].goal)
+      console.log(probs[$scope.stimuli_set[$scope.stim_id].goal])
+      if (probs[$scope.true_goal] != 0) {
+        $scope.reward_score += reward_weights[num_words_guessed];
+      }
+      else {
+        $scope.reward_score += reward_weights[0];
+      }
+      console.log("reward = " + $scope.reward_score)
+
       if ($scope.section == "instructions") {
         $scope.points = (probs[$scope.true_goal] * 10).toFixed(1);
         $scope.tutorial_score += probs[$scope.true_goal] * 10;
@@ -267,48 +278,48 @@ experimentApp.controller('ExperimentController',
       [14, 3, 7, 11, 15, 1, 5, 9, 13, 4],
     ]
     $scope.instructions = [
-      {
-        text: `Welcome to our word guessing game! <br>
-               Before you begin your task, you'll complete a brief guided tutorial (~ 4 minutes) to understand the game.<br>
-               Press next to continue.`,
-      },
-      {
-        text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
-               what the word is before your friend finishes spelling.
-               <br>
-               <br>
-               The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
-               <br>
-               <br>
-               Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
-               `,
-        image: "tutorial/demo/0.png"
-      },
-      {
-        text: ``,
-        image: "tutorial/demo/scenario-tutorial-demo.gif",
-        question: `What is the word?`,
-        options: ["pear", "reap", "ear", "wade", "draw"],
-        answer: 2
-      },
-      {
-        text: ``,
-        image: "tutorial/demo/scenario-tutorial-demo2.gif",
-        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
-        options: ["No, there was no mistake", "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"],
-        answer: 1
-      },
-      {
-        text: `Now, your task is to watch someone stacking these blocks, and with every block they 
-              move, guess which word they are trying to spell.
-              <br><br>
-              <b>How to guess?</b> <br>
-              You will be given <b>5 possible words</b>. 
-              When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
-      },
-      {
-        text: `Let's do a practice run, just so you're familiarized.`,
-      },
+      // {
+      //   text: `Welcome to our word guessing game! <br>
+      //          Before you begin your task, you'll complete a brief guided tutorial (~ 4 minutes) to understand the game.<br>
+      //          Press Next to continue.`,
+      // },
+      // {
+      //   text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
+      //          what the word is before your friend finishes spelling.
+      //          <br>
+      //          <br>
+      //          The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
+      //          <br>
+      //          <br>
+      //          Hit the <b>Next button</b> to watch your friend play, and try to guess the word. 
+      //          `,
+      //   image: "tutorial/demo/0.png"
+      // },
+      // {
+      //   text: ``,
+      //   image: "tutorial/demo/scenario-tutorial-demo.gif",
+      //   question: `What is the word?`,
+      //   options: ["pear", "reap", "ear", "wade", "draw"],
+      //   answer: 2
+      // },
+      // {
+      //   text: ``,
+      //   image: "tutorial/demo/scenario-tutorial-demo2.gif",
+      //   question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
+      //   options: ["No, there was no mistake", "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"],
+      //   answer: 1
+      // },
+      // {
+      //   text: `Now, your task is to watch someone stacking these blocks, and with every block they 
+      //         move, guess which word they are trying to spell.
+      //         <br><br>
+      //         <b>How to guess?</b> <br>
+      //         You will be given <b>5 possible words</b>. 
+      //         When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
+      // },
+      // {
+      //   text: `Let's do a practice run, just so you're familiarized.`,
+      // },
       {
         text: `First, you'll get a chance to look at the available letters and the 5 possible words.
                Before seeing the player move any blocks, select all the words that you think
@@ -421,7 +432,7 @@ experimentApp.controller('ExperimentController',
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. Ready to start? Press next to continue!`
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. Ready to start? Press Next to continue!`
       }
     ];
     $scope.stimuli = [
