@@ -317,14 +317,18 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Now watch the player move the first block. What do you think? 
-        If you think that several words are more likely than the rest, select all of likely words.`,
+        text: `Press Next to watch the player move the first block.`,
+      },
+      {
+        text: `What do you think? If you think that <b>several</b> words are more likely than the rest, select <b>all</b> of likely words.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
       },
       {
-        text: `Consider this new move. Do you notice that it doesn't make sense? 
-        It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
+        text: `Press Next to consider the next move.`
+      },
+      {
+        text: `Do you notice that the move doesn't make sense? It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
         image: "tutorial/tutorial/1.gif",
         question: `Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br> 
         How would you best describe the mistake here?`,
