@@ -426,7 +426,7 @@ experimentApp.controller('ExperimentController',
         "times": [1, 2, 3, 4],
         "name": "scenario_1_2",
         "optimal": true,
-        "goal_space": ["wad", "reap", "war", "wade", "draw"],
+        "goal_space": ["ear", "reap", "pear", "wade", "draw"],
         "goal": 3,
         "problem": 1,
         "length": 4,
@@ -495,10 +495,10 @@ experimentApp.controller('ExperimentController',
         "problem": 2,
         "length": 4,
         "images": [
-          "stimuli/1/2/0.png",
-          "stimuli/1/2/0.gif",
-          "stimuli/1/2/1.gif",
-          "stimuli/1/2/2.gif"
+          "stimuli/2/2/0.png",
+          "stimuli/2/2/0.gif",
+          "stimuli/2/2/1.gif",
+          "stimuli/2/2/2.gif"
         ]
       },
       {
