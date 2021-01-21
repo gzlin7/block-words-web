@@ -51,6 +51,7 @@ experimentApp.controller('ExperimentController',
       "goal_probs_4",
       "true_goal_probs"
     ];
+    $scope.exam_results = [];
     // $scope.csv_name = function() {
     //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
     // }
@@ -100,6 +101,12 @@ experimentApp.controller('ExperimentController',
     $scope.advance_instructions = function () {
       if ($scope.inst_id == $scope.instructions.length - 1) {
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
+        exam_data = {
+          "results": $scope.exam_results,
+          "score": $scope.exam_results.filter(correct => correct == true).length
+        }
+        console.log("Exam Results: " + exam_data);
+        storeToDB($scope.user_id + "_exam", exam_data);
         $scope.reward_score = 0;
         $scope.section = "stimuli";
         $scope.stim_id = 0;
@@ -126,8 +133,8 @@ experimentApp.controller('ExperimentController',
           $scope.tutorial_length = 0
         }
         if ($scope.instructions[$scope.inst_id].exam) {
-          // TODO: replace alert with recording
-          // alert("exam step, response=" + $scope.exam_response);
+          let correct = $scope.instructions[$scope.inst_id].options[$scope.instructions[$scope.inst_id].answer] === $scope.exam_response;
+          $scope.exam_results.push(correct);
         }
         $scope.inst_id = $scope.inst_id + 1;
       }
@@ -162,7 +169,7 @@ experimentApp.controller('ExperimentController',
           // Advance to next problem.
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
-          $scope.bonus_points = (($scope.reward_score * 10) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
+          $scope.bonus_points = (($scope.reward_score) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
         }
       }
       $scope.response = { "checked": [false, false, false, false, false] };
@@ -172,14 +179,25 @@ experimentApp.controller('ExperimentController',
       // Compute probs from checkboxes
       let numChecked = resp.checked.filter(check => check == true).length;
       probs = [0, 0, 0, 0, 0];
+      num_words_guessed = 0
       resp.checked.forEach((check, index) => {
         if (check) {
           probs[index] = (1 / numChecked).toFixed(2);
+          num_words_guessed += 1;
         }
       })
-      console.log("probs=" + probs);
       // Increase reward score
-      $scope.reward_score += probs[$scope.true_goal];
+      reward_weights = [-2.0, 8.0, 3.0, 1.3, 0.5, 0.0]
+      console.log($scope.stimuli_set[$scope.stim_id].goal)
+      console.log(probs[$scope.stimuli_set[$scope.stim_id].goal])
+      if (probs[$scope.true_goal] != 0) {
+        $scope.reward_score += reward_weights[num_words_guessed];
+      }
+      else {
+        $scope.reward_score += reward_weights[0];
+      }
+      console.log("reward = " + $scope.reward_score)
+
       if ($scope.section == "instructions") {
         $scope.points = (probs[$scope.true_goal] * 10).toFixed(1);
         $scope.tutorial_score += probs[$scope.true_goal] * 10;
@@ -216,8 +234,8 @@ experimentApp.controller('ExperimentController',
     $scope.loaded = false;
     $scope.setStimuli = async function () {
       let count = await getCounter();
-      // let stim_idx = $scope.stimuli_sets[count % 7];
-      let stim_idx = $scope.stimuli_sets[count % 2];
+      // change mod if # stimuli sets changes
+      let stim_idx = $scope.stimuli_sets[count % 16];
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
       }
@@ -246,15 +264,31 @@ experimentApp.controller('ExperimentController',
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
     $scope.stimuli_set_length = 10;
+    // circular buffer / sliding window strategy
+    // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
       [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
-      [4, 8, 12, 16, 2, 6, 10, 14, 3, 7]
+      [7, 11, 15, 1, 5, 9, 13, 4, 8, 12],
+      [11, 15, 1, 5, 9, 13, 4, 8, 12, 16],
+      [15, 1, 5, 9, 13, 4, 8, 12, 16, 2],
+      [1, 5, 9, 13, 4, 8, 12, 16, 2, 6],
+      [5, 9, 13, 4, 8, 12, 16, 2, 6, 10],
+      [9, 13, 4, 8, 12, 16, 2, 6, 10, 14],
+      [13, 4, 8, 12, 16, 2, 6, 10, 14, 3],
+      [4, 8, 12, 16, 2, 6, 10, 14, 3, 7],
+      [8, 12, 16, 2, 6, 10, 14, 3, 7, 11],
+      [12, 16, 2, 6, 10, 14, 3, 7, 11, 15],
+      [16, 2, 6, 10, 14, 3, 7, 11, 15, 1],
+      [2, 6, 10, 14, 3, 7, 11, 15, 1, 5],
+      [6, 10, 14, 3, 7, 11, 15, 1, 5, 9],
+      [10, 14, 3, 7, 11, 15, 1, 5, 9, 13],
+      [14, 3, 7, 11, 15, 1, 5, 9, 13, 4],
     ]
     $scope.instructions = [
       {
         text: `Welcome to our word guessing game! <br>
                Before you begin your task, you'll complete a brief guided tutorial (~ 4 minutes) to understand the game.<br>
-               Press next to continue.`,
+               Press Next to continue.`,
       },
       {
         text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
@@ -264,7 +298,7 @@ experimentApp.controller('ExperimentController',
                The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
                <br>
                <br>
-               Hit the <b>next button</b> to watch your friend play, and try to guess the word. 
+               Hit the <b>Next button</b> to watch your friend play, and try to guess the word. 
                `,
         image: "tutorial/demo/0.png"
       },
@@ -276,9 +310,12 @@ experimentApp.controller('ExperimentController',
         answer: 2
       },
       {
+        text: `Let's watch it again, but this time, pay attention to whether your friend <b>made a mistake</b> while spelling the word <b>ear</b>.`,
+      },
+      {
         text: ``,
         image: "tutorial/demo/scenario-tutorial-demo2.gif",
-        question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
+        question: `Can you tell if your friend <b>made a mistake</b> while spelling the word <b>ear</b>?`,
         options: ["No, there was no mistake", "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"],
         answer: 1
       },
@@ -301,17 +338,19 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Now watch the player move the first block. What do you think? 
-        If you think that several words are more likely than the rest, select all of likely words.`,
+        text: `Press Next to watch the player move the first block.`,
+      },
+      {
+        text: `What do you think? If you think that <b>several</b> words are more likely than the rest, select <b>all</b> of likely words.`,
         image: "tutorial/tutorial/0.gif",
         tutorial: true
       },
       {
-        text: `Consider this new move. Do you notice that it doesn't make sense? 
-        It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
+        text: `Press Next to consider the next move. You may notice that the move doesn't make sense. That's fine, the person spelling the words <b>might make mistakes</b> sometimes.`
+      },
+      {
         image: "tutorial/tutorial/1.gif",
-        question: `Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br> 
-        How would you best describe the mistake here?`,
+        question: `How would you best describe the mistake here? Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br>`,
         options: ['I don\'t think a mistake was made.', 'The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b>  on block <b>e</b> , but mistakenly dropped it in the wrong location.',
           'The player <i><b>mistakenly</b></i>&nbsp; picked up block <b>w</b>, then put it back down in a different location.'
         ],
@@ -347,59 +386,61 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `<b>Bonus Payment Points</b> <br>
-               As you play this game, you can earn <b>bonus payment</b> by collecting <b>points</b> for each guess you make, based on <b>how correct</b> the guess is. The points system will be explained in more detail on the next page.
-               Your total points for each task are shown at the end of the task, and [insert conversion method?]`
+               As you play, you can earn <b>bonus payment</b> by collecting <b>points for each guess</b>  you make, based on <b>how correct</b> the guess is. Your score for each game is the average score of your guesses in the game, and will be <b>displayed after that game</b>. 
+               <br><br>
+               Your points from all games are converted to bonus payment at a rate of <b>10 points = $1.00.</b>
+               The points system will be explained in more detail on the next page.
+               `
       },
       {
         text: `<b>Bonus Payment Points</b> <br>
-               The points system works as follows:<br><br>
+               The points system works as follows:<br>
                <b>-2.0 points</b> if none of the words you choose is correct <br>
                <b>0.0 points</b> for saying "I Don't Know" or choosing all words<br>
                <b>0.5 points</b> for choosing 4 words, one of which is the correct word <br>
                <b>1.3 points</b> for choosing 3 words, one of which is the correct word <br>
                <b>3.0 points</b> for choosing 2 words, one of which is the correct word <br>
                <b>8.0 points</b> for choosing only the correct word 
-               <br>
-               <br>
+               <br><br>
                <b>Important:</b> Because <b>you might lose points</b> if you guess incorrectly, don't be over-confident! The point system is designed so that you <b>don't benefit from guessing when you don't know for sure</b>.`
       },
       {
-        text: `<b>Comprehension Check</b> <br>
-               For the last part of the tutorial, we will ask some questions to check your understanding of the task. For each question, please select the best answer.`
+        text: `<b>Comprehension Check Questions</b> <br>
+               For the last part of the tutorial, we will ask 5 quick questions to check your understanding of the task. For each question, please select the best answer.`
       },
       {
-        text: `What is the purpose of your task?`,
+        text: `<b>Question 1/5:</b> What is the purpose of your task?`,
         options: ["Spell a word by stacking blocks, out of five possible words.", "Stack blocks to spell as many words as possible.",
           "Watch your friend spell a given word by stacking blocks, and try to guess which word they are spelling."],
         answer: 2,
         exam: true
       },
       {
-        text: `How many words is your friend actually trying to spell?`,
+        text: `<b>Question 2/5:</b>  In a particular game, how many words is your friend actually trying to spell?`,
         options: ["1 word", "2 words", "More than 2 words"],
         answer: 0,
         exam: true
       },
       {
-        text: `Sometimes, you are not yet sure exactly which word your friend is trying to spell, and a few words seem likely. <b>Up to</b> how many words are you allowed to guess?`,
-        options: ["1 word", "2 words", "More than 2 words"],
+        text: `<b>Question 3/5:</b> Sometimes, you are not yet sure exactly which word your friend is trying to spell, and a few words seem likely. How many words are you allowed to guess?`,
+        options: ["Only 1 word", "Only 2 words", "As many words as I want"],
         answer: 2,
         exam: true
       },
       {
-        text: `You're watching your friend play and <b>two</b> of the words seem likelier than the rest. What should you do?`,
+        text: `<b>Question 4/5:</b> You're watching your friend play and <b>two</b> of the words seem likelier than the rest. What should you do?`,
         options: ["Guess <b>one</b> of the two likely words.", "Guess <b>both</b> likely words."],
         answer: 1,
         exam: true
       },
       {
-        text: `You're watching your friend play and <b>none</b> of the words seem likelier than the rest. What should you do?`,
+        text: `<b>Question 5/5:</b> You're watching your friend play and <b>none</b> of the words seem likelier than the rest. Which is the best guessing strategy?`,
         options: ["Guess one or two words and hope one of them is correct.", "Select the \"I don't know\" option because I may lose bonus points from guessing incorrectly."],
         answer: 1,
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. Ready to start? Press next to continue!`
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. Ready to start? Press Next to continue!`
       }
     ];
     $scope.stimuli = [

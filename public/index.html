@@ -233,7 +233,7 @@
           </li>
         </ul>
 
-        <button class="check-all" ng-click="check_all()">All Equally Likely</button>
+        <!-- <button class="check-all" ng-click="check_all()">All Equally Likely</button> -->
       </div>
 
       <!-- Comprehension questions -->
@@ -247,7 +247,7 @@
         <br>
 
         <div ng-hide="comprehension_response == ''" class="checkboxtext">
-          <b ng-show="valid_comprehension" style="color:green">Correct! Hit the "Next" button to continue.</b>
+          <b ng-show="valid_comprehension" style="color:green">Correct! Hit the Next button to continue.</b>
           <b ng-show="!valid_comprehension" style="color:red">Wrong answer, please try again!</b>
         </div>
 
@@ -276,11 +276,11 @@
 
       function storeToDB(key, val) {
         console.log("Storing " + key + " with " + JSON.stringify(val));
-        // resultsRef.child(key).set(val);
+        resultsRef.child(key).set(val);
       }
 
       function incrementCounter() {
-        // counterRef.child(counterKey).set(count+1);
+        counterRef.child(counterKey).set(count + 1);
       }
 
       async function getCounter() {
