@@ -51,6 +51,7 @@ experimentApp.controller('ExperimentController',
       "goal_probs_4",
       "true_goal_probs"
     ];
+    $scope.exam_results = [];
     // $scope.csv_name = function() {
     //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
     // }
@@ -100,6 +101,12 @@ experimentApp.controller('ExperimentController',
     $scope.advance_instructions = function () {
       if ($scope.inst_id == $scope.instructions.length - 1) {
         storeToDB($scope.user_id + "_tutorial", $scope.ratings);
+        exam_data = {
+          "results": $scope.exam_results,
+          "score": $scope.exam_results.filter(correct => correct == true).length
+        }
+        console.log("Exam Results: " + exam_data);
+        storeToDB($scope.user_id + "_exam", exam_data);
         $scope.reward_score = 0;
         $scope.section = "stimuli";
         $scope.stim_id = 0;
@@ -126,8 +133,8 @@ experimentApp.controller('ExperimentController',
           $scope.tutorial_length = 0
         }
         if ($scope.instructions[$scope.inst_id].exam) {
-          // TODO: replace alert with recording
-          // alert("exam step, response=" + $scope.exam_response);
+          let correct = $scope.instructions[$scope.inst_id].options[$scope.instructions[$scope.inst_id].answer] === $scope.exam_response;
+          $scope.exam_results.push(correct);
         }
         $scope.inst_id = $scope.inst_id + 1;
       }

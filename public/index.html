@@ -276,11 +276,11 @@
 
       function storeToDB(key, val) {
         console.log("Storing " + key + " with " + JSON.stringify(val));
-        // resultsRef.child(key).set(val);
+        resultsRef.child(key).set(val);
       }
 
       function incrementCounter() {
-        // counterRef.child(counterKey).set(count+1);
+        counterRef.child(counterKey).set(count + 1);
       }
 
       async function getCounter() {
