@@ -278,48 +278,51 @@ experimentApp.controller('ExperimentController',
       [14, 3, 7, 11, 15, 1, 5, 9, 13, 4],
     ]
     $scope.instructions = [
-      // {
-      //   text: `Welcome to our word guessing game! <br>
-      //          Before you begin your task, you'll complete a brief guided tutorial (~ 4 minutes) to understand the game.<br>
-      //          Press Next to continue.`,
-      // },
-      // {
-      //   text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
-      //          what the word is before your friend finishes spelling.
-      //          <br>
-      //          <br>
-      //          The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
-      //          <br>
-      //          <br>
-      //          Hit the <b>Next button</b> to watch your friend play, and try to guess the word. 
-      //          `,
-      //   image: "tutorial/demo/0.png"
-      // },
-      // {
-      //   text: ``,
-      //   image: "tutorial/demo/scenario-tutorial-demo.gif",
-      //   question: `What is the word?`,
-      //   options: ["pear", "reap", "ear", "wade", "draw"],
-      //   answer: 2
-      // },
-      // {
-      //   text: ``,
-      //   image: "tutorial/demo/scenario-tutorial-demo2.gif",
-      //   question: `Watch it again, can you tell if your friend made a mistake while spelling the word <b>ear</b>?`,
-      //   options: ["No, there was no mistake", "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"],
-      //   answer: 1
-      // },
-      // {
-      //   text: `Now, your task is to watch someone stacking these blocks, and with every block they 
-      //         move, guess which word they are trying to spell.
-      //         <br><br>
-      //         <b>How to guess?</b> <br>
-      //         You will be given <b>5 possible words</b>. 
-      //         When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
-      // },
-      // {
-      //   text: `Let's do a practice run, just so you're familiarized.`,
-      // },
+      {
+        text: `Welcome to our word guessing game! <br>
+               Before you begin your task, you'll complete a brief guided tutorial (~ 4 minutes) to understand the game.<br>
+               Press Next to continue.`,
+      },
+      {
+        text: `Your friend is moving blocks to spell an English word in a stack (first letter on top). You are watching and trying to guess
+               what the word is before your friend finishes spelling.
+               <br>
+               <br>
+               The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
+               <br>
+               <br>
+               Hit the <b>Next button</b> to watch your friend play, and try to guess the word. 
+               `,
+        image: "tutorial/demo/0.png"
+      },
+      {
+        text: ``,
+        image: "tutorial/demo/scenario-tutorial-demo.gif",
+        question: `What is the word?`,
+        options: ["pear", "reap", "ear", "wade", "draw"],
+        answer: 2
+      },
+      {
+        text: `Let's watch it again, but this time, pay attention to whether your friend <b>made a mistake</b> while spelling the word <b>ear</b>.`,
+      },
+      {
+        text: ``,
+        image: "tutorial/demo/scenario-tutorial-demo2.gif",
+        question: `Can you tell if your friend <b>made a mistake</b> while spelling the word <b>ear</b>?`,
+        options: ["No, there was no mistake", "Yes, at first they misspelled the word <b>ear</b> as <b>aer</b>"],
+        answer: 1
+      },
+      {
+        text: `Now, your task is to watch someone stacking these blocks, and with every block they 
+              move, guess which word they are trying to spell.
+              <br><br>
+              <b>How to guess?</b> <br>
+              You will be given <b>5 possible words</b>. 
+              When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
+      },
+      {
+        text: `Let's do a practice run, just so you're familiarized.`,
+      },
       {
         text: `First, you'll get a chance to look at the available letters and the 5 possible words.
                Before seeing the player move any blocks, select all the words that you think
@@ -336,13 +339,11 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `Press Next to consider the next move.`
+        text: `Press Next to consider the next move. You may notice that the move doesn't make sense. That's fine, the person spelling the words <b>might make mistakes</b> sometimes.`
       },
       {
-        text: `Do you notice that the move doesn't make sense? It is ok, the person spelling the words <b>might make mistakes</b> sometimes.`,
         image: "tutorial/tutorial/1.gif",
-        question: `Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br> 
-        How would you best describe the mistake here?`,
+        question: `How would you best describe the mistake here? Keep in mind that the possible words are: <b>power, cower, crow, core, pore</b>. <br>`,
         options: ['I don\'t think a mistake was made.', 'The player <i><b>intended</b></i> &nbsp; to stack block <b>w</b>  on block <b>e</b> , but mistakenly dropped it in the wrong location.',
           'The player <i><b>mistakenly</b></i>&nbsp; picked up block <b>w</b>, then put it back down in a different location.'
         ],
