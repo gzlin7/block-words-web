@@ -237,7 +237,7 @@ experimentApp.controller('ExperimentController',
       // change mod if # stimuli sets changes
       let stim_idx = $scope.stimuli_sets[count % 16];
       for (i = 0; i < stim_idx.length; i++) {
-        $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
+        $scope.stimuli_set.push($scope.stimuli[stim_idx[i]-1]);
       }
       console.log("stimuli set = " + stim_idx);
       incrementCounter();
