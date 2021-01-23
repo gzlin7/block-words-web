@@ -236,8 +236,10 @@ experimentApp.controller('ExperimentController',
       let count = await getCounter();
       // change mod if # stimuli sets changes
       let stim_idx = $scope.stimuli_sets[count % 16];
+      // uncomment for testing stimuli
+      // let stim_idx = $scope.stimuli_sets[0];
       for (i = 0; i < stim_idx.length; i++) {
-        $scope.stimuli_set.push($scope.stimuli[stim_idx[i]]);
+        $scope.stimuli_set.push($scope.stimuli[stim_idx[i] - 1]);
       }
       console.log("stimuli set = " + stim_idx);
       incrementCounter();
@@ -544,13 +546,13 @@ experimentApp.controller('ExperimentController',
       },
       {
         "trial": 0,
-        "times": [1, 2, 3, 4, 5, 6, 7],
+        "times": [1, 2, 3, 4, 5, 6, 7, 8],
         "name": "scenario_2_3",
         "optimal": true,
         "goal_space": ["power", "cower", "crow", "core", "pore"],
         "goal": 3,
         "problem": 2,
-        "length": 7,
+        "length": 8,
         "images": [
           "stimuli/2/3/0.png",
           "stimuli/2/3/0.gif",
@@ -558,7 +560,8 @@ experimentApp.controller('ExperimentController',
           "stimuli/2/3/2.gif",
           "stimuli/2/3/3.gif",
           "stimuli/2/3/4.gif",
-          "stimuli/2/3/5.gif"
+          "stimuli/2/3/5.gif",
+          "stimuli/2/3/6.gif"
         ]
       },
       {
