@@ -95,7 +95,7 @@ experimentApp.controller('ExperimentController',
     $scope.validate_mistake = function () {
       if ($scope.mistake_yes_no == "yes") {
         $scope.valid_mistake = $scope.mistake_response.length > 0;
-      } else if ($scope.mistake_yes_no == "no") {
+      } else if ($scope.mistake_yes_no.length > 0) {
         $scope.valid_mistake = true;
       }
     }
@@ -179,7 +179,9 @@ experimentApp.controller('ExperimentController',
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
         $scope.reward_score = 0;
-        if ($scope.last_two_scenarios && ($scope.mistake_yes_no == "no" || $scope.mistake_response.length > 0)) {
+        if ($scope.last_two_scenarios && (
+          ($scope.mistake_yes_no == "yes" && $scope.mistake_response.length > 0) ||
+          $scope.mistake_yes_no.length > 0 && $scope.mistake_yes_no.length != "yes")) {
           $scope.store_mistake_data(1);
         }
         // Advance to first part

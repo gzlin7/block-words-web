@@ -168,11 +168,15 @@
         <span ng-show="section == 'stimuli' && part_id < 0 && last_two_scenarios">
           Did your friend make a mistake while trying to spell
           <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>?
+          <br>
           <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()"
             value="yes">
           <span class="checkboxtext">Yes</span>
           <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()" value="no">
           <span class="checkboxtext">No</span>
+          <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()"
+            value="not sure">
+          <span class="checkboxtext">Not Sure</span>
           <br>
           <span ng-show="mistake_yes_no == 'yes'"> Please provide a <b>brief description of the
               mistake</b> in the box below to continue.
