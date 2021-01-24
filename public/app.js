@@ -464,7 +464,8 @@ experimentApp.controller('ExperimentController',
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. Ready to start? Press Next to continue!`
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. For the last 2 rounds, we will also ask you whether you believe your friend made a mistake, and to describe the mistake if so.
+         Ready to start? Press Next to continue!`
       }
     ];
     $scope.stimuli = [
