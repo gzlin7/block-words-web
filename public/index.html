@@ -162,13 +162,27 @@
       <p ng-show="section == 'stimuli' && part_id < 0" class="full-row">
         The true goal was
         <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>. <br>
-        You earned {{bonus_points}} bonus points this round. <br>
-        Press next to continue.
+        You earned {{bonus_points}} bonus points this round.<br><br>
+
+        <!-- Mistake text box -->
+        <span ng-show="section == 'stimuli' && part_id < 0 && last_two_scenarios">
+          Did your friend make a mistake while trying to spell
+          <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>?
+          <br>
+          If you think they made a mistake, please provide a <b>brief description of the
+            mistake</b>.
+          <br>
+          <i>Type your answer (yes/no) in the box below to continue.</i>
+          <br>
+          <textarea ng-model="mistake_response" ng-change="validate_mistake()" rows="4" cols="75">
+          </textarea>
+          <!-- <br>(e.g. meant to pick up 'o' but picked up 'e', dropped 'w', spelled 'drwa' instead of 'draw', etc.) -->
+        </span>
       </p>
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"
         ng-src="{{stimuli_set[stim_id].images[part_id]}}" class="stimulus" id="stimulus-img">
       <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
-      <div class="section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id + 1}}</div>
+      <div class="section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id + 1}}/10</div>
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
         You're all done! <br> Thank you for your time :) <br>
@@ -180,7 +194,8 @@
         <button class="button" ng-click="reload_gif()"
           ng-show="section == 'stimuli' && part_id >= 0 || section == 'instructions' && instruction_has_image()">
           Replay Move </button>
-        <button class="button" ng-click="advance()" ng-show="section == 'stimuli' && part_id < 0">
+        <button class="button" ng-click="advance()" ng-show="section == 'stimuli' && part_id < 0"
+          ng-disabled="valid_mistake == false && last_two_scenarios">
           Next >>
         </button>
         <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' || 
@@ -242,7 +257,8 @@
 
         <ul class="no-bullets" ng-repeat="opt in instructions[inst_id].options">
           <li><input type="radio" name="comprehension" ng-model="comprehension_response" ng-click="validate_answer(opt)"
-              value="{{opt}}"> <span class="checkboxtext" ng-bind-html="opt"></span></li>
+              value="{{opt}}"> <span class="checkboxtext" ng-bind-html="opt"></span>
+          </li>
         </ul>
         <br>
 

@@ -42,6 +42,9 @@ experimentApp.controller('ExperimentController',
     $scope.valid_goal = false;
     $scope.exam_response = "";
     $scope.valid_exam = false;
+    $scope.mistake_response = "";
+    $scope.valid_mistake = false;
+    $scope.last_two_scenarios = false;
     $scope.csv_header = [
       "timestep",
       "goal_probs_0",
@@ -87,6 +90,17 @@ experimentApp.controller('ExperimentController',
     $scope.validate_exam = function (ans) {
       $scope.exam_response = ans;
       $scope.valid_exam = true;
+    }
+    $scope.validate_mistake = function () {
+      $scope.valid_mistake = $scope.mistake_response.length > 0;
+    }
+    $scope.store_mistake_data = function (number) {
+      mistake_data = {
+        "mistake": $scope.mistake_response,
+        "scenario": $scope.stimuli_set[$scope.stim_id - 1].name,
+      };
+      console.log("Mistake Results: " + mistake_data);
+      storeToDB($scope.user_id + "_mistake" + number, mistake_data);
     }
     $scope.advance = function () {
       $scope.loaded = false;
@@ -146,15 +160,22 @@ experimentApp.controller('ExperimentController',
       $scope.valid_exam = false;
     };
     $scope.advance_stimuli = function () {
+      $scope.last_two_scenarios = $scope.stim_id >= $scope.stimuli_set.length - 2;
       if ($scope.stim_id == $scope.stimuli_set.length) {
         // Advance section
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
         $scope.reward_score = 0;
+        // Store mistake response
+        $scope.store_mistake_data(2);
+        // Show endscreen (survey code)
         $scope.section = "endscreen"
       } else if ($scope.part_id < 0) {
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
         $scope.reward_score = 0;
+        if ($scope.last_two_scenarios && $scope.mistake_response.length > 0) {
+          $scope.store_mistake_data(1);
+        }
         // Advance to first part
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
@@ -174,6 +195,8 @@ experimentApp.controller('ExperimentController',
       }
       $scope.response = { "checked": [false, false, false, false, false] };
       $scope.valid_goal = false;
+      $scope.mistake_response = "";
+      $scope.valid_mistake = false;
     };
     $scope.compute_ratings = function (resp) {
       // Compute probs from checkboxes
@@ -234,10 +257,9 @@ experimentApp.controller('ExperimentController',
     $scope.loaded = false;
     $scope.setStimuli = async function () {
       let count = await getCounter();
-      // change mod if # stimuli sets changes
-      let stim_idx = $scope.stimuli_sets[count % 16];
+      let stim_idx = $scope.stimuli_sets[count % $scope.stimuli.length];
       // uncomment for testing stimuli
-      // let stim_idx = $scope.stimuli_sets[0];
+      // stim_idx = $scope.stimuli_sets[0];
       for (i = 0; i < stim_idx.length; i++) {
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i] - 1]);
       }
