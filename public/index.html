@@ -168,15 +168,18 @@
         <span ng-show="section == 'stimuli' && part_id < 0 && last_two_scenarios">
           Did your friend make a mistake while trying to spell
           <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>?
+          <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()"
+            value="yes">
+          <span class="checkboxtext">Yes</span>
+          <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()" value="no">
+          <span class="checkboxtext">No</span>
           <br>
-          If you think they made a mistake, please provide a <b>brief description of the
-            mistake</b>.
-          <br>
-          <i>Type your answer (yes/no) in the box below to continue.</i>
-          <br>
-          <textarea ng-model="mistake_response" ng-change="validate_mistake()" rows="4" cols="75">
+          <span ng-show="mistake_yes_no == 'yes'"> Please provide a <b>brief description of the
+              mistake</b> in the box below to continue.
+            <br>
+            <textarea ng-model="mistake_response" ng-change="validate_mistake()" rows="4" cols="75">
           </textarea>
-          <!-- <br>(e.g. meant to pick up 'o' but picked up 'e', dropped 'w', spelled 'drwa' instead of 'draw', etc.) -->
+          </span>
         </span>
       </p>
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"

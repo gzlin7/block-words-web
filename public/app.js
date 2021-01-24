@@ -43,6 +43,7 @@ experimentApp.controller('ExperimentController',
     $scope.exam_response = "";
     $scope.valid_exam = false;
     $scope.mistake_response = "";
+    $scope.mistake_yes_no = "";
     $scope.valid_mistake = false;
     $scope.last_two_scenarios = false;
     $scope.csv_header = [
@@ -92,10 +93,15 @@ experimentApp.controller('ExperimentController',
       $scope.valid_exam = true;
     }
     $scope.validate_mistake = function () {
-      $scope.valid_mistake = $scope.mistake_response.length > 0;
+      if ($scope.mistake_yes_no == "yes") {
+        $scope.valid_mistake = $scope.mistake_response.length > 0;
+      } else if ($scope.mistake_yes_no == "no") {
+        $scope.valid_mistake = true;
+      }
     }
     $scope.store_mistake_data = function (number) {
       mistake_data = {
+        "yes_no": $scope.mistake_yes_no,
         "mistake": $scope.mistake_response,
         "scenario": $scope.stimuli_set[$scope.stim_id - 1].name,
       };
@@ -173,7 +179,7 @@ experimentApp.controller('ExperimentController',
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
         $scope.reward_score = 0;
-        if ($scope.last_two_scenarios && $scope.mistake_response.length > 0) {
+        if ($scope.last_two_scenarios && ($scope.mistake_yes_no == "no" || $scope.mistake_response.length > 0)) {
           $scope.store_mistake_data(1);
         }
         // Advance to first part
@@ -196,6 +202,7 @@ experimentApp.controller('ExperimentController',
       $scope.response = { "checked": [false, false, false, false, false] };
       $scope.valid_goal = false;
       $scope.mistake_response = "";
+      $scope.mistake_yes_no = "";
       $scope.valid_mistake = false;
     };
     $scope.compute_ratings = function (resp) {
@@ -291,6 +298,7 @@ experimentApp.controller('ExperimentController',
     // circular buffer / sliding window strategy
     // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
+      // [1, 2, 3],
       [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
       [7, 11, 15, 1, 5, 9, 13, 4, 8, 12],
       [11, 15, 1, 5, 9, 13, 4, 8, 12, 16],
@@ -464,11 +472,52 @@ experimentApp.controller('ExperimentController',
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. For the last 2 rounds, we will also ask you whether you believe your friend made a mistake, and to describe the mistake if so.
-         Ready to start? Press Next to continue!`
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. 
+        For the last 2 rounds, we will also ask you whether you believe your friend made a mistake, and to describe the mistake if so.
+        Ready to start? Press Next to continue!`
       }
     ];
     $scope.stimuli = [
+      // uncomment to test mistake response
+      // {
+      //   "trial": 0,
+      //   "times": [1],
+      //   "name": "scenario_1_1",
+      //   "optimal": true,
+      //   "goal_space": ["power", "cower", "crow", "core", "pore"],
+      //   "goal": 3,
+      //   "problem": 1,
+      //   "length": 1,
+      //   "images": [
+      //     "stimuli/1/1/0.png",
+      //   ]
+      // },
+      // {
+      //   "trial": 0,
+      //   "times": [1],
+      //   "name": "scenario_1_2",
+      //   "optimal": true,
+      //   "goal_space": ["power", "cower", "crow", "core", "pore"],
+      //   "goal": 3,
+      //   "problem": 1,
+      //   "length": 1,
+      //   "images": [
+      //     "stimuli/1/1/0.png",
+      //   ]
+      // },
+      // {
+      //   "trial": 0,
+      //   "times": [1],
+      //   "name": "scenario_1_3",
+      //   "optimal": true,
+      //   "goal_space": ["power", "cower", "crow", "core", "pore"],
+      //   "goal": 3,
+      //   "problem": 1,
+      //   "length": 1,
+      //   "images": [
+      //     "stimuli/1/1/0.png",
+      //   ]
+      // },
       {
         "trial": 0,
         "times": [1, 2, 3, 4, 5, 6],
