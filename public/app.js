@@ -373,7 +373,7 @@ experimentApp.controller('ExperimentController',
       {
         text: ``,
         image: "tutorial/demo/scenario-tutorial-demo.gif",
-        question: `What is the word?`,
+        question: `Watch the entire game. What is the word your friend spelled?`,
         options: ["pear", "reap", "ear", "wade", "draw"],
         answer: 2
       },
