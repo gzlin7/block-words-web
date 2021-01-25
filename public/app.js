@@ -379,6 +379,9 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `Let's watch it again, but this time, pay attention to whether your friend <b>made a mistake</b> while spelling the word <b>ear</b>.`,
+        image: "tutorial/demo/0.png",
+        tutorial: true,
+        questions_show: false
       },
       {
         text: ``,
