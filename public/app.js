@@ -100,13 +100,26 @@ experimentApp.controller('ExperimentController',
       }
     }
     $scope.store_mistake_data = function (number) {
+      if (($scope.stim_id <= 4) && (($scope.mistake_yes_no == "no") || ($scope.mistake_yes_no == "not sure"))) {
+        $scope.mistake_bonus = 5
+      } else if (($scope.stim_id > 4) && ($scope.mistake_yes_no == "yes")) {
+        $scope.mistake_bonus = 5
+      } else {
+        $scope.mistake_bonus = 0
+      }
+      console.log($scope.mistake_bonus)
+      $scope.total_reward += ($scope.mistake_bonus/10)
       mistake_data = {
         "yes_no": $scope.mistake_yes_no,
         "mistake": $scope.mistake_response,
         "scenario": $scope.stimuli_set[$scope.stim_id - 1].name,
+        "score": $scope.mistake_bonus
       };
       console.log("Mistake Results: " + mistake_data);
       storeToDB($scope.user_id + "_mistake" + number, mistake_data);
+    }
+    $scope.store_total_reward = function () {
+      storeToDB($scope.user_id + "_total_reward", $scope.total_reward);
     }
     $scope.advance = function () {
       $scope.loaded = false;
@@ -175,6 +188,7 @@ experimentApp.controller('ExperimentController',
         $scope.store_mistake_data(2);
         // Show endscreen (survey code)
         $scope.section = "endscreen"
+        $scope.store_total_reward()
       } else if ($scope.part_id < 0) {
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
@@ -199,6 +213,7 @@ experimentApp.controller('ExperimentController',
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
           $scope.bonus_points = (($scope.reward_score) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
+          $scope.total_reward += parseFloat($scope.bonus_points)/10
         }
       }
       $scope.response = { "checked": [false, false, false, false, false] };
@@ -282,6 +297,7 @@ experimentApp.controller('ExperimentController',
     $scope.true_goal = 0
     $scope.reward_score = 0;
     $scope.bonus_points = 0;
+    $scope.total_reward = 0;
     $scope.tutorial_score = 0;
 
     $scope.instruction_has_image = function () {
@@ -296,11 +312,10 @@ experimentApp.controller('ExperimentController',
     $scope.is_tutorial = function () {
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
-    $scope.stimuli_set_length = 10;
     // circular buffer / sliding window strategy
     // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
-      // [1, 2, 3],
+      // [1, 8],
       [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
       [7, 11, 15, 1, 5, 9, 13, 4, 8, 12],
       [11, 15, 1, 5, 9, 13, 4, 8, 12, 16],
@@ -318,6 +333,7 @@ experimentApp.controller('ExperimentController',
       [10, 14, 3, 7, 11, 15, 1, 5, 9, 13],
       [14, 3, 7, 11, 15, 1, 5, 9, 13, 4],
     ]
+    $scope.stimuli_set_length = $scope.stimuli_sets[0].length;
     $scope.instructions = [
       {
         text: `Welcome to our word guessing game! <br>
