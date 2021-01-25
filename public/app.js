@@ -161,7 +161,7 @@ experimentApp.controller('ExperimentController',
           $scope.tutorial_score = ($scope.tutorial_score / $scope.tutorial_length).toFixed(1);
           $scope.tutorial_text += `<br>Averaging all the points, your score for this game is: ` + $scope.tutorial_score +
             ` points`;
-          $scope.instructions[$scope.inst_id + 1]['text'] += `<br><br> <b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
+          // $scope.instructions[$scope.inst_id + 1]['text'] += `<br><br> <b>Your bonus payment score breakdown:</b> <br>` + $scope.tutorial_text;
           // console.log($scope.tutorial_text)
           $scope.tutorial_length = 0
         }
@@ -312,6 +312,10 @@ experimentApp.controller('ExperimentController',
     $scope.is_tutorial = function () {
       return $scope.instructions[$scope.inst_id].tutorial == true
     };
+    $scope.hide_questions = function () {
+      return $scope.instructions[$scope.inst_id].questions_show == false
+      //return false
+    };
     // circular buffer / sliding window strategy
     // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
@@ -385,18 +389,30 @@ experimentApp.controller('ExperimentController',
                Before seeing the player move any blocks, select all the words that you think
                might be the word that the player will try to spell. `,
         image: "tutorial/tutorial/0.png",
-        tutorial: true
+        tutorial: true,
+        questions_show: true
       },
       {
-        text: `Press Next to watch the player move the first block.`,
+        text: `In the next step, the player will move the first block.
+              <br><br>
+              Press Next to continue.`,
+        image: "tutorial/tutorial/0b.png",
+        tutorial: true,
+        questions_show: false
       },
       {
         text: `What do you think? If you think that <b>several</b> words are more likely than the rest, select <b>all</b> of likely words.`,
         image: "tutorial/tutorial/0.gif",
-        tutorial: true
+        tutorial: true,
+        questions_show: true
       },
       {
-        text: `Press Next to consider the next move. You may notice that the move doesn't make sense. That's fine, the person spelling the words <b>might make mistakes</b> sometimes.`
+        text: `You may soon notice that some moves don't make sense. That's fine, the person spelling the words <b>might make mistakes</b> sometimes.
+              <br> <br>
+              Press Next to see the next move. `,
+        image: "tutorial/tutorial/2.png",
+        tutorial: true,
+        questions_show: false
       },
       {
         image: "tutorial/tutorial/1.gif",
