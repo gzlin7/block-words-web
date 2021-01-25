@@ -167,16 +167,16 @@
         <!-- Mistake text box -->
         <span ng-show="section == 'stimuli' && part_id < 0 && last_two_scenarios">
           Did your friend make a mistake while trying to spell
-          <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>?
+          <span ng-style="{color:'blue'}">{{possible_goals[stimuli_set[stim_id-1].goal]}}</span>? Make your best guess.
           <br>
           <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()"
             value="yes">
           <span class="checkboxtext">Yes</span>
           <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()" value="no">
           <span class="checkboxtext">No</span>
-          <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()"
+          <!-- <input type="radio" name="mistake_yes_no" ng-model="mistake_yes_no" ng-change="validate_mistake()"
             value="not sure">
-          <span class="checkboxtext">Not Sure</span>
+          <span class="checkboxtext">Not Sure</span> -->
           <br>
           <span ng-show="mistake_yes_no == 'yes'"> Please provide a <b>brief description of the
               mistake</b> in the box below to continue.
@@ -189,11 +189,20 @@
       <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"
         ng-src="{{stimuli_set[stim_id].images[part_id]}}" class="stimulus" id="stimulus-img">
       <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
-      <div class="section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id + 1}}/{{stimuli_set_length}}</div>
+      <div class="section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id +
+        1}}/{{stimuli_set_length}}</div>
+      <!-- Break screen before last 2 stimuli -->
+      <p ng-show="section == 'breakscreen'" class="full-row">
+        Almost done! In these last two rounds, we're adding a bonus question: At the end of each round, you'll be asked
+        to judge <b>whether your friend made a mistake while trying to spell the word.</b>
+        <br>
+        You'll be asked to judge yes or no, and provide a brief text description of the mistake, if any. For each
+        correct answer, you'll get a <b>bonus of 5 points ($0.50), so pay attention</b> while you
+        step through the rounds! Hit Next to continue.
+      </p>
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
-        You're all done! <br> 
-        You scored {{total_reward}} points in total, equal to ${{total_payment}} <br> 
+        You're all done! You scored {{total_reward}} points in total, equal to ${{total_payment}} bonus payment. <br>
         Thank you for your time :) <br>
         Your survey code is {{user_id}}
       </p>
@@ -301,11 +310,11 @@
 
       function storeToDB(key, val) {
         console.log("Storing " + key + " with " + JSON.stringify(val));
-        resultsRef.child(key).set(val);
+        // resultsRef.child(key).set(val);
       }
 
       function incrementCounter() {
-        counterRef.child(counterKey).set(count + 1);
+        // counterRef.child(counterKey).set(count + 1);
       }
 
       async function getCounter() {

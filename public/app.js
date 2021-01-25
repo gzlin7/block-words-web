@@ -46,6 +46,7 @@ experimentApp.controller('ExperimentController',
     $scope.mistake_yes_no = "";
     $scope.valid_mistake = false;
     $scope.last_two_scenarios = false;
+    $scope.breakscreen_shown = false;
     $scope.csv_header = [
       "timestep",
       "goal_probs_0",
@@ -107,7 +108,7 @@ experimentApp.controller('ExperimentController',
       } else {
         $scope.mistake_bonus = 0;
       }
-      
+
       $scope.total_reward += ($scope.mistake_bonus)
       mistake_data = {
         "yes_no": $scope.mistake_yes_no,
@@ -125,7 +126,8 @@ experimentApp.controller('ExperimentController',
       $scope.loaded = false;
       if ($scope.section == "instructions") {
         $scope.advance_instructions()
-      } else if ($scope.section == "stimuli") {
+      } else if ($scope.section == "stimuli" || $scope.section == "breakscreen") {
+        $scope.section = "stimuli";
         $scope.advance_stimuli()
       } else if ($scope.section == "endscreen") {
         // Do nothing
@@ -188,13 +190,17 @@ experimentApp.controller('ExperimentController',
         $scope.store_mistake_data(2);
         // Show endscreen (survey code)
         $scope.section = "endscreen"
-        if ($scope.total_reward > 0 ){
-          $scope.total_payment = ($scope.total_reward/10).toFixed(1)
-        } else{
+        if ($scope.total_reward > 0) {
+          $scope.total_payment = ($scope.total_reward / 10).toFixed(2)
+        } else {
           $scope.total_payment = 0.0
         }
         $scope.total_reward = $scope.total_reward.toFixed(1)
         $scope.store_total_reward()
+        // Show break screen before last 2 stimuli
+      } else if ($scope.last_two_scenarios && $scope.breakscreen_shown == false) {
+        $scope.section = "breakscreen";
+        $scope.breakscreen_shown = true;
       } else if ($scope.part_id < 0) {
         // Store result to DB
         storeToDB($scope.user_id + "_" + $scope.stimuli_set[$scope.stim_id - 1].name, $scope.ratings);
@@ -326,6 +332,8 @@ experimentApp.controller('ExperimentController',
     // circular buffer / sliding window strategy
     // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
+      // uncomment to test mistake response
+      // [1, 2, 3],
       [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
       [7, 11, 15, 1, 5, 9, 13, 4, 8, 12],
       [11, 15, 1, 5, 9, 13, 4, 8, 12, 16],
