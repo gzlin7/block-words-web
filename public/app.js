@@ -100,15 +100,15 @@ experimentApp.controller('ExperimentController',
       }
     }
     $scope.store_mistake_data = function (number) {
-      if (($scope.stim_id <= 4) && (($scope.mistake_yes_no == "no") || ($scope.mistake_yes_no == "not sure"))) {
-        $scope.mistake_bonus = 5
-      } else if (($scope.stim_id > 4) && ($scope.mistake_yes_no == "yes")) {
-        $scope.mistake_bonus = 5
+      if ($scope.stimuli_set[$scope.stim_id - 1].problem == "1" && $scope.mistake_yes_no == "no") {
+        $scope.mistake_bonus = 5.0;
+      } else if ($scope.stimuli_set[$scope.stim_id - 1].problem != "1" && $scope.mistake_yes_no == "yes") {
+        $scope.mistake_bonus = 5.0;
       } else {
-        $scope.mistake_bonus = 0
+        $scope.mistake_bonus = 0;
       }
-      console.log($scope.mistake_bonus)
-      $scope.total_reward += ($scope.mistake_bonus/10)
+      
+      $scope.total_reward += ($scope.mistake_bonus)
       mistake_data = {
         "yes_no": $scope.mistake_yes_no,
         "mistake": $scope.mistake_response,
@@ -188,6 +188,12 @@ experimentApp.controller('ExperimentController',
         $scope.store_mistake_data(2);
         // Show endscreen (survey code)
         $scope.section = "endscreen"
+        if ($scope.total_reward > 0 ){
+          $scope.total_payment = ($scope.total_reward/10).toFixed(1)
+        } else{
+          $scope.total_payment = 0.0
+        }
+        $scope.total_reward = $scope.total_reward.toFixed(1)
         $scope.store_total_reward()
       } else if ($scope.part_id < 0) {
         // Store result to DB
@@ -213,7 +219,7 @@ experimentApp.controller('ExperimentController',
           $scope.part_id = -1;
           $scope.stim_id = $scope.stim_id + 1;
           $scope.bonus_points = (($scope.reward_score) / $scope.stimuli_set[$scope.stim_id - 1].length).toFixed(1);
-          $scope.total_reward += parseFloat($scope.bonus_points)/10
+          $scope.total_reward += parseFloat($scope.bonus_points)
         }
       }
       $scope.response = { "checked": [false, false, false, false, false] };
@@ -298,6 +304,7 @@ experimentApp.controller('ExperimentController',
     $scope.reward_score = 0;
     $scope.bonus_points = 0;
     $scope.total_reward = 0;
+    $scope.mistake_bonus = 0
     $scope.tutorial_score = 0;
 
     $scope.instruction_has_image = function () {
@@ -319,7 +326,6 @@ experimentApp.controller('ExperimentController',
     // circular buffer / sliding window strategy
     // 3, 7, 11, 15, 1, 5, 9, 13, 4, 8, 12, 16, 2, 6, 10, 14
     $scope.stimuli_sets = [
-      // [1, 8],
       [3, 7, 11, 15, 1, 5, 9, 13, 4, 8],
       [7, 11, 15, 1, 5, 9, 13, 4, 8, 12],
       [11, 15, 1, 5, 9, 13, 4, 8, 12, 16],
