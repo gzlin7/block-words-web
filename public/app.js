@@ -366,7 +366,7 @@ experimentApp.controller('ExperimentController',
                The word is one of the following: <b>ear</b>, <b>reap</b>, <b>pear</b>, <b>wade</b>, <b>draw</b>
                <br>
                <br>
-               Hit the <b>Next button</b> to watch your friend play, and try to guess the word. 
+               Hit the <b>Next button</b> to watch your friend play, and try to guess the word.
                `,
         image: "tutorial/demo/0.png"
       },
@@ -391,11 +391,11 @@ experimentApp.controller('ExperimentController',
         answer: 1
       },
       {
-        text: `Now, your task is to watch someone stacking these blocks, and with every block they 
+        text: `Now, your task is to watch someone stacking these blocks, and with every block they
               move, guess which word they are trying to spell.
               <br><br>
               <b>How to guess?</b> <br>
-              You will be given <b>5 possible words</b>. 
+              You will be given <b>5 possible words</b>.
               When a block is moved, you need to <b>choose all words</b> that your friend might be trying to spell. This means you can guess <b>more than one word</b> if there are several likely choices. `
       },
       {
@@ -412,7 +412,7 @@ experimentApp.controller('ExperimentController',
       {
         text: `In the next step, the player will move the first block.
               <br><br>
-              Press Next to continue.`,
+              Press Next to continue, then watch closely.`,
         image: "tutorial/tutorial/0b.png",
         tutorial: true,
         questions_show: false
@@ -424,9 +424,9 @@ experimentApp.controller('ExperimentController',
         questions_show: true
       },
       {
-        text: `You may soon notice that some moves don't make sense. That's fine, the person spelling the words <b>might make mistakes</b> sometimes.
+        text: `In the next step, you may notice that some moves don't make sense. That's fine, the person spelling the words <b>might make mistakes</b> sometimes.
               <br> <br>
-              Press Next to see the next move. `,
+              Press Next to see the next move. Watch closely.`,
         image: "tutorial/tutorial/2.png",
         tutorial: true,
         questions_show: false
@@ -452,13 +452,13 @@ experimentApp.controller('ExperimentController',
         tutorial: true
       },
       {
-        text: `It seems like there are two equally possible words. 
+        text: `It seems like there are two equally possible words.
         If that's the case please select both of them.`,
         image: "tutorial/tutorial/3.gif",
         tutorial: true
       },
       {
-        text: `Even if it seems obvious what the word is, please make sure 
+        text: `Even if it seems obvious what the word is, please make sure
         to answer by selecting only the correct word.`,
         image: "tutorial/tutorial/4.gif",
         tutorial: true
@@ -469,7 +469,7 @@ experimentApp.controller('ExperimentController',
       },
       {
         text: `<b>Bonus Payment Points</b> <br>
-               As you play, you can earn <b>bonus payment</b> by collecting <b>points for each guess</b>  you make, based on <b>how correct</b> the guess is. Your score for each game is the average score of your guesses in the game, and will be <b>displayed after that game</b>. 
+               As you play, you can earn <b>bonus payment</b> by collecting <b>points for each guess</b>  you make, based on <b>how correct</b> the guess is. Your score for each game is the average score of your guesses in the game, and will be <b>displayed after that game</b>.
                <br><br>
                Your points from all games are converted to bonus payment at a rate of <b>10 points = $1.00.</b>
                The points system will be explained in more detail on the next page.
@@ -483,7 +483,7 @@ experimentApp.controller('ExperimentController',
                <b>0.5 points</b> for choosing 4 words, one of which is the correct word <br>
                <b>1.3 points</b> for choosing 3 words, one of which is the correct word <br>
                <b>3.0 points</b> for choosing 2 words, one of which is the correct word <br>
-               <b>8.0 points</b> for choosing only the correct word 
+               <b>8.0 points</b> for choosing only the correct word
                <br><br>
                <b>Important:</b> Because <b>you might lose points</b> if you guess incorrectly, don't be over-confident! The point system is designed so that you <b>don't benefit from guessing when you don't know for sure</b>.`
       },
@@ -523,7 +523,7 @@ experimentApp.controller('ExperimentController',
         exam: true
       },
       {
-        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds. 
+        text: `Congrats! You've finished the tutorial. Your task is to guess words for 10 different rounds.
         For the last 2 rounds, we will also ask you whether you believe your friend made a mistake, and to describe the mistake if so.
         Ready to start? Press Next to continue!`
       }

@@ -195,15 +195,19 @@
       <p ng-show="section == 'breakscreen'" class="full-row">
         Almost done! In these last two rounds, we're adding a bonus question: At the end of each round, you'll be asked
         to judge <b>whether your friend made a mistake while trying to spell the word.</b>
-        <br>
-        You'll be asked to judge yes or no, and provide a brief text description of the mistake, if any. For each
-        correct answer, you'll get a <b>bonus of 5 points ($0.50), so pay attention</b> while you
-        step through the rounds! Hit Next to continue.
+        <br> <br>
+        You'll be asked to judge <b>yes</b> or <b>no</b>, and provide a brief text description of the mistake, if any. For each
+        correct answer, you'll get a bonus of <b>5 points ($0.50)</b>, so pay attention while you
+        step through the rounds!
+        <br> <br>
+        Hit Next to continue.
       </p>
       <!-- Endscreen -->
       <p ng-show="section == 'endscreen'" class="full-row">
-        You're all done! You scored {{total_reward}} points in total, equal to ${{total_payment}} bonus payment. <br>
-        Thank you for your time :) <br>
+        You're all done! You scored {{total_reward}} points in total, equal to ${{total_payment}} bonus payment.
+        <br><br>
+        Thank you for your time :)
+        <br><br>
         Your survey code is {{user_id}}
       </p>
       <!-- </div> -->
@@ -216,8 +220,8 @@
           ng-disabled="valid_mistake == false && last_two_scenarios">
           Next >>
         </button>
-        <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' || 
-          (valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial()) && !hide_questions())  || 
+        <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' ||
+          (valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial()) && !hide_questions())  ||
           (valid_exam == false && section == 'instructions' && is_exam()) ||
           (valid_comprehension == false && section == 'instructions' && instruction_has_question())">
           Next >>
