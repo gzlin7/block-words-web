@@ -216,8 +216,7 @@
           ng-disabled="valid_mistake == false && last_two_scenarios">
           Next >>
         </button>
-        <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" 
-        ng-disabled="section == 'endscreen' || 
+        <button class="button" ng-click="advance()" ng-hide="section == 'stimuli' && part_id < 0" ng-disabled="section == 'endscreen' || 
           (valid_goal == false && (section == 'stimuli' && part_id >= 0 || is_tutorial()) && !hide_questions())  || 
           (valid_exam == false && section == 'instructions' && is_exam()) ||
           (valid_comprehension == false && section == 'instructions' && instruction_has_question())">
@@ -234,7 +233,8 @@
       </p>
       <!-- Note: No instruction should have both tutorial and comprehension questions -->
       <!-- Questions for goals-->
-      <div ng-show="(section == 'stimuli' && part_id >= 0) || (is_tutorial() && !hide_questions())" class="hidden" id="question">
+      <div ng-show="(section == 'stimuli' && part_id >= 0) || (is_tutorial() && !hide_questions())" class="hidden"
+        id="question">
         <p><b>Which of the words below is the player trying to spell? </b> </p>
         <p>Select <b>at least one guess</b> to
           continue. If no guesses seem more likely than the others, select the "I don't know" option.
@@ -311,11 +311,11 @@
 
       function storeToDB(key, val) {
         console.log("Storing " + key + " with " + JSON.stringify(val));
-        // resultsRef.child(key).set(val);
+        resultsRef.child(key).set(val);
       }
 
       function incrementCounter() {
-        // counterRef.child(counterKey).set(count + 1);
+        counterRef.child(counterKey).set(count + 1);
       }
 
       async function getCounter() {
