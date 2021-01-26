@@ -126,6 +126,7 @@ experimentApp.controller('ExperimentController',
         $scope.section = "stimuli";
         $scope.stim_id = 0;
         $scope.part_id = 0;
+        $scope.ratings = [];
         $scope.possible_goals = $scope.stimuli_set[$scope.stim_id].goal_space;
         $scope.true_goal = $scope.stimuli_set[$scope.stim_id].goal;
         // get time of first experiment
