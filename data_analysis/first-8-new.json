@@ -1,0 +1,6649 @@
+{
+  "counter" : {
+    "count" : 16
+  },
+  "results" : {
+    "1611684208566_exam" : {
+      "results" : [ true, true, false, false, true ],
+      "score" : 3
+    },
+    "1611684208566_mistake1" : {
+      "mistake" : "moved blocks wrong and needed to start over.",
+      "scenario" : "scenario_4_2",
+      "score" : 5,
+      "yes_no" : "yes"
+    },
+    "1611684208566_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_1_3",
+      "score" : 5,
+      "yes_no" : "no"
+    },
+    "1611684208566_scenario_1_2" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.776,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.616,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 7.696,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 3.593,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_1_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 22.472,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.647,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 3.912,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 3.136,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_1_4" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.888,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 14.176,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 8,
+      "time_spent" : 8.4,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 16,
+      "time_spent" : 3.063,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_2_2" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 4.175,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.896,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 4.552,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 3.736,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_2_4" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.088,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.8,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.976,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 4.056,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -2,
+      "time_spent" : 5.385,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 3.712,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 3.655,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_3_2" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 4.344,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 7.233,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.887,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 7.744,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 4.168,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 3.24,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 2.928,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_3_4" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.128,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.544,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.648,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.352,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 5.656,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 4,
+      "time_spent" : 4.624,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_4_1" : [ null, null, null, null, null, null, null, null, null, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 9.022,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 12.408,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 21.127,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 13.865,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 13.783,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 7.705,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 24,
+      "time_spent" : 10.103,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 32,
+      "time_spent" : 5.888,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 40,
+      "time_spent" : 6.848,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 48,
+      "time_spent" : 4.336,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 56,
+      "time_spent" : 5.12,
+      "timestep" : 11,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_4_2" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 33.952,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.095,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.64,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 8,
+      "time_spent" : 2.704,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 8,
+      "time_spent" : 5.68,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 8,
+      "time_spent" : 4.024,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 8,
+      "time_spent" : 4.312,
+      "timestep" : 7,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 8,
+      "time_spent" : 3.599,
+      "timestep" : 8,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 6.233,
+      "timestep" : 9,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 14,
+      "time_spent" : 2.976,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_scenario_4_4" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 4.175,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.689,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 4.656,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.207,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.584,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.496,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 8,
+      "time_spent" : 6.152,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 16,
+      "time_spent" : 3.112,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684208566_total_reward" : "33.5",
+    "1611684208566_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 0,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_exam" : {
+      "results" : [ true, false, true, true, true ],
+      "score" : 4
+    },
+    "1611684249948_mistake1" : {
+      "mistake" : "",
+      "scenario" : "scenario_1_3",
+      "score" : 5,
+      "yes_no" : "no"
+    },
+    "1611684249948_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_2_3",
+      "score" : 0,
+      "yes_no" : "no"
+    },
+    "1611684249948_scenario_1_2" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 7.855,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 5.329,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 5.2,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 5.264,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_1_3" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : -2,
+      "time_spent" : 19.024,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 5.196,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 4.356,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 4.048,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_1_4" : {
+      "9" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 8,
+        "time_spent" : 18.176,
+        "timestep" : 1,
+        "true_goal_probs" : "1.00"
+      },
+      "10" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 16,
+        "time_spent" : 7.742,
+        "timestep" : 2,
+        "true_goal_probs" : "1.00"
+      },
+      "11" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 24,
+        "time_spent" : 7.014,
+        "timestep" : 3,
+        "true_goal_probs" : "1.00"
+      },
+      "12" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 32,
+        "time_spent" : 6.258,
+        "timestep" : 4,
+        "true_goal_probs" : "1.00"
+      }
+    },
+    "1611684249948_scenario_2_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 8.888,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 5.959,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 3.204,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 3.741,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    } ],
+    "1611684249948_scenario_2_3" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 10.864,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 5.433,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 8.296,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 15.016,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 0,
+      "time_spent" : 6.136,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 3.464,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 5.983,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_2_4" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 27.825,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 7.193,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 24,
+      "time_spent" : 6.263,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 22,
+      "time_spent" : 6.087,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 30,
+      "time_spent" : 8.2,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 38,
+      "time_spent" : 4.984,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 46,
+      "time_spent" : 4.961,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_3_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 19.376,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 5.744,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 24,
+      "time_spent" : 7.04,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 32,
+      "time_spent" : 3.409,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 40,
+      "time_spent" : 4.817,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 48,
+      "time_spent" : 3.662,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 56,
+      "time_spent" : 4.864,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_3_4" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 14.608,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 7.753,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 6.176,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 11.208,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 5.448,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : -2,
+      "time_spent" : 13.871,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 6,
+      "time_spent" : 6.105,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_4_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 11.504,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 8.128,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 19.28,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 15.921,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 4.887,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -12,
+      "time_spent" : 8.369,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -14,
+      "time_spent" : 3.312,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -16,
+      "time_spent" : 6.312,
+      "timestep" : 8,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -18,
+      "time_spent" : 4.328,
+      "timestep" : 9,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : -10,
+      "time_spent" : 6.76,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_scenario_4_4" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 19.65,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 6,
+      "time_spent" : 7.022,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 14,
+      "time_spent" : 7.169,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 22,
+      "time_spent" : 7.477,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 30,
+      "time_spent" : 4.401,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 38,
+      "time_spent" : 3.504,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 46,
+      "time_spent" : 4.095,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 54,
+      "time_spent" : 3.291,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684249948_total_reward" : "38.1",
+    "1611684249948_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 0,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_exam" : {
+      "results" : [ true, true, true, true, true ],
+      "score" : 5
+    },
+    "1611684261693_mistake1" : {
+      "mistake" : "I noticed the mistake but now I can't remember the exact letter",
+      "scenario" : "scenario_2_3",
+      "score" : 5,
+      "yes_no" : "yes"
+    },
+    "1611684261693_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_3_3",
+      "score" : 0,
+      "yes_no" : "no"
+    },
+    "1611684261693_scenario_1_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "0.50",
+      "reward_score" : -2,
+      "time_spent" : 9.15,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 8.337,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 4.597,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 3.217,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_1_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 9.313,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.33",
+      "goal_probs_1" : "0.33",
+      "goal_probs_2" : "0.33",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 1.3,
+      "time_spent" : 6.896,
+      "timestep" : 2,
+      "true_goal_probs" : "0.33"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4.3,
+      "time_spent" : 4.281,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12.3,
+      "time_spent" : 3.609,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_2_2" : [ {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 24.804,
+      "timestep" : 1,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 5.296,
+      "timestep" : 2,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 9,
+      "time_spent" : 10.967,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 5.136,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    } ],
+    "1611684261693_scenario_2_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 21.761,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.808,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 6.595,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.073,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -1,
+      "time_spent" : 5.924,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 2,
+      "time_spent" : 4.633,
+      "timestep" : 6,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 3.433,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_2_4" : {
+      "9" : {
+        "goal_probs_0" : "0.25",
+        "goal_probs_1" : "0.25",
+        "goal_probs_2" : "0.25",
+        "goal_probs_3" : "0.25",
+        "goal_probs_4" : 0,
+        "reward_score" : 0.5,
+        "time_spent" : 17.487,
+        "timestep" : 1,
+        "true_goal_probs" : "0.25"
+      },
+      "10" : {
+        "goal_probs_0" : "0.50",
+        "goal_probs_1" : "0.50",
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : -1.5,
+        "time_spent" : 25.926,
+        "timestep" : 2,
+        "true_goal_probs" : 0
+      },
+      "11" : {
+        "goal_probs_0" : "0.33",
+        "goal_probs_1" : "0.33",
+        "goal_probs_2" : "0.33",
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : -0.19999999999999996,
+        "time_spent" : 9.569,
+        "timestep" : 3,
+        "true_goal_probs" : "0.33"
+      },
+      "12" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : "1.00",
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : -2.2,
+        "time_spent" : 5.489,
+        "timestep" : 4,
+        "true_goal_probs" : 0
+      },
+      "13" : {
+        "goal_probs_0" : "0.50",
+        "goal_probs_1" : "0.50",
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : -4.2,
+        "time_spent" : 9.169,
+        "timestep" : 5,
+        "true_goal_probs" : 0
+      },
+      "14" : {
+        "goal_probs_0" : "1.00",
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : -6.2,
+        "time_spent" : 4.474,
+        "timestep" : 6,
+        "true_goal_probs" : 0
+      },
+      "15" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : "1.00",
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : 1.7999999999999998,
+        "time_spent" : 4.089,
+        "timestep" : 7,
+        "true_goal_probs" : "1.00"
+      }
+    },
+    "1611684261693_scenario_3_2" : [ {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 6.54,
+      "timestep" : 1,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.33",
+      "goal_probs_1" : "0.33",
+      "goal_probs_2" : "0.33",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4.3,
+      "time_spent" : 9.033,
+      "timestep" : 2,
+      "true_goal_probs" : "0.33"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2.3,
+      "time_spent" : 15.552,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 5.3,
+      "time_spent" : 4.625,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8.3,
+      "time_spent" : 7.123,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 11.3,
+      "time_spent" : 4.369,
+      "timestep" : 6,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 19.3,
+      "time_spent" : 3.769,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_3_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 31.383,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 4.641,
+      "timestep" : 2,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 3.602,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 9,
+      "time_spent" : 6.297,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 5.512,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 20,
+      "time_spent" : 5.289,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 28,
+      "time_spent" : 5.388,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_3_4" : [ {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 10.16,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 12.667,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 29.422,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -3,
+      "time_spent" : 6.791,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 0,
+      "time_spent" : 3.907,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 8,
+      "time_spent" : 6.175,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 16,
+      "time_spent" : 4.633,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_4_2" : [ {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 8.602,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.33",
+      "goal_probs_1" : "0.33",
+      "goal_probs_2" : "0.33",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 7.644,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 14.258,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 15.673,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -8,
+      "time_spent" : 9.362,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -8,
+      "time_spent" : 13.402,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 5.857,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -7,
+      "time_spent" : 5.723,
+      "timestep" : 8,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -4,
+      "time_spent" : 4.576,
+      "timestep" : 9,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 4,
+      "time_spent" : 3.658,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_scenario_4_4" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 8,
+      "time_spent" : 12.889,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 16,
+      "time_spent" : 8.077,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 14,
+      "time_spent" : 14.618,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 14,
+      "time_spent" : 13.662,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 22,
+      "time_spent" : 5.859,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 30,
+      "time_spent" : 4.879,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 38,
+      "time_spent" : 6.644,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 46,
+      "time_spent" : 3.269,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611684261693_total_reward" : "31.1",
+    "1611684261693_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.33",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.33",
+      "goal_probs_3" : "0.33",
+      "goal_probs_4" : 0,
+      "reward_score" : -0.7,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : "0.33"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2.7,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 5.3,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3.3,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 11.3,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 19.3,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 27.3,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 35.3,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_exam" : {
+      "results" : [ true, true, true, false, true ],
+      "score" : 4
+    },
+    "1611685492552_mistake1" : {
+      "mistake" : "",
+      "scenario" : "scenario_4_3",
+      "score" : 0,
+      "yes_no" : "no"
+    },
+    "1611685492552_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_1_1",
+      "score" : 5,
+      "yes_no" : "no"
+    },
+    "1611685492552_scenario_1_1" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 20.16,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 12.054,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 6,
+      "time_spent" : 7.758,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 14,
+      "time_spent" : 4.502,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 22,
+      "time_spent" : 4.347,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 30,
+      "time_spent" : 4.216,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_1_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 31.711,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 9.091,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 8.05,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 9.207,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_1_3" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 10.528,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 4.625,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 4.792,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 5.73,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_2_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 18.882,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 40.035,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 7.694,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 6.196,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_2_3" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 13.336,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 9.241,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 11.553,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 4.778,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -8,
+      "time_spent" : 12.907,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 4.247,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 4.877,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_3_2" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 14.61,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.785,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 28.67,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 7.65,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 6.121,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -12,
+      "time_spent" : 5.041,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.254,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_3_3" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 28.329,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 9.278,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 8.753,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 13.387,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 0,
+      "time_spent" : 5.773,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 4.742,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 4.143,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_4_2" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 8.676,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 10.318,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 13.119,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 4.893,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 6.944,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -10,
+      "time_spent" : 5.127,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -10,
+      "time_spent" : 6.079,
+      "timestep" : 7,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -10,
+      "time_spent" : 5.01,
+      "timestep" : 8,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -12,
+      "time_spent" : 4.784,
+      "timestep" : 9,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -14,
+      "time_spent" : 4.769,
+      "timestep" : 10,
+      "true_goal_probs" : 0
+    } ],
+    "1611685492552_scenario_4_3" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 36.031,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 5.615,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 4.019,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 4.573,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 5.286,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -10,
+      "time_spent" : 8.121,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -12,
+      "time_spent" : 9.356,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 11.355,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 4.994,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 4.704,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611685492552_scenario_4_4" : {
+      "9" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : "0.50",
+        "goal_probs_3" : "0.50",
+        "goal_probs_4" : 0,
+        "reward_score" : -2,
+        "time_spent" : 65.942,
+        "timestep" : 1,
+        "true_goal_probs" : 0
+      },
+      "10" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : "1.00",
+        "goal_probs_3" : 0,
+        "goal_probs_4" : 0,
+        "reward_score" : -4,
+        "time_spent" : 13.796,
+        "timestep" : 2,
+        "true_goal_probs" : 0
+      },
+      "11" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : "1.00",
+        "goal_probs_4" : 0,
+        "reward_score" : -6,
+        "time_spent" : 11.105,
+        "timestep" : 3,
+        "true_goal_probs" : 0
+      },
+      "12" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : "1.00",
+        "goal_probs_4" : 0,
+        "reward_score" : -8,
+        "time_spent" : 10.792,
+        "timestep" : 4,
+        "true_goal_probs" : 0
+      },
+      "13" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 0,
+        "time_spent" : 13.884,
+        "timestep" : 5,
+        "true_goal_probs" : "1.00"
+      },
+      "14" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : "1.00",
+        "goal_probs_4" : 0,
+        "reward_score" : -2,
+        "time_spent" : 7.592,
+        "timestep" : 6,
+        "true_goal_probs" : 0
+      },
+      "15" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 6,
+        "time_spent" : 19.63,
+        "timestep" : 7,
+        "true_goal_probs" : "1.00"
+      },
+      "16" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : 14,
+        "time_spent" : 8.589,
+        "timestep" : 8,
+        "true_goal_probs" : "1.00"
+      }
+    },
+    "1611685492552_total_reward" : "17.0",
+    "1611685492552_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : -8,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "0.50",
+      "reward_score" : -7,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 1,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 9,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 17,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_exam" : {
+      "results" : [ true, true, true, true, true ],
+      "score" : 5
+    },
+    "1611687013746_mistake1" : {
+      "mistake" : "",
+      "scenario" : "scenario_1_1",
+      "score" : 5,
+      "yes_no" : "no"
+    },
+    "1611687013746_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_2_1",
+      "score" : 0,
+      "yes_no" : "no"
+    },
+    "1611687013746_scenario_1_1" : [ {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 30.696,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 10.228,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 5.372,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -3,
+      "time_spent" : 9.332,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 5,
+      "time_spent" : 9.036,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 13,
+      "time_spent" : 7.648,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_1_2" : {
+      "9" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : -2,
+        "time_spent" : 9.977,
+        "timestep" : 1,
+        "true_goal_probs" : 0
+      },
+      "10" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : 0,
+        "goal_probs_4" : "1.00",
+        "reward_score" : -4,
+        "time_spent" : 8.324,
+        "timestep" : 2,
+        "true_goal_probs" : 0
+      },
+      "11" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : "1.00",
+        "goal_probs_4" : 0,
+        "reward_score" : 4,
+        "time_spent" : 9.38,
+        "timestep" : 3,
+        "true_goal_probs" : "1.00"
+      },
+      "12" : {
+        "goal_probs_0" : 0,
+        "goal_probs_1" : 0,
+        "goal_probs_2" : 0,
+        "goal_probs_3" : "1.00",
+        "goal_probs_4" : 0,
+        "reward_score" : 12,
+        "time_spent" : 4.411,
+        "timestep" : 4,
+        "true_goal_probs" : "1.00"
+      }
+    },
+    "1611687013746_scenario_1_3" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -2,
+      "time_spent" : 25.181,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.33",
+      "goal_probs_1" : "0.33",
+      "goal_probs_2" : "0.33",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -0.7,
+      "time_spent" : 7.144,
+      "timestep" : 2,
+      "true_goal_probs" : "0.33"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2.3,
+      "time_spent" : 6.588,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10.3,
+      "time_spent" : 3.189,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_2_1" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 23.012,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 12.571,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -1,
+      "time_spent" : 8.484,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 10.508,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 5,
+      "time_spent" : 5.356,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 13,
+      "time_spent" : 3.184,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_2_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 23.992,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 8.252,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 12.399,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 3.945,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    } ],
+    "1611687013746_scenario_2_3" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 19.823,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 15.456,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 11.017,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 9.44,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -5,
+      "time_spent" : 8.423,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -2,
+      "time_spent" : 5.336,
+      "timestep" : 6,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 3.384,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_3_2" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 22.871,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 7.86,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 11.733,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -3,
+      "time_spent" : 8.176,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -5,
+      "time_spent" : 13.496,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -7,
+      "time_spent" : 6.423,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 1,
+      "time_spent" : 4.873,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_3_3" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 16.794,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 6.544,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 24,
+      "time_spent" : 3.634,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 32,
+      "time_spent" : 5.34,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 40,
+      "time_spent" : 5.384,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 48,
+      "time_spent" : 4.852,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 56,
+      "time_spent" : 8.344,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_4_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 23.971,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.42,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : -1,
+      "time_spent" : 21.112,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 7,
+      "time_spent" : 13.312,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 15,
+      "time_spent" : 19.608,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 13,
+      "time_spent" : 12.06,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 11,
+      "time_spent" : 5.204,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 14,
+      "time_spent" : 12.024,
+      "timestep" : 8,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 17,
+      "time_spent" : 5.328,
+      "timestep" : 9,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 25,
+      "time_spent" : 3.694,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_scenario_4_3" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 16.477,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 10.675,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 19,
+      "time_spent" : 8.744,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 27,
+      "time_spent" : 8.423,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 35,
+      "time_spent" : 7.584,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 43,
+      "time_spent" : 6.836,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 51,
+      "time_spent" : 6.615,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 59,
+      "time_spent" : 8.758,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 67,
+      "time_spent" : 4.921,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 75,
+      "time_spent" : 3.526,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611687013746_total_reward" : "32.0",
+    "1611687013746_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.25",
+      "goal_probs_1" : "0.25",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.25",
+      "goal_probs_4" : "0.25",
+      "reward_score" : -5.5,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "0.25"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -7.5,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 0.5,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3.5,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 11.5,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 19.5,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_exam" : {
+      "results" : [ true, true, true, false, true ],
+      "score" : 4
+    },
+    "1611688860495_mistake1" : {
+      "mistake" : "I believe they mixed up the e, and the a's position in the word.",
+      "scenario" : "scenario_2_1",
+      "score" : 5,
+      "yes_no" : "yes"
+    },
+    "1611688860495_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_3_1",
+      "score" : 0,
+      "yes_no" : "no"
+    },
+    "1611688860495_scenario_1_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 9.012,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 7.418,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 9.018,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 12.208,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 5.005,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 24,
+      "time_spent" : 3.355,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_1_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 24.912,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 16.614,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 4.23,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 5.254,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_2_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 39.968,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 11.282,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -2,
+      "time_spent" : 9.514,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -2,
+      "time_spent" : 39.414,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 11.108,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 14,
+      "time_spent" : 6.062,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_2_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 18,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 26,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 34,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 42,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 13.41,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 15.314,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 6.643,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -6,
+      "time_spent" : 16.815,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    } ],
+    "1611688860495_scenario_2_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 13.968,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.228,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 7.932,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 4.172,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 9.356,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 12.015,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 4.737,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_3_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 96.846,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 12.169,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 17.151,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 20.306,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 6,
+      "time_spent" : 16.012,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 14,
+      "time_spent" : 10.074,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 22,
+      "time_spent" : 4.444,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_3_2" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 31.743,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 18.158,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.689,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 9.484,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 4.434,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 3.959,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 3.264,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_3_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 10.377,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.796,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 15.615,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 8.498,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 3.463,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 3.822,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 7.429,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_4_2" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 11.934,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.447,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 8.909,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 7.832,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.834,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.468,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.579,
+      "timestep" : 7,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 8.37,
+      "timestep" : 8,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 17.715,
+      "timestep" : 9,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 6,
+      "time_spent" : 4.08,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_scenario_4_3" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 18.076,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.13,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 7.13,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 8.466,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 3.754,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 18,
+      "time_spent" : 4.514,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 26,
+      "time_spent" : 4.122,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 34,
+      "time_spent" : 3.36,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 42,
+      "time_spent" : 3.06,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 50,
+      "time_spent" : 3.374,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611688860495_total_reward" : "23.2",
+    "1611688860495_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 18,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 26,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 34,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 42,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_exam" : {
+      "results" : [ true, true, true, false, false ],
+      "score" : 3
+    },
+    "1611690551367_mistake1" : {
+      "mistake" : "",
+      "scenario" : "scenario_3_1",
+      "score" : 0,
+      "yes_no" : "no"
+    },
+    "1611690551367_mistake2" : {
+      "mistake" : "Ordered the w, c and o in the wrong spots.",
+      "scenario" : "scenario_4_1",
+      "score" : 5,
+      "yes_no" : "yes"
+    },
+    "1611690551367_scenario_1_1" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 5.864,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 6.777,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 6,
+      "time_spent" : 3.623,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 14,
+      "time_spent" : 3.385,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 22,
+      "time_spent" : 3.343,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 30,
+      "time_spent" : 12.512,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_1_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.152,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.353,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 2.952,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 5.071,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_2_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.736,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 2.432,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.744,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 3.04,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 16,
+      "time_spent" : 3.088,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 24,
+      "time_spent" : 3.024,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_2_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 7.073,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 10.2,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 8.8,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 4.016,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 3.951,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 2.128,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 20,
+      "time_spent" : 4.352,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_3_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.489,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 2.807,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 7.416,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -2,
+      "time_spent" : 3.952,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 2.503,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 2.584,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 2.176,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_3_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 0,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 5.294,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 7.528,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 6.447,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 3.112,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 3.792,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -12,
+      "time_spent" : 2.344,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 2.881,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_3_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.384,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.112,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 3.84,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 4.088,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 3.015,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 3.137,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 4.504,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_4_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.816,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 3.016,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 4.232,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 3.32,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 3.433,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 14,
+      "time_spent" : 2.384,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 22,
+      "time_spent" : 1.687,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 30,
+      "time_spent" : 1.848,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 38,
+      "time_spent" : 1.616,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 46,
+      "time_spent" : 1.928,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 54,
+      "time_spent" : 2.073,
+      "timestep" : 11,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_4_2" : [ {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 6.959,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -2,
+      "time_spent" : 11.264,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 6.697,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -4,
+      "time_spent" : 5.255,
+      "timestep" : 4,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -4,
+      "time_spent" : 4.128,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : -4,
+      "time_spent" : 7.624,
+      "timestep" : 6,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 4.969,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -8,
+      "time_spent" : 5.4,
+      "timestep" : 8,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -10,
+      "time_spent" : 3.2,
+      "timestep" : 9,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : -2,
+      "time_spent" : 2.511,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_scenario_4_3" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 8,
+      "time_spent" : 5.536,
+      "timestep" : 1,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 6.128,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 4.104,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 3.024,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 20,
+      "time_spent" : 3.816,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 28,
+      "time_spent" : 3.704,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 36,
+      "time_spent" : 2.968,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 44,
+      "time_spent" : 2.888,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 52,
+      "time_spent" : 2.284,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 60,
+      "time_spent" : 2.092,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611690551367_total_reward" : "32.7",
+    "1611690551367_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 0,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_exam" : {
+      "results" : [ true, true, true, true, true ],
+      "score" : 5
+    },
+    "1611691031648_mistake1" : {
+      "mistake" : "Placed the O on the E-R block stack before the W. Then they didn't catch the issue soon enough.",
+      "scenario" : "scenario_4_1",
+      "score" : 5,
+      "yes_no" : "yes"
+    },
+    "1611691031648_mistake2" : {
+      "mistake" : "",
+      "scenario" : "scenario_1_4",
+      "score" : 5,
+      "yes_no" : "no"
+    },
+    "1611691031648_scenario_1_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.862,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 3,
+      "time_spent" : 15.17,
+      "timestep" : 2,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 6,
+      "time_spent" : 4.72,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 9,
+      "time_spent" : 3.384,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 12,
+      "time_spent" : 3.357,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 20,
+      "time_spent" : 2.73,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_1_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.196,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.33",
+      "goal_probs_1" : "0.33",
+      "goal_probs_2" : "0.33",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 1.3,
+      "time_spent" : 6.786,
+      "timestep" : 2,
+      "true_goal_probs" : "0.33"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4.3,
+      "time_spent" : 3.85,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12.3,
+      "time_spent" : 3.093,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_1_4" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 47.161,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 7.131,
+      "timestep" : 2,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 6,
+      "time_spent" : 3.606,
+      "timestep" : 3,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 14,
+      "time_spent" : 4.938,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_2_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 8.28,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 13.994,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 4.568,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -4,
+      "time_spent" : 2.987,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -6,
+      "time_spent" : 2.903,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 2.923,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_2_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 11.922,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 3,
+      "time_spent" : 5.454,
+      "timestep" : 2,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 3,
+      "time_spent" : 6.917,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 6,
+      "time_spent" : 4.049,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 9,
+      "time_spent" : 4.011,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 12,
+      "time_spent" : 3.509,
+      "timestep" : 6,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "1.00",
+      "goal_probs_4" : 0,
+      "reward_score" : 20,
+      "time_spent" : 3.027,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_3_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.719,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.25",
+      "goal_probs_1" : "0.25",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.25",
+      "goal_probs_4" : "0.25",
+      "reward_score" : 0.5,
+      "time_spent" : 7.895,
+      "timestep" : 2,
+      "true_goal_probs" : "0.25"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3.5,
+      "time_spent" : 5.669,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6.5,
+      "time_spent" : 3.032,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 9.5,
+      "time_spent" : 2.639,
+      "timestep" : 5,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12.5,
+      "time_spent" : 3.158,
+      "timestep" : 6,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 20.5,
+      "time_spent" : 2.347,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_3_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 10.895,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 5.972,
+      "timestep" : 2,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 5.606,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 5.321,
+      "timestep" : 4,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 2,
+      "time_spent" : 2.974,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 3.286,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 18,
+      "time_spent" : 3.545,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_4_1" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 30.903,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 5.902,
+      "timestep" : 2,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 1,
+      "time_spent" : 3.153,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : "0.50",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 3.367,
+      "timestep" : 4,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 2.954,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 20,
+      "time_spent" : 2.658,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 28,
+      "time_spent" : 2.79,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 36,
+      "time_spent" : 2.414,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 44,
+      "time_spent" : 2.025,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 52,
+      "time_spent" : 2.333,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : "1.00",
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 60,
+      "time_spent" : 5.243,
+      "timestep" : 11,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_4_2" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 18,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 26,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 34,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 42,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.633,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 5.582,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.861,
+      "timestep" : 3,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 8,
+      "time_spent" : 8.32,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 8,
+      "time_spent" : 6.84,
+      "timestep" : 5,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 16,
+      "time_spent" : 5.079,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 24,
+      "time_spent" : 4.096,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 27,
+      "time_spent" : 5.297,
+      "timestep" : 8,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : "0.50",
+      "goal_probs_4" : "0.50",
+      "reward_score" : 30,
+      "time_spent" : 3.764,
+      "timestep" : 9,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : "1.00",
+      "reward_score" : 38,
+      "time_spent" : 4.164,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_scenario_4_3" : [ {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.921,
+      "timestep" : 1,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.20",
+      "goal_probs_1" : "0.20",
+      "goal_probs_2" : "0.20",
+      "goal_probs_3" : "0.20",
+      "goal_probs_4" : "0.20",
+      "reward_score" : 0,
+      "time_spent" : 6.763,
+      "timestep" : 2,
+      "true_goal_probs" : "0.20"
+    }, {
+      "goal_probs_0" : "0.50",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "0.50",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 3,
+      "time_spent" : 6.636,
+      "timestep" : 3,
+      "true_goal_probs" : "0.50"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 11,
+      "time_spent" : 3.372,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 19,
+      "time_spent" : 2.933,
+      "timestep" : 5,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 27,
+      "time_spent" : 3.102,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 35,
+      "time_spent" : 3.384,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 43,
+      "time_spent" : 2.592,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 51,
+      "time_spent" : 2.808,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : "1.00",
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 59,
+      "time_spent" : 3.011,
+      "timestep" : 10,
+      "true_goal_probs" : "1.00"
+    } ],
+    "1611691031648_total_reward" : "43.8",
+    "1611691031648_tutorial" : [ {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : -2,
+      "time_spent" : 0,
+      "timestep" : 1,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 6,
+      "time_spent" : 0,
+      "timestep" : 2,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 4,
+      "time_spent" : 0,
+      "timestep" : 3,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 12,
+      "time_spent" : 0,
+      "timestep" : 4,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : 0,
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 10,
+      "time_spent" : 0,
+      "timestep" : 5,
+      "true_goal_probs" : 0
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 18,
+      "time_spent" : 0,
+      "timestep" : 6,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 26,
+      "time_spent" : 0,
+      "timestep" : 7,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 34,
+      "time_spent" : 0,
+      "timestep" : 8,
+      "true_goal_probs" : "1.00"
+    }, {
+      "goal_probs_0" : "1.00",
+      "goal_probs_1" : 0,
+      "goal_probs_2" : 0,
+      "goal_probs_3" : 0,
+      "goal_probs_4" : 0,
+      "reward_score" : 42,
+      "time_spent" : 0,
+      "timestep" : 9,
+      "true_goal_probs" : "1.00"
+    } ],
+    "asdf" : "asdf"
+  }
+}
