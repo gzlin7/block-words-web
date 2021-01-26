@@ -1,4 +1,4 @@
-var experimentApp = angular.module('experimentApp', ['ngSanitize', 'ngCsv']);
+var experimentApp = angular.module('experimentApp', ['ngSanitize', 'ngCsv', 'preloader']);
 var start_time;
 
 // function shuffle(array) {
@@ -28,7 +28,7 @@ experimentApp.directive('imageonload', function () {
 });
 
 experimentApp.controller('ExperimentController',
-  function ExperimentController($scope) {
+  function ExperimentController($scope, preloader) {
     $scope.section = "instructions";
     $scope.inst_id = 0;
     $scope.stim_id = 0;
@@ -211,6 +211,8 @@ experimentApp.controller('ExperimentController',
           $scope.store_mistake_data(1);
         }
         // Advance to first part
+        preloader.preloadImages($scope.stimuli_set[$scope.stim_id].images).then(
+					function handleResolve(imglocs) {console.info("Preloaded stimulus.");});
         $scope.part_id = $scope.part_id + 1;
         $scope.ratings = [];
         // set possible goals based on stimuli json
@@ -528,6 +530,10 @@ experimentApp.controller('ExperimentController',
         Ready to start? Press Next to continue!`
       }
     ];
+    instruction_images =
+      $scope.instructions.filter(i => i.image !== undefined).map(i => i.image);
+    preloader.preloadImages(instruction_images).then(
+      function handleResolve(imglocs) {console.info("Preloaded instructions.");});
     $scope.stimuli = [
       // uncomment to test mistake response
       // {
