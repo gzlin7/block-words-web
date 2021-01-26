@@ -154,11 +154,9 @@
         </li>
       </ul>
       </p>
-      <img imageonload ng-show="loaded && section == 'instructions' && instruction_has_image()"
+      <img ng-show="section == 'instructions' && instruction_has_image()"
         ng-src="{{instructions[inst_id].image}}" class="stimulus" id="instruction-img">
       <p class="section_title" ng-show="section == 'instructions' && instruction_has_image()">Tutorial</p>
-      <img ng-show="!loaded && section == 'instructions' && instruction_has_image()" ng-src="blank.png"
-        class="stimulus">
       <!-- Stimuli -->
       <p ng-show="section == 'stimuli' && part_id < 0" class="full-row">
         The true goal was
@@ -187,9 +185,8 @@
           </span>
         </span>
       </p>
-      <img imageonload ng-show="loaded && section == 'stimuli' && part_id >= 0"
+      <img ng-show="section == 'stimuli' && part_id >= 0"
         ng-src="{{stimuli_set[stim_id].images[part_id]}}" class="stimulus" id="stimulus-img">
-      <img ng-show="!loaded && section == 'stimuli' && part_id >= 0" ng-src="blank.png" class="stimulus">
       <div class="section_title" ng-show="section == 'stimuli' && part_id >= 0"> Round {{stim_id +
         1}}/{{stimuli_set_length}}</div>
       <!-- Break screen before last 2 stimuli -->

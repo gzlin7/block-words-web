@@ -11,22 +11,6 @@ var start_time;
 //     return array
 // }
 
-experimentApp.directive('imageonload', function () {
-  return {
-    restrict: 'A',
-    link: function (scope, element, attrs) {
-      element.bind('load', function () {
-        scope.$apply(function () {
-          scope.loaded = true;
-        });
-      });
-      // element.bind('error', function () {
-      //   console.log('image could not be loaded');
-      // });
-    }
-  };
-});
-
 experimentApp.controller('ExperimentController',
   function ExperimentController($scope, preloader) {
     $scope.section = "instructions";
@@ -123,7 +107,6 @@ experimentApp.controller('ExperimentController',
       storeToDB($scope.user_id + "_total_reward", $scope.total_reward);
     }
     $scope.advance = function () {
-      $scope.loaded = false;
       if ($scope.section == "instructions") {
         $scope.advance_instructions()
       } else if ($scope.section == "stimuli" || $scope.section == "breakscreen") {
