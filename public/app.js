@@ -1,4 +1,4 @@
-var experimentApp = angular.module('experimentApp', ['ngSanitize', 'ngCsv', 'preloader']);
+var experimentApp = angular.module('experimentApp', ['ngSanitize', 'preloader']);
 var start_time;
 
 // function shuffle(array) {
@@ -41,9 +41,6 @@ experimentApp.controller('ExperimentController',
       "true_goal_probs"
     ];
     $scope.exam_results = [];
-    // $scope.csv_name = function() {
-    //   return $scope.stimuli[$scope.stim_id-1].name + "_" + Date.now() + ".csv"
-    // }
     $scope.ratings = [];
     $scope.reload_gif = function () {
       if ($scope.section == "stimuli") {
