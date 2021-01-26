@@ -283,6 +283,8 @@ experimentApp.controller('ExperimentController',
         $scope.stimuli_set.push($scope.stimuli[stim_idx[i] - 1]);
       }
       console.log("stimuli set = " + stim_idx);
+      // store stimuli set
+      storeToDB($scope.user_id + "_stimuli_set", stim_idx);
       incrementCounter();
       // unhide question sliders- workaround for slider initial flashing
       document.getElementById("question").classList.remove("hidden");
